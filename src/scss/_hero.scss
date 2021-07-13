@@ -3,12 +3,14 @@
   flex-direction: column;
   text-align: center;
   padding: 6rem 0;
+  background: $text-white;
 
   &_title {
     color: $primary-color;
     font-size: 3.5rem;
     font-weight: 600;
     text-transform: uppercase;
+    line-height: 1.25;
   }
 
   &_sub-title {
@@ -21,9 +23,9 @@
   &_description {
     font-size: 1.25rem;
     color: $text-gray;
-    width: 60%;
+    width: 66.66%;
     margin: auto;
-    padding: 2.5rem 0;
+    padding: 2.5rem 0 3.5rem;
   }
 
   &_buttons {
@@ -34,7 +36,6 @@
 
   &_button {
     background: $primary-color;
-    padding: 1rem 1.5rem;
     border-radius: 0.25rem;
     margin-right: 3rem;
 
@@ -45,5 +46,8 @@
 
   &_button-link {
     color: $text-white;
+    padding: 1rem 2rem;
+    display: inline-block;
+    font-weight: 600;
   }
 }

@@ -1,0 +1,66 @@
+// @media (prefers-color-scheme: light) {
+// }
+
+// Dark Theme
+@media (prefers-color-scheme: dark) {
+  header,
+  .header {
+    color: $text-white;
+
+    &_top {
+      background: $dark-color;
+    }
+
+    &_social-icons {
+      a {
+        color: $text-white;
+      }
+    }
+
+    &_navbar {
+      background: $lighter-color;
+      // background: $white-color;
+      background: $darker-color;
+    }
+
+    &_navbar-link {
+      color: $text-white;
+    }
+  }
+
+  .hero {
+    background: $darker-color;
+
+    &_title {
+      color: $primary-color;
+    }
+
+    &_sub-title {
+      color: $text-white;
+    }
+
+    &_description {
+      color: $text-light;
+    }
+
+    &_button {
+      background: $text-white;
+    }
+
+    &_button-link {
+      color: $primary-color;
+    }
+  }
+
+  footer,
+  .footer {
+    &_stats {
+      color: $text-white;
+      background: $dark-color;
+    }
+
+    &_brands {
+      background: $light-color;
+    }
+  }
+}
