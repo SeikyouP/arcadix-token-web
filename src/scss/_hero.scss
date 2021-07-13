@@ -1,0 +1,49 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 6rem 0;
+
+  &_title {
+    color: $primary-color;
+    font-size: 3.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &_sub-title {
+    color: $text-dark;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &_description {
+    font-size: 1.25rem;
+    color: $text-gray;
+    width: 60%;
+    margin: auto;
+    padding: 2.5rem 0;
+  }
+
+  &_buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_button {
+    background: $primary-color;
+    padding: 1rem 1.5rem;
+    border-radius: 0.25rem;
+    margin-right: 3rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &_button-link {
+    color: $text-white;
+  }
+}

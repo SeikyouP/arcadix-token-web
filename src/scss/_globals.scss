@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+body {
+  // min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: $container-width;
+  margin: auto;
+}
+
+h1,
+h2,
+h3,
+p {
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,23 @@
+// Main Colors
+$primary-color: #ab45e7 !default;
+$secondary-color: transparent !default;
+
+// Light Theme Colors
+$light-color: #e4e0e8;
+$lighter-color: #f1f0f3;
+$white-color: #ffffff;
+
+// Dark Theme Colors
+$dark-color: #473c53;
+$darker-color: #2f2838;
+$black-color: #000000;
+
+// Text Colors
+$text-white: $white-color;
+$text-light: $lighter-color;
+$text-dark: $darker-color;
+$text-gray: $dark-color;
+$text-black: $black-color;
+
+// Container Width
+$container-width: 60rem !default;

@@ -1,0 +1,48 @@
+footer,
+.footer {
+  // margin-top: auto;
+
+  &_stats {
+    color: $primary-color;
+    font-weight: 700;
+    background: $lighter-color;
+    min-height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  &_data {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    margin-right: 7.5rem;
+
+    &:last-child {
+      margin-right: 0rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    span {
+      font-size: 0.9rem;
+    }
+  }
+
+  &_brands {
+    background: $light-color;
+    min-height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      display: block;
+      width: 14rem;
+      height: auto;
+    }
+  }
+}
