@@ -1,4 +1,1 @@
-# http and https need separate rules if you don’t force_ssl!
-http://www.arcadixtoken.com/* https://www.arcadixtoken.io/:splat 301!
-https://www.arcadixtoken.com/* https://www.arcadixtoken.io/:splat 301!
-
+https://yourdomain.com https://yourotherdomain.com 301!
