@@ -152,6 +152,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background: #ffffff;
 }
 
 .container {
@@ -379,6 +380,9 @@ footer_brands img,
 }
 
 @media (prefers-color-scheme: dark) {
+  body {
+    background: #2f2838;
+  }
   header,
   .header {
     color: #ffffff;
@@ -426,5 +430,93 @@ footer_brands img,
   footer_brands,
   .footer_brands {
     background: #e4e0e8;
+  }
+}
+
+.theme-toggle {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  right: 4rem;
+  height: 3rem;
+  width: 6rem;
+  border: 0.125rem solid #ab45e7;
+  border-radius: 1.5rem;
+}
+
+.theme-toggle .light-btn,
+.theme-toggle .dark-btn {
+  width: 100%;
+  font-size: 2rem;
+  border: none;
+  background-color: transparent;
+}
+
+.theme-toggle .light-btn {
+  z-index: 1;
+  -webkit-animation: spin 4s linear infinite;
+          animation: spin 4s linear infinite;
+}
+
+.theme-toggle .dark-btn {
+  z-index: 2;
+  -webkit-animation: shine 2s ease infinite;
+          animation: shine 2s ease infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0) scale(1);
+            transform: rotate(0) scale(1);
+  }
+  50% {
+    -webkit-transform: rotate(180deg) scale(1.25);
+            transform: rotate(180deg) scale(1.25);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1);
+            transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0) scale(1);
+            transform: rotate(0) scale(1);
+  }
+  50% {
+    -webkit-transform: rotate(180deg) scale(1.25);
+            transform: rotate(180deg) scale(1.25);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1);
+            transform: rotate(360deg) scale(1);
+  }
+}
+
+@-webkit-keyframes shine {
+  0%,
+  100% {
+    color: #2f2838;
+  }
+  50% {
+    color: #f1f0f3;
+  }
+}
+
+@keyframes shine {
+  0%,
+  100% {
+    color: #2f2838;
+  }
+  50% {
+    color: #f1f0f3;
   }
 }
