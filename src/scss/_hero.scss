@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 6rem 0;
+  padding: 9rem 0;
   background: $text-white;
+  min-height: 29.5rem;
 
   &_title {
     color: $primary-color;
@@ -23,9 +24,9 @@
   &_description {
     font-size: 1.25rem;
     color: $text-gray;
-    width: 66.66%;
+    width: 60%;
     margin: auto;
-    padding: 2.5rem 0 3.5rem;
+    padding: 2rem 0;
   }
 
   &_buttons {

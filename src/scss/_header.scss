@@ -7,12 +7,12 @@ header,
   color: $primary-color;
 
   &_top {
-    min-height: 4rem;
+    min-height: 4.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: $light-color;
-    padding: 0 4rem;
+    padding: 0 2rem;
   }
 
   &_contract-address {
@@ -21,8 +21,8 @@ header,
 
   &_social-icons {
     a {
-      font-size: 1.75rem;
-      margin-right: 1rem;
+      font-size: 2rem;
+      margin-right: 1.5rem;
       color: $primary-color;
 
       &:last-child {
@@ -39,7 +39,7 @@ header,
     justify-content: center;
     align-items: center;
     font-weight: 700;
-    min-height: 6rem;
+    min-height: 4.5rem;
   }
 
   &_navbar-link {
