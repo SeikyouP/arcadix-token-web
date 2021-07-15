@@ -4,26 +4,28 @@ header,
   z-index: 100;
   display: flex;
   flex-direction: column;
-  color: $primary-color;
 
   &_top {
     min-height: 4.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: $light-color;
+    background: $white-color;
     padding: 0 2rem;
   }
 
   &_contract-address {
-    font-weight: 700;
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-family: $secondary-font-stack;
+    color: $neutral-gray;
   }
 
   &_social-icons {
     a {
       font-size: 2rem;
-      margin-right: 1.5rem;
-      color: $primary-color;
+      margin-right: 2rem;
+      color: $neutral-gray;
 
       &:last-child {
         margin-right: 0;
@@ -33,18 +35,20 @@ header,
 
   &_navbar {
     background: $lighter-color;
-    // background: $white-color;
+
     padding: 0 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 700;
     min-height: 4.5rem;
   }
 
   &_navbar-link {
-    margin-right: 3rem;
+    margin-right: 4rem;
     color: $primary-color;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: $primary-font-stack;
 
     &:last-child {
       margin-right: 0;

@@ -5,13 +5,12 @@
 }
 
 html {
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-family: $default-font-stack;
 }
+
 body {
-  // min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background: $text-white;
+  // background: $text-white;
+  min-height: 100vh;
 }
 
 .container {
@@ -19,11 +18,17 @@ body {
   margin: auto;
 }
 
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 h1,
 h2,
 h3,
 p {
-  line-height: 1.5;
+  line-height: 2rem;
 }
 
 a {

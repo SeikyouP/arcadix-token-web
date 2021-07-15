@@ -1,15 +1,17 @@
 // Dark Theme
 @media (prefers-color-scheme: dark) {
-  body {
-    background: $darker-color;
-  }
+  // body {
+  //   background: $bg-dark;
+  // }
 
   header,
   .header {
-    color: $text-white;
-
     &_top {
-      background: $dark-color;
+      background: $bg-dark;
+    }
+
+    &_contract-address {
+      color: $text-white;
     }
 
     &_social-icons {
@@ -19,18 +21,16 @@
     }
 
     &_navbar {
-      background: $lighter-color;
-      // background: $white-color;
-      background: $darker-color;
+      background: $bg-light;
     }
 
     &_navbar-link {
-      color: $text-white;
+      color: $primary-color;
     }
   }
 
   .hero {
-    background: $darker-color;
+    background: $bg-dark;
 
     &_title {
       color: $primary-color;
@@ -45,22 +45,22 @@
     }
 
     &_button {
-      background: $text-white;
+      background: $bg-light;
     }
 
     &_button-link {
       color: $primary-color;
     }
+
+    &_stats {
+      color: $text-white;
+      background: $bg-dark;
+    }
   }
 
   footer,
   .footer {
-    &_stats {
-      color: $text-white;
-      background: $dark-color;
-    }
-
-    &_brands {
+    &_sponsors {
       background: $light-color;
     }
   }

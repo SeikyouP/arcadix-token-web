@@ -1,49 +1,35 @@
 footer,
 .footer {
-  // margin-top: auto;
-
-  &_stats {
-    color: $primary-color;
-    font-weight: 700;
-    background: $lighter-color;
-    min-height: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-  &_data {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 0;
-    margin-right: 7.5rem;
-
-    &:last-child {
-      margin-right: 0rem;
-    }
-
-    h3 {
-      font-size: 1.5rem;
-    }
-
-    span {
-      font-size: 0.9rem;
-    }
-  }
+  min-height: 9rem;
 
   &_sponsors {
     background: $light-color;
-    min-height: 9rem;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 2rem;
 
+    &--bitmart {
+      width: 220px;
+      height: 54px;
+    }
+
+    &--certik {
+      width: 271px;
+      height: 107px;
+    }
+
+    &--coinmarketcap {
+      width: auto;
+      height: 42px;
+    }
+
     img {
-      display: block;
-      width: 14rem;
-      height: auto;
+      margin-right: 2rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }

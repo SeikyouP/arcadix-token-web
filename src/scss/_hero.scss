@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 9rem 0;
+  padding: 8.25rem 0;
   background: $text-white;
   min-height: 29.5rem;
 
@@ -10,21 +10,25 @@
     color: $primary-color;
     font-size: 3.5rem;
     font-weight: 600;
+    font-family: $primary-font-stack;
     text-transform: uppercase;
-    line-height: 1.25;
+    line-height: 3.5rem;
   }
 
   &_sub-title {
-    color: $text-dark;
+    color: $neutral-gray;
     font-size: 2rem;
     font-weight: 600;
+    font-family: $primary-font-stack;
     text-transform: uppercase;
+    line-height: 2.75rem;
   }
 
   &_description {
     font-size: 1.25rem;
-    color: $text-gray;
-    width: 60%;
+    color: $neutral-gray;
+    font-family: $tertiary-font-stack;
+    width: 38.375rem;
     margin: auto;
     padding: 2rem 0;
   }
@@ -37,8 +41,7 @@
 
   &_button {
     background: $primary-color;
-    border-radius: 0.25rem;
-    margin-right: 3rem;
+    border-radius: 0.3125rem;
 
     &:last-child {
       margin-right: 0;
@@ -47,8 +50,42 @@
 
   &_button-link {
     color: $text-white;
-    padding: 1rem 2rem;
     display: inline-block;
     font-weight: 600;
+    font-size: 1.25rem;
+    font-family: $secondary-font-stack;
+    width: 212px;
+    line-height: 56px;
+  }
+
+  &_stats {
+    color: $primary-color;
+    font-weight: 700;
+    min-height: 4.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  &_data {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    margin-right: 2.875rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: $primary-font-stack;
+    line-height: 2rem;
+    letter-spacing: -0.02rem;
+
+    &:last-child {
+      margin-right: 0rem;
+    }
+
+    span {
+      font-size: 0.9rem;
+    }
   }
 }
