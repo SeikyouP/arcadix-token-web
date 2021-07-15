@@ -3,7 +3,7 @@
   flex-direction: column;
   text-align: center;
   padding: 8.25rem 0;
-  background: $text-white;
+  background: $bg-light;
   min-height: 29.5rem;
 
   &_title {
@@ -42,20 +42,26 @@
   &_button {
     background: $primary-color;
     border-radius: 0.3125rem;
+    transition: background 0.25s ease;
 
     &:last-child {
       margin-right: 0;
     }
+
+    &:hover {
+      background: $neutral-gray;
+    }
   }
 
   &_button-link {
-    color: $text-white;
     display: inline-block;
     font-weight: 600;
     font-size: 1.25rem;
     font-family: $secondary-font-stack;
     width: 212px;
     line-height: 56px;
+    color: $text-white;
+    transition: color 0.25s ease;
   }
 
   &_stats {
@@ -74,18 +80,23 @@
     flex-direction: column;
     padding: 1rem 0;
     margin-right: 2.875rem;
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 600;
     font-family: $primary-font-stack;
-    line-height: 2rem;
     letter-spacing: -0.02rem;
 
     &:last-child {
       margin-right: 0rem;
     }
 
+    h3 {
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+    }
+
     span {
-      font-size: 0.9rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-family: $secondary-font-stack;
     }
   }
 }

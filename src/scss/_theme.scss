@@ -6,7 +6,7 @@
 
   header,
   .header {
-    &_top {
+    &_topbar {
       background: $bg-dark;
     }
 
@@ -46,10 +46,18 @@
 
     &_button {
       background: $bg-light;
+
+      &:hover {
+        background: $primary-color;
+      }
     }
 
     &_button-link {
       color: $primary-color;
+
+      &:hover {
+        color: $text-white;
+      }
     }
 
     &_stats {
@@ -61,7 +69,7 @@
   footer,
   .footer {
     &_sponsors {
-      background: $light-color;
+      background: $bg-gray;
     }
   }
 }
@@ -112,7 +120,7 @@
   @keyframes shine {
     0%,
     100% {
-      color: $text-dark;
+      color: $neutral-gray;
     }
 
     50% {

@@ -2,26 +2,20 @@
 $primary-color: #ab45e7;
 $secondary-color: transparent;
 
-// Light Theme Colors
-$light-color: #e4e0e8;
-$lighter-color: #f1f0f3;
-$white-color: #ffffff;
+// Gray Colors
 $neutral-gray: #76648b;
 
-// Dark Theme Colors
-$dark-color: #18141c;
-$black-color: #000000;
+// Background Colors
+$bg-light: #ffffff;
+$bg-gray: #f1f0f3;
+$bg-dark: #18141c;
 
 // Text Colors
-$text-white: $white-color;
-$text-light: $lighter-color;
-$text-dark: $dark-color;
-$text-gray: $dark-color;
-$text-black: $black-color;
-
-// Background Colors
-$bg-light: $white-color;
-$bg-dark: $dark-color;
+$text-white: $bg-light;
+$text-light: $bg-gray;
+$text-gray: $neutral-gray;
+$text-dark: $bg-dark;
+$text-black: #000000;
 
 // Container Width
 $container-width: 90rem;

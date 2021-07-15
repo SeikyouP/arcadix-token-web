@@ -5,13 +5,11 @@ header,
   display: flex;
   flex-direction: column;
 
-  &_top {
+  &_topbar {
     min-height: 4.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: $white-color;
+    background: $bg-light;
     padding: 0 2rem;
+    line-height: 4.5rem;
   }
 
   &_contract-address {
@@ -26,16 +24,20 @@ header,
       font-size: 2rem;
       margin-right: 2rem;
       color: $neutral-gray;
+      transition: 0.25s ease;
 
       &:last-child {
         margin-right: 0;
+      }
+
+      &:hover {
+        color: $primary-color;
       }
     }
   }
 
   &_navbar {
-    background: $lighter-color;
-
+    background: $bg-gray;
     padding: 0 4rem;
     display: flex;
     justify-content: center;
@@ -49,9 +51,14 @@ header,
     font-size: 1rem;
     font-weight: 700;
     font-family: $primary-font-stack;
+    transition: 0.25s ease;
 
     &:last-child {
       margin-right: 0;
+    }
+
+    &:hover {
+      color: $neutral-gray;
     }
   }
 }

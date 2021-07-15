@@ -145,6 +145,7 @@ html {
 }
 
 body {
+  background: #ffffff;
   min-height: 100vh;
 }
 
@@ -153,7 +154,7 @@ body {
   margin: auto;
 }
 
-.flex {
+.flex-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -163,6 +164,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 90rem;
+  margin: auto;
 }
 
 h1,
@@ -189,20 +192,12 @@ header,
           flex-direction: column;
 }
 
-header_top,
-.header_top {
+header_topbar,
+.header_topbar {
   min-height: 4.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background: #ffffff;
   padding: 0 2rem;
+  line-height: 4.5rem;
 }
 
 header_contract-address,
@@ -218,11 +213,18 @@ header_social-icons a,
   font-size: 2rem;
   margin-right: 2rem;
   color: #76648b;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
 }
 
 header_social-icons a:last-child,
 .header_social-icons a:last-child {
   margin-right: 0;
+}
+
+header_social-icons a:hover,
+.header_social-icons a:hover {
+  color: #ab45e7;
 }
 
 header_navbar,
@@ -248,11 +250,18 @@ header_navbar-link,
   font-size: 1rem;
   font-weight: 700;
   font-family: "Montserrat", "Open Sans", Arial, Helvetica, sans-serif;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
 }
 
 header_navbar-link:last-child,
 .header_navbar-link:last-child {
   margin-right: 0;
+}
+
+header_navbar-link:hover,
+.header_navbar-link:hover {
+  color: #76648b;
 }
 
 .hero {
@@ -311,20 +320,28 @@ header_navbar-link:last-child,
 .hero_button {
   background: #ab45e7;
   border-radius: 0.3125rem;
+  -webkit-transition: background 0.25s ease;
+  transition: background 0.25s ease;
 }
 
 .hero_button:last-child {
   margin-right: 0;
 }
 
+.hero_button:hover {
+  background: #76648b;
+}
+
 .hero_button-link {
-  color: #ffffff;
   display: inline-block;
   font-weight: 600;
   font-size: 1.25rem;
   font-family: "Inter", "Open Sans", Arial, Helvetica, sans-serif;
   width: 212px;
   line-height: 56px;
+  color: #ffffff;
+  -webkit-transition: color 0.25s ease;
+  transition: color 0.25s ease;
 }
 
 .hero_stats {
@@ -354,10 +371,8 @@ header_navbar-link:last-child,
           flex-direction: column;
   padding: 1rem 0;
   margin-right: 2.875rem;
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   font-family: "Montserrat", "Open Sans", Arial, Helvetica, sans-serif;
-  line-height: 2rem;
   letter-spacing: -0.02rem;
 }
 
@@ -365,18 +380,20 @@ header_navbar-link:last-child,
   margin-right: 0rem;
 }
 
-.hero_data span {
-  font-size: 0.9rem;
+.hero_data h3 {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
 }
 
-footer,
-.footer {
-  min-height: 9rem;
+.hero_data span {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: "Inter", "Open Sans", Arial, Helvetica, sans-serif;
 }
 
 footer_sponsors,
 .footer_sponsors {
-  background: #e4e0e8;
+  background: #f1f0f3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -387,6 +404,7 @@ footer_sponsors,
       -ms-flex-align: center;
           align-items: center;
   padding: 0 2rem;
+  min-height: 9rem;
 }
 
 footer_sponsors--bitmart,
@@ -418,8 +436,8 @@ footer_sponsors img:last-child,
 }
 
 @media (prefers-color-scheme: dark) {
-  header_top,
-  .header_top {
+  header_topbar,
+  .header_topbar {
     background: #18141c;
   }
   header_contract-address,
@@ -453,8 +471,14 @@ footer_sponsors img:last-child,
   .hero_button {
     background: #ffffff;
   }
+  .hero_button:hover {
+    background: #ab45e7;
+  }
   .hero_button-link {
     color: #ab45e7;
+  }
+  .hero_button-link:hover {
+    color: #ffffff;
   }
   .hero_stats {
     color: #ffffff;
@@ -462,7 +486,7 @@ footer_sponsors img:last-child,
   }
   footer_sponsors,
   .footer_sponsors {
-    background: #e4e0e8;
+    background: #f1f0f3;
   }
 }
 
@@ -537,7 +561,7 @@ footer_sponsors img:last-child,
 @-webkit-keyframes shine {
   0%,
   100% {
-    color: #18141c;
+    color: #76648b;
   }
   50% {
     color: #f1f0f3;
@@ -547,7 +571,7 @@ footer_sponsors img:last-child,
 @keyframes shine {
   0%,
   100% {
-    color: #18141c;
+    color: #76648b;
   }
   50% {
     color: #f1f0f3;

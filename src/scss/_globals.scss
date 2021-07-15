@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  // background: $text-white;
+  background: $bg-light;
   min-height: 100vh;
 }
 
@@ -18,10 +18,12 @@ body {
   margin: auto;
 }
 
-.flex {
+.flex-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: $container-width;
+  margin: auto;
 }
 
 h1,

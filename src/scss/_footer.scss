@@ -1,13 +1,12 @@
 footer,
 .footer {
-  min-height: 9rem;
-
   &_sponsors {
-    background: $light-color;
+    background: $bg-gray;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 2rem;
+    min-height: 9rem;
 
     &--bitmart {
       width: 220px;
