@@ -64,10 +64,7 @@
       color: $text-white;
       background: $bg-dark;
     }
-  }
 
-  footer,
-  .footer {
     &_sponsors {
       background: $bg-gray;
     }
@@ -79,52 +76,112 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  right: 4rem;
+  left: 2rem;
+  bottom: 2rem;
   height: 3rem;
-  width: 6rem;
+  width: 3rem;
   border: 0.125rem solid $primary-color;
-  border-radius: 1.5rem;
+  border-radius: 50%;
+  text-align: center;
+  z-index: 100;
+  // will-change: contents;
+
+  &::before {
+    content: 'Switch to Light/Dark Theme (Does Not Work Yet)';
+    position: absolute;
+    width: 28rem;
+    line-height: 3rem;
+    background: $primary-color;
+    right: -29rem;
+    text-align: center;
+    color: $text-white;
+    border-radius: 0.25rem;
+    pointer-events: none;
+    transition: background 0.25s ease, opacity 0.25s ease;
+    opacity: 0;
+  }
+
+  &:hover {
+    i {
+      animation: themeBtn 2s ease infinite;
+    }
+
+    &::before {
+      opacity: 1;
+    }
+  }
 
   .light-btn,
   .dark-btn {
+    position: absolute;
     width: 100%;
     font-size: 2rem;
     border: none;
     background-color: $secondary-color;
+    cursor: pointer;
+  }
+}
+
+.top-button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 2rem;
+  bottom: 2rem;
+  height: 3rem;
+  width: 3rem;
+  border: 0.125rem solid $primary-color;
+  border-radius: 1.5rem;
+  z-index: 100;
+
+  &::before {
+    content: 'Scroll to Top (Does Not Work Yet)';
+    position: absolute;
+    width: 18rem;
+    line-height: 3rem;
+    background: $primary-color;
+    left: -19rem;
+    text-align: center;
+    color: $text-white;
+    border-radius: 0.25rem;
+    pointer-events: none;
+    transition: background 0.25s ease, opacity 0.25s ease;
+    opacity: 0;
   }
 
-  .light-btn {
-    z-index: 1;
-    animation: spin 4s linear infinite;
-  }
-
-  .dark-btn {
-    z-index: 2;
-    animation: shine 2s ease infinite;
-  }
-
-  @keyframes spin {
-    0% {
-      transform: rotate(0) scale(1);
-    }
-
-    50% {
-      transform: rotate(180deg) scale(1.25);
-    }
-
-    100% {
-      transform: rotate(360deg) scale(1);
+  &:hover {
+    &::before {
+      opacity: 1;
     }
   }
 
-  @keyframes shine {
-    0%,
-    100% {
-      color: $neutral-gray;
-    }
+  i {
+    font-size: 1.5rem;
+    animation: topBtn 2s ease infinite;
+  }
+}
 
-    50% {
-      color: $text-light;
-    }
+@keyframes themeBtn {
+  0%,
+  100% {
+    color: $text-black;
+  }
+
+  50% {
+    color: darken($text-light, 20%);
+  }
+}
+
+@keyframes topBtn {
+  0%,
+  100% {
+    color: $text-black;
+    transform: translate3d(0, -1px, 0);
+  }
+
+  50% {
+    color: darken($text-light, 20%);
+    transform: translate3d(0, 1px, 0);
   }
 }

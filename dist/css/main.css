@@ -273,7 +273,7 @@ header_navbar-link:hover,
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  padding: 8.25rem 0;
+  padding: 8.25rem 0 0;
   background: #ffffff;
   min-height: 29.5rem;
 }
@@ -391,8 +391,7 @@ header_navbar-link:hover,
   font-family: "Inter", "Open Sans", Arial, Helvetica, sans-serif;
 }
 
-footer_sponsors,
-.footer_sponsors {
+.hero_sponsors {
   background: #f1f0f3;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -405,33 +404,29 @@ footer_sponsors,
           align-items: center;
   padding: 0 2rem;
   min-height: 9rem;
+  margin-top: 8.25rem;
 }
 
-footer_sponsors--bitmart,
-.footer_sponsors--bitmart {
+.hero_sponsors--bitmart {
   width: 220px;
   height: 54px;
 }
 
-footer_sponsors--certik,
-.footer_sponsors--certik {
+.hero_sponsors--certik {
   width: 271px;
   height: 107px;
 }
 
-footer_sponsors--coinmarketcap,
-.footer_sponsors--coinmarketcap {
+.hero_sponsors--coinmarketcap {
   width: auto;
   height: 42px;
 }
 
-footer_sponsors img,
-.footer_sponsors img {
+.hero_sponsors img {
   margin-right: 2rem;
 }
 
-footer_sponsors img:last-child,
-.footer_sponsors img:last-child {
+.hero_sponsors img:last-child {
   margin-right: 0;
 }
 
@@ -484,8 +479,7 @@ footer_sponsors img:last-child,
     color: #ffffff;
     background: #18141c;
   }
-  footer_sponsors,
-  .footer_sponsors {
+  .hero_sponsors {
     background: #f1f0f3;
   }
 }
@@ -501,79 +495,141 @@ footer_sponsors img:last-child,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  right: 4rem;
+  left: 2rem;
+  bottom: 2rem;
   height: 3rem;
-  width: 6rem;
+  width: 3rem;
   border: 0.125rem solid #ab45e7;
-  border-radius: 1.5rem;
+  border-radius: 50%;
+  text-align: center;
+  z-index: 100;
+}
+
+.theme-toggle::before {
+  content: 'Switch to Light/Dark Theme (Does Not Work Yet)';
+  position: absolute;
+  width: 28rem;
+  line-height: 3rem;
+  background: #ab45e7;
+  right: -29rem;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 0.25rem;
+  pointer-events: none;
+  -webkit-transition: background 0.25s ease, opacity 0.25s ease;
+  transition: background 0.25s ease, opacity 0.25s ease;
+  opacity: 0;
+}
+
+.theme-toggle:hover i {
+  -webkit-animation: themeBtn 2s ease infinite;
+          animation: themeBtn 2s ease infinite;
+}
+
+.theme-toggle:hover::before {
+  opacity: 1;
 }
 
 .theme-toggle .light-btn,
 .theme-toggle .dark-btn {
+  position: absolute;
   width: 100%;
   font-size: 2rem;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
-.theme-toggle .light-btn {
-  z-index: 1;
-  -webkit-animation: spin 4s linear infinite;
-          animation: spin 4s linear infinite;
+.top-button {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  right: 2rem;
+  bottom: 2rem;
+  height: 3rem;
+  width: 3rem;
+  border: 0.125rem solid #ab45e7;
+  border-radius: 1.5rem;
+  z-index: 100;
 }
 
-.theme-toggle .dark-btn {
-  z-index: 2;
-  -webkit-animation: shine 2s ease infinite;
-          animation: shine 2s ease infinite;
+.top-button::before {
+  content: 'Scroll to Top (Does Not Work Yet)';
+  position: absolute;
+  width: 18rem;
+  line-height: 3rem;
+  background: #ab45e7;
+  left: -19rem;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 0.25rem;
+  pointer-events: none;
+  -webkit-transition: background 0.25s ease, opacity 0.25s ease;
+  transition: background 0.25s ease, opacity 0.25s ease;
+  opacity: 0;
 }
 
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0) scale(1);
-            transform: rotate(0) scale(1);
-  }
-  50% {
-    -webkit-transform: rotate(180deg) scale(1.25);
-            transform: rotate(180deg) scale(1.25);
-  }
-  100% {
-    -webkit-transform: rotate(360deg) scale(1);
-            transform: rotate(360deg) scale(1);
-  }
+.top-button:hover::before {
+  opacity: 1;
 }
 
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0) scale(1);
-            transform: rotate(0) scale(1);
-  }
-  50% {
-    -webkit-transform: rotate(180deg) scale(1.25);
-            transform: rotate(180deg) scale(1.25);
-  }
-  100% {
-    -webkit-transform: rotate(360deg) scale(1);
-            transform: rotate(360deg) scale(1);
-  }
+.top-button i {
+  font-size: 1.5rem;
+  -webkit-animation: topBtn 2s ease infinite;
+          animation: topBtn 2s ease infinite;
 }
 
-@-webkit-keyframes shine {
+@-webkit-keyframes themeBtn {
   0%,
   100% {
-    color: #76648b;
+    color: #000000;
   }
   50% {
-    color: #f1f0f3;
+    color: #bcb7c6;
   }
 }
 
-@keyframes shine {
+@keyframes themeBtn {
   0%,
   100% {
-    color: #76648b;
+    color: #000000;
   }
   50% {
-    color: #f1f0f3;
+    color: #bcb7c6;
+  }
+}
+
+@-webkit-keyframes topBtn {
+  0%,
+  100% {
+    color: #000000;
+    -webkit-transform: translate3d(0, -1px, 0);
+            transform: translate3d(0, -1px, 0);
+  }
+  50% {
+    color: #bcb7c6;
+    -webkit-transform: translate3d(0, 1px, 0);
+            transform: translate3d(0, 1px, 0);
+  }
+}
+
+@keyframes topBtn {
+  0%,
+  100% {
+    color: #000000;
+    -webkit-transform: translate3d(0, -1px, 0);
+            transform: translate3d(0, -1px, 0);
+  }
+  50% {
+    color: #bcb7c6;
+    -webkit-transform: translate3d(0, 1px, 0);
+            transform: translate3d(0, 1px, 0);
   }
 }
