@@ -3,7 +3,7 @@
   flex-direction: column;
   text-align: center;
   padding: 8.25rem 0 0;
-  background: $bg-light;
+  background: $bg-dark;
   min-height: 29.5rem;
 
   &_title {
@@ -16,7 +16,7 @@
   }
 
   &_sub-title {
-    color: $neutral-gray;
+    color: $text-white;
     font-size: 2rem;
     font-weight: 600;
     font-family: $primary-font-stack;
@@ -26,7 +26,7 @@
 
   &_description {
     font-size: 1.25rem;
-    color: $neutral-gray;
+    color: $text-light;
     font-family: $tertiary-font-stack;
     width: 38.375rem;
     margin: auto;
@@ -40,7 +40,7 @@
   }
 
   &_button {
-    background: $primary-color;
+    background: $bg-light;
     border-radius: 0.3125rem;
     transition: background 0.25s ease;
 
@@ -49,7 +49,7 @@
     }
 
     &:hover {
-      background: $neutral-gray;
+      background: $primary-color;
     }
   }
 
@@ -60,12 +60,16 @@
     font-family: $secondary-font-stack;
     width: 212px;
     line-height: 56px;
-    color: $text-white;
+    color: $primary-color;
     transition: color 0.25s ease;
+
+    &:hover {
+      color: $text-white;
+    }
   }
 
   &_stats {
-    color: $primary-color;
+    color: $text-white;
     font-weight: 700;
     min-height: 4.5rem;
     display: flex;

@@ -1,0 +1,50 @@
+.top-button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 2rem;
+  bottom: 2rem;
+  height: 3rem;
+  width: 3rem;
+  border: 0.125rem solid $primary-color;
+  border-radius: 1.5rem;
+  z-index: 100;
+
+  &::before {
+    content: 'Scroll to Top (Does Not Work Yet)';
+    position: absolute;
+    width: 18rem;
+    line-height: 3rem;
+    background: $primary-color;
+    left: -19rem;
+    text-align: center;
+    color: $text-white;
+    border-radius: 0.25rem;
+    pointer-events: none;
+    transition: background 0.25s ease, opacity 0.25s ease;
+    opacity: 0;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  i {
+    font-size: 1.5rem;
+    animation: topBtn 1.5s ease infinite;
+  }
+}
+
+@keyframes topBtn {
+  0%,
+  100% {
+    color: $text-black;
+  }
+
+  50% {
+    color: darken($text-light, 20%);
+  }
+}

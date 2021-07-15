@@ -7,7 +7,7 @@ header,
 
   &_topbar {
     min-height: 4.5rem;
-    background: $bg-light;
+    background: $bg-dark;
     padding: 0 2rem;
     line-height: 4.5rem;
   }
@@ -16,14 +16,14 @@ header,
     font-size: 1.25rem;
     font-weight: 600;
     font-family: $secondary-font-stack;
-    color: $neutral-gray;
+    color: $text-white;
   }
 
   &_social-icons {
     a {
       font-size: 2rem;
       margin-right: 2rem;
-      color: $neutral-gray;
+      color: $text-white;
       transition: 0.25s ease;
 
       &:last-child {
@@ -37,7 +37,7 @@ header,
   }
 
   &_navbar {
-    background: $bg-gray;
+    background: $bg-light;
     padding: 0 4rem;
     display: flex;
     justify-content: center;
