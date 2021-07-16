@@ -30,76 +30,184 @@
   <body>
     <!-- Start of Header Section -->
     <header class="header">
-      <div class="header_topbar">
-        <div class="flex-container">
-          <div class="header_contract-address">
-            <span>CONTRACT ADDRESS | 0xd8c202fc83792D98FB94c1FA2FdaC5702A75dF1C</span>
-          </div>
-          <div class="header_social-icons">
-            <a class="header_social-icon" href="#"><i class="fab fa-telegram-plane"></i></a>
-            <a class="header_social-icon" href="#"><i class="fab fa-discord"></i></a>
-            <a class="header_social-icon" href="#"><i class="fab fa-twitter"></i></a>
-            <a class="header_social-icon" href="#"><i class="fab fa-youtube"></i></a>
-            <a class="header_social-icon" href="#"><i class="fab fa-linkedin"></i></a>
-            <a class="header_social-icon" href="#"><i class="fab fa-reddit-alien"></i></a>
-          </div>
-        </div>
-      </div>
+      <div class="header_navbar container-1080">
+        <a href="#">
+          <img class="header_logo" src="src/assets/img/logo.svg" alt="header_logo" />
+        </a>
 
-      <div class="header_navbar">
-        <a class="header_navbar-link" href="#">Home</a>
-        <a class="header_navbar-link" href="#">About</a>
-        <a class="header_navbar-link" href="#">Team</a>
-        <a class="header_navbar-link" href="#">Community</a>
-        <a class="header_navbar-link" href="#">Tokenomics</a>
-        <a class="header_navbar-link" href="#">Roadmap</a>
+        <div class="header_menu">
+          <a class="header_menu-link" href="#">Home</a>
+          <a class="header_menu-link" href="#">Team</a>
+          <a class="header_menu-link" href="#">Projects</a>
+          <a class="header_menu-link" href="#">Roadmap</a>
+          <a class="header_menu-link" href="#">Tokenomics</a>
+          <a class="header_menu-link" href="#">Buy Arcadix</a>
+        </div>
       </div>
     </header>
     <!-- End of Header Section -->
 
     <main class="content-area">
-      <section class="hero">
-        <div class="hero_title">Arcadix Token</div>
-        <div class="hero_sub-title">One Coin. One Future.</div>
-        <p class="hero_description">
-          We are an audiovisual platform with the main goal being to help creators monetize their content seamlessly and
-          connect with their fans.
-        </p>
+      <!-- Start of Home Section -->
+      <section class="home">
+        <div class="home_hero container-960">
+          <div class="home_title">
+            One Coin<span class="home_color">.</span> One Future<span class="home_color">.</span>
+          </div>
+          <p class="home_description">
+            We are an audiovisual platform with the main goal being to help creators monetize their content seamlessly
+            and connect with their fans with an ecosystem of decentralized apps powered by Acradix.
+          </p>
 
-        <div class="hero_buttons">
-          <div class="hero_button">
-            <a href="#" class="hero_button-link">How to Buy</a>
+          <div class="home_contract-address">
+            Contract Address:
+            <span class="home_color">0xd8c202fc83792D98FB94c1FA2FdaC5702A75dF1C</span>
+          </div>
+
+          <div class="home_buttons">
+            <a href="#" class="home_button">Tokenomics</a>
+            <a href="#" class="home_button">
+              <span> Meet the team </span>
+              <i class="far fa-clock"></i>
+            </a>
+          </div>
+
+          <div class="home_stats">
+            <div class="home_data">
+              <h3>0.0001</h3>
+              <span>current price</span>
+            </div>
+            <div class="home_data">
+              <h3>15,000</h3>
+              <span>holders</span>
+            </div>
+            <div class="home_data">
+              <h3>$1,000,000</h3>
+              <span>liquidity</span>
+            </div>
+            <div class="home_data">
+              <h3>$5,000,000</h3>
+              <span>market cap</span>
+            </div>
           </div>
         </div>
 
-        <div class="hero_stats">
-          <div class="hero_data">
-            <h3>---</h3>
-            <span>Current Price</span>
+        <div class="home_cards container-960">
+          <div class="home_card">
+            <img class="home_card-icon" src="src/assets/img/arrow_icon.svg" alt="home_card-icon" />
+            <h3 class="home_card-title">Original Supply</h3>
+            <span class="home_card-number">-----------------------</span>
           </div>
-          <div class="hero_data">
-            <h3>---</h3>
-            <span>Holders</span>
+
+          <div class="home_card">
+            <img class="home_card-icon" src="src/assets/img/arrow_icon.svg" alt="home_card-icon" />
+            <h3 class="home_card-title">14% Tax On Transactions</h3>
+            <span class="home_card-number">-----------------------</span>
           </div>
-          <div class="hero_data">
-            <h3>---</h3>
-            <span>Supply</span>
-          </div>
-          <div class="hero_data">
-            <h3>---</h3>
-            <span>Market Cap</span>
+
+          <div class="home_card">
+            <img class="home_card-icon" src="src/assets/img/diamond_icon.svg" alt="home_card-icon" />
+            <h3 class="home_card-title">Diamond Hand Holders Only</h3>
+            <span class="home_card-number">-----------------------</span>
           </div>
         </div>
-        <div class="hero_sponsors">
-          <img class="hero_sponsors--bitmart" src="src/assets/img/bitmart.png" alt="bitmart_img" />
-          <img class="hero_sponsors--certik" src="src/assets/img/certik.png" alt="certik_img" />
-          <img class="hero_sponsors--coinmarketcap" src="src/assets/img/coinmarketcap.png" alt="coinmarketcap_img" />
+
+        <div class="button-section container-960">
+          <div class="home_buttons home_buttons--alt container-960">
+            <a href="#" class="home_button">Read our Whitepaper</a>
+            <a href="#" class="home_button">
+              <span> Read our Roadmap </span>
+            </a>
+          </div>
         </div>
       </section>
+      <!-- End of Home Section -->
+      <div class="line"></div>
+      <!-- Start of Team Section -->
+      <section class="team">
+        <h3 class="team_title">Meet Our Core Team<span class="team_title--period">.</span></h3>
+
+        <div class="team_cards">
+          <div class="team_card">
+            <div class="team_profile">
+              <img class="team_image" src="src/assets/img/forest_park.png" alt="forest_park" />
+              <div class="team_overlay"></div>
+            </div>
+            <p class="team_name">Forest Park</p>
+            <p class="team_role">Chief Technology Officer | Founder</p>
+          </div>
+
+          <div class="team_card">
+            <div class="team_profile">
+              <img class="team_image" src="src/assets/img/james_floreani.png" alt="james_floreani" />
+              <div class="team_overlay"></div>
+            </div>
+            <p class="team_name">James Floreani</p>
+            <p class="team_role">Chief Executive Officer | Founder</p>
+          </div>
+
+          <div class="team_card">
+            <div class="team_profile">
+              <img class="team_image" src="src/assets/img/ryan_koroll.png" alt="ryan_koroll" />
+              <div class="team_overlay"></div>
+            </div>
+            <p class="team_name">Ryan Koroll</p>
+            <p class="team_role">Chief Operations Officer</p>
+          </div>
+        </div>
+
+        <div class="team_cards">
+          <div class="team_card">
+            <div class="team_profile">
+              <img class="team_image" src="src/assets/img/adam_shomer.png" alt="adam_shomer" />
+              <div class="team_overlay"></div>
+            </div>
+            <p class="team_name">Adam Shomer</p>
+            <p class="team_role">VP, Business Development</p>
+          </div>
+
+          <div class="team_card">
+            <div class="team_profile">
+              <img class="team_image" src="src/assets/img/jacob_kaplan.png" alt="jacob_kaplan" />
+              <div class="team_overlay"></div>
+            </div>
+            <p class="team_name">Jacob Kaplan</p>
+            <p class="team_role">VP, Crypto Operations</p>
+          </div>
+
+          <div class="team_card">
+            <div class="team_profile">
+              <img class="team_image" src="src/assets/img/byron_onwas.png" alt="byron_onwas" />
+              <div class="team_overlay"></div>
+            </div>
+            <p class="team_name">Byron Onwas</p>
+            <p class="team_role">VP, Design Lead</p>
+          </div>
+
+          <div class="team_card">
+            <div class="team_profile">
+              <img class="team_image" src="src/assets/img/naresh_gordon.png" alt="naresh_gordon" />
+              <div class="team_overlay"></div>
+            </div>
+            <p class="team_name">Naresh Gordon</p>
+            <p class="team_role">Chief Financial Officer</p>
+          </div>
+        </div>
+      </section>
+      <!-- End of Team Section -->
     </main>
 
     <!-- Start of Footer Section -->
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <!-- <div class="footer_social-icons">
+        <a class="footer_social-icon" href="#"><i class="fab fa-telegram-plane"></i></a>
+        <a class="footer_social-icon" href="#"><i class="fab fa-discord"></i></a>
+        <a class="footer_social-icon" href="#"><i class="fab fa-twitter"></i></a>
+        <a class="footer_social-icon" href="#"><i class="fab fa-youtube"></i></a>
+        <a class="footer_social-icon" href="#"><i class="fab fa-linkedin"></i></a>
+        <a class="footer_social-icon" href="#"><i class="fab fa-reddit-alien"></i></a>
+      </div> -->
+    </footer>
     <!-- End of Footer Section -->
 
     <!-- Start of Top Button -->

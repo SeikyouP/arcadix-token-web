@@ -1,0 +1,62 @@
+.team {
+  text-align: center;
+  max-width: 60rem;
+  margin: 12rem auto;
+
+  &_title {
+    font-weight: 700;
+    font-size: 2.125rem;
+    line-height: 2.5rem;
+    font-family: $primary-font-stack;
+    text-transform: uppercase;
+    letter-spacing: -0.04em;
+    margin-bottom: 8.25rem;
+
+    &--period {
+      @include span-color;
+    }
+  }
+
+  &_cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:first-child {
+      margin-bottom: 4.125rem;
+    }
+
+    &:last-child {
+      margin: 4rem auto;
+      margin-bottom: 4.125rem;
+    }
+  }
+
+  &_card {
+    margin-right: 4rem;
+    height: 16.5rem;
+    width: 11rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &_name {
+    font-family: $primary-font-stack;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    text-align: center;
+    margin: 1rem auto 0.5rem;
+    width: 10ch;
+    line-height: 1.5rem;
+  }
+
+  &_role {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: $primary-color;
+  }
+}

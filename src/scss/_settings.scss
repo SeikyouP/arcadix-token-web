@@ -1,26 +1,15 @@
 // Main Colors
 $primary-color: #ab45e7;
-$secondary-color: transparent;
-
-// Gray Colors
-$neutral-gray: #76648b;
-
-// Background Colors
-$bg-light: #ffffff;
-$bg-gray: #f1f0f3;
-$bg-dark: #18141c;
-
-// Text Colors
-$text-white: $bg-light;
-$text-light: $bg-gray;
-$text-gray: $neutral-gray;
-$text-dark: $bg-dark;
-$text-black: #000000;
+$secondary-color: #f1f0f3;
+$tertiary-color: #7205f6;
+$body-color: linear-gradient(180deg, rgba(171, 69, 231, 0.2) 0%, rgba(0, 0, 0, 0.2) 50%), #170131;
+$line-color: rgba(241, 240, 243, 0.25);
 
 // Container Width
-$container-width: 90rem;
+$container-width-1080: 67.5rem;
+$container-width-960: 60rem;
 
-// Font Family
+// Font Family Stacks
 $primary-font-stack: 'Montserrat', 'Open Sans', Arial, Helvetica, sans-serif;
 $secondary-font-stack: 'Inter', 'Open Sans', Arial, Helvetica, sans-serif;
 $tertiary-font-stack: 'Poppins', 'Open Sans', Arial, Helvetica, sans-serif;

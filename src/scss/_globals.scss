@@ -5,24 +5,22 @@
 }
 
 html {
-  font-family: $default-font-stack;
+  font-family: $primary-font-stack;
 }
 
 body {
-  background: $bg-light;
+  background: $body-color;
+  color: $secondary-color;
   min-height: 100vh;
 }
 
-.container {
-  max-width: $container-width;
+.container-1080 {
+  max-width: $container-width-1080;
   margin: auto;
 }
 
-.flex-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: $container-width;
+.container-960 {
+  max-width: $container-width-960;
   margin: auto;
 }
 
@@ -31,8 +29,15 @@ h2,
 h3,
 p {
   line-height: 2rem;
+  letter-spacing: -0.02em;
 }
 
 a {
   text-decoration: none;
+  letter-spacing: -0.02em;
+  color: $secondary-color;
+}
+
+@mixin span-color {
+  color: $primary-color;
 }
