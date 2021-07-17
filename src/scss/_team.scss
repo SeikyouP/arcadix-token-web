@@ -21,6 +21,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 4rem;
 
     &:first-child {
       margin-bottom: 4.125rem;
@@ -33,13 +34,8 @@
   }
 
   &_card {
-    margin-right: 4rem;
     height: 16.5rem;
     width: 11rem;
-
-    &:last-child {
-      margin-right: 0;
-    }
   }
 
   &_name {
@@ -58,5 +54,13 @@
     font-size: 1rem;
     line-height: 1.25rem;
     color: $primary-color;
+  }
+}
+
+@media (max-width: 959px) {
+  .team {
+    &_cards {
+      flex-wrap: wrap;
+    }
   }
 }

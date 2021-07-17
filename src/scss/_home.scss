@@ -29,6 +29,8 @@
     display: flex;
     align-items: center;
     margin: 3rem 0 2rem;
+    gap: 1.25rem;
+    flex-wrap: wrap;
 
     &--alt {
       margin-top: 0;
@@ -41,20 +43,17 @@
     display: inline-block;
     font-weight: 700;
     font-size: 0.875rem;
-    padding: 0 1.5rem;
+    padding: 0 1.25rem;
     line-height: 2.875rem;
     transition: color 0.25s ease;
     text-align: center;
     transition: background 0.25s ease;
-    margin-right: 1.25rem;
     background: $primary-color;
     border-radius: 0.3125rem;
 
     &:last-child {
       background: $secondary-color;
       color: $primary-color;
-      padding: 0 0.875rem;
-      margin-right: 0;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -76,6 +75,7 @@
     align-items: center;
     text-align: center;
     padding: 2rem 0;
+    flex-wrap: wrap;
   }
 
   &_data {
@@ -97,18 +97,21 @@
   }
 
   &_cards {
-    padding: 4.5rem 0;
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     text-align: center;
+    flex-wrap: wrap;
+    gap: 3.75rem;
   }
 
   &_card {
     border: 4px solid $tertiary-color;
     border-radius: 1.875rem;
     padding: 2rem 3.5rem;
-    width: 16.375rem;
+    flex-basis: 16.375rem;
     height: 20.9375rem;
     display: flex;
     flex-direction: column;
@@ -134,5 +137,65 @@
     font-weight: 600;
     font-size: 0.75rem;
     line-height: 1.125rem;
+  }
+}
+
+@media (max-width: 959px) {
+  .home {
+    text-align: center;
+    &_description {
+      margin: auto;
+      width: 75%;
+    }
+
+    &_buttons {
+      justify-content: center;
+    }
+
+    &_stats {
+      justify-content: center;
+      gap: 6rem;
+    }
+
+    &_cards {
+      gap: 2rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    padding: 15rem 0 0;
+    &_description {
+      width: 90%;
+    }
+
+    &_data {
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      span {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .home {
+    &_description {
+      font-size: 0.8rem;
+      width: 100%;
+    }
+
+    &_contract-address {
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    &_stats {
+      flex-direction: column;
+    }
   }
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Metadata -->
+    <!-- METADATA -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,13 +14,18 @@
       rel="stylesheet"
     />
 
-    <!-- CSS.GG ICONS (CDN Source: https://css.gg/) -->
+    <!-- FAVICONS -->
+    <link rel="apple-touch-icon" sizes="144x144" href="src/assets/img/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="src/assets/img/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="src/assets/img/favicons/favicon-16x16.png" />
+
+    <!-- CSS.GG ICONS -->
     <link href="https://unpkg.com/css.gg/icons/all.css" rel="stylesheet" />
 
     <!-- FONT AWESOME ICONS -->
     <script src="https://kit.fontawesome.com/57287a8829.js" crossorigin="anonymous"></script>
 
-    <!-- Title -->
+    <!-- TITLE -->
     <title>Arcadix Token</title>
 
     <!-- CSS -->
@@ -31,28 +36,56 @@
     <!-- Start of Header Section -->
     <header class="header">
       <div class="header_navbar container-1080">
-        <a href="#">
+        <a href="https://www.arcadixtoken.io">
           <img class="header_logo" src="src/assets/img/logo.svg" alt="header_logo" />
         </a>
 
         <div class="header_menu">
           <a class="header_menu-link" href="#">Home</a>
-          <a class="header_menu-link" href="#">Team</a>
-          <a class="header_menu-link" href="#">Projects</a>
-          <a class="header_menu-link" href="#">Roadmap</a>
-          <a class="header_menu-link" href="#">Tokenomics</a>
+          <a class="header_menu-link" href="#team">Team</a>
+          <a class="header_menu-link" href="#projects">Projects</a>
+          <a class="header_menu-link" href="#roadmap">Roadmap</a>
+          <a class="header_menu-link" href="#tokenomics">Tokenomics</a>
           <a class="header_menu-link" href="#">Buy Arcadix</a>
         </div>
       </div>
     </header>
     <!-- End of Header Section -->
 
+    <!-- Start of Mobile Header Section -->
+    <header class="mobile-header">
+      <div class="mobile-header_navbar">
+        <div class="mobile-header_topbar">
+          <a href="https://www.arcadixtoken.io">
+            <img class="mobile-header_logo" src="src/assets/img/logo.svg" alt="mobile-header_logo" />
+          </a>
+
+          <button class="mobile-header_button hamburger hamburger--squeeze" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+
+        <div class="mobile-header_menu">
+          <a class="mobile-header_menu-link" href="#">Home</a>
+          <a class="mobile-header_menu-link" href="#team">Team</a>
+          <a class="mobile-header_menu-link" href="#projects">Projects</a>
+          <a class="mobile-header_menu-link" href="#roadmap">Roadmap</a>
+          <a class="mobile-header_menu-link" href="#tokenomics">Tokenomics</a>
+          <a class="mobile-header_menu-link" href="#">Buy Arcadix</a>
+        </div>
+      </div>
+    </header>
+    <!-- End of Mobile Header Section -->
+
     <main class="content-area">
       <!-- Start of Home Section -->
       <section class="home">
         <div class="home_hero container-960">
           <div class="home_title">
-            One Coin<span class="home_color">.</span> One Future<span class="home_color">.</span>
+            One Coin<span class="home_color">.</span>
+            <span class="next-line"> One Future<span class="home_color">.</span></span>
           </div>
           <p class="home_description">
             We are an audiovisual platform with the main goal being to help creators monetize their content seamlessly
@@ -65,8 +98,8 @@
           </div>
 
           <div class="home_buttons">
-            <a href="#" class="home_button">Tokenomics</a>
-            <a href="#" class="home_button">
+            <a href="#tokenomics" class="home_button">Tokenomics</a>
+            <a href="#team" class="home_button">
               <span> Meet the Team </span>
               <!-- <i class="far fa-clock"></i> -->
             </a>
@@ -122,10 +155,16 @@
         </div>
       </section>
       <!-- End of Home Section -->
-      <div class="line"></div>
+
+      <div class="container-960">
+        <div class="line"></div>
+      </div>
+
       <!-- Start of Team Section -->
-      <section class="team">
-        <h3 class="team_title">Meet Our Core Team<span class="team_title--period">.</span></h3>
+      <section class="team container-960" id="team">
+        <h3 class="team_title">
+          Meet Our <span class="next-line"> Core Team<span class="team_title--period">.</span></span>
+        </h3>
 
         <div class="team_cards">
           <div class="team_card">

@@ -3,16 +3,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  right: 2rem;
-  bottom: 2rem;
-  height: 3rem;
+  right: 0.25rem;
+  bottom: 0.25rem;
+  height: 6rem;
   width: 3rem;
   border: 0.25rem solid $primary-color;
   border-radius: 1.5rem;
-  z-index: 100;
+  background: $body-color;
+  z-index: 99;
+  transform: translateY(6.25rem);
+  transition: 0.25s ease-in-out 0.25s;
+
+  &--active {
+    transform: translateY(0);
+  }
 
   &::before {
-    content: 'Scroll to Top (Does Not Work Yet)';
+    content: 'Scroll to Top (It Works, but has bugs)';
     position: absolute;
     width: 18rem;
     line-height: 3rem;
@@ -22,7 +29,7 @@
     color: $secondary-color;
     border-radius: 0.25rem;
     pointer-events: none;
-    transition: background 0.25s ease, opacity 0.25s ease;
+    transition: background 0.25s ease 0.25s, opacity 0.25s ease 0.25s;
     opacity: 0;
   }
 
@@ -51,8 +58,6 @@
 
 // Line
 .line {
-  margin: auto;
-  width: 63.75rem;
   height: 0.25rem;
   background: $line-color;
 }

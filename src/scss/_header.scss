@@ -1,3 +1,4 @@
+// Desktop Header
 header,
 .header {
   &_navbar {
@@ -33,5 +34,101 @@ header,
     &:hover {
       color: $primary-color;
     }
+  }
+}
+
+// Mobile Header
+.mobile-header {
+  height: 9rem;
+  background: $body-color-alt;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+  overflow-x: hidden;
+  transition: height 0.5s ease;
+
+  &_active {
+    height: 100%;
+  }
+
+  &_navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_topbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    min-height: 4.5rem;
+    margin-top: 4.5rem;
+    padding: 0 1rem;
+  }
+
+  &_menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: calc(100vh - 9rem);
+    background: $body-color;
+  }
+
+  &_menu-link {
+    font-size: 1rem;
+    font-weight: 700;
+    transition: 0.25s ease;
+    padding: 2rem 0;
+    border-bottom: 2px solid $secondary-color;
+
+    &:first-child {
+      border-top: 4px solid $secondary-color;
+    }
+
+    &:last-child {
+      border: 4px solid #f1f0f3;
+      padding: 0.75rem 1.125rem;
+      border-radius: 0.5rem;
+      margin: 2rem auto 0;
+      width: 10rem;
+
+      &:hover {
+        color: $primary-color;
+        border: 4px solid $primary-color;
+      }
+    }
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+.mobile-header {
+  display: none;
+}
+
+@media (max-width: 959px) {
+  .header {
+    &_menu-link {
+      margin-right: 1rem;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    display: none;
+  }
+
+  .mobile-header {
+    display: block;
   }
 }

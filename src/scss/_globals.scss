@@ -6,22 +6,26 @@
 
 html {
   font-family: $primary-font-stack;
+  scroll-behavior: smooth;
 }
 
 body {
   background: $body-color;
   color: $secondary-color;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .container-1080 {
   max-width: $container-width-1080;
   margin: auto;
+  padding: 0 1rem;
 }
 
 .container-960 {
   max-width: $container-width-960;
   margin: auto;
+  padding: 0 1rem;
 }
 
 h1,
@@ -40,4 +44,10 @@ a {
 
 @mixin span-color {
   color: $primary-color;
+}
+
+@media (max-width: 31.25rem) {
+  .next-line {
+    display: block;
+  }
 }
