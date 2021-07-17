@@ -18,14 +18,15 @@ for (i = 0; i < menuLinks.length; i++) {
   })
 }
 
+// Listen for Scroll Event
 window.addEventListener('scroll', function () {
   // Check where (y-position) the top button should be visible
-  if (window.pageYOffset >= 288) {
+  if (window.pageYOffset >= 300) {
     topButton.classList.add('top-button--active')
   }
 
   // Otherwise, check which Y-position the top button should be invisible
-  else if (window.pageYOffset < 144) {
+  else if (window.pageYOffset < 300) {
     topButton.classList.remove('top-button--active')
   }
 })

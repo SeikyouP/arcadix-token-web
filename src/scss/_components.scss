@@ -12,10 +12,12 @@
   background: $body-color;
   z-index: 99;
   transform: translateY(6.25rem);
-  transition: 0.25s ease-in-out 0.25s;
+  transition: 0.5s ease-in-out 0.25s;
+  opacity: 0;
 
   &--active {
     transform: translateY(0);
+    opacity: 1;
   }
 
   &::before {

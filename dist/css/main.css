@@ -378,7 +378,7 @@ header_menu-link:hover,
   bottom: 0;
   width: 100%;
   z-index: 100;
-  overflow-x: hidden;
+  overflow: hidden;
   -webkit-transition: height 0.5s ease;
   transition: height 0.5s ease;
 }
@@ -837,13 +837,15 @@ footer_social-icons a:hover,
   z-index: 99;
   -webkit-transform: translateY(6.25rem);
           transform: translateY(6.25rem);
-  -webkit-transition: 0.25s ease-in-out 0.25s;
-  transition: 0.25s ease-in-out 0.25s;
+  -webkit-transition: 0.5s ease-in-out 0.25s;
+  transition: 0.5s ease-in-out 0.25s;
+  opacity: 0;
 }
 
 .top-button--active {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+  opacity: 1;
 }
 
 .top-button::before {
