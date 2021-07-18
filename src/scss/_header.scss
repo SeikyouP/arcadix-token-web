@@ -21,22 +21,16 @@ header,
     display: flex;
     flex-grow: 1;
     align-items: center;
-    gap: 1.25rem;
   }
 
   &_menu-link {
     font-size: 0.875rem;
     font-weight: 700;
     transition: 0.25s ease;
-
-    @supports not (gap: 1.25rem) {
-      margin-right: 1.25rem;
-    }
+    margin-right: 1.25rem;
 
     &:last-child {
-      @supports not (gap: 1.25rem) {
-        margin-right: 0;
-      }
+      margin-right: 0;
     }
 
     &:hover {
