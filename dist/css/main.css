@@ -377,7 +377,6 @@ header_menu,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1.25rem;
 }
 
 header_menu-link,
@@ -386,20 +385,12 @@ header_menu-link,
   font-weight: 700;
   -webkit-transition: 0.25s ease;
   transition: 0.25s ease;
+  margin-right: 1.25rem;
 }
 
-@supports not (gap: 1.25rem) {
-  header_menu-link,
-  .header_menu-link {
-    margin-right: 1.25rem;
-  }
-}
-
-@supports not (gap: 1.25rem) {
-  header_menu-link:last-child,
-  .header_menu-link:last-child {
-    margin-right: 0;
-  }
+header_menu-link:last-child,
+.header_menu-link:last-child {
+  margin-right: 0;
 }
 
 header_menu-link:hover,
@@ -1072,26 +1063,36 @@ header_menu-button:hover,
 .project-roadmap_rectangle {
   width: 100%;
   min-height: 264px;
-  background: #7205f6;
+  background: #f1f0f3;
   position: relative;
   border-radius: 0px 50px 50px 0px;
   padding: 4.625rem 5.875rem;
   text-align: right;
 }
 
+.project-roadmap_rectangle:last-child {
+  border-radius: 50px 50px 50px 50px;
+  position: relative;
+  margin: 6.25rem 0;
+}
+
+.project-roadmap_rectangle:last-child > * {
+  text-align: center;
+  border-radius: 50px;
+}
+
 .project-roadmap_rectangle > * {
   text-align: right;
 }
 
-.project-roadmap_rectangle:nth-child(even) {
-  background: #ab45e7;
+.project-roadmap_rectangle:nth-child(2) {
   position: relative;
   padding: 4.625rem 5.875rem;
   margin: 6.25rem 0;
   border-radius: 50px 0px 0px 50px;
 }
 
-.project-roadmap_rectangle:nth-child(even) > * {
+.project-roadmap_rectangle:nth-child(2) > * {
   text-align: left;
 }
 

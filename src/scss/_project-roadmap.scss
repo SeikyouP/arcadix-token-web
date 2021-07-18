@@ -42,18 +42,29 @@
   &_rectangle {
     width: 100%; // 86px space
     min-height: 264px;
-    background: $tertiary-color;
+    background: $secondary-color;
     position: relative;
     border-radius: 0px 50px 50px 0px;
     padding: 4.625rem 5.875rem;
     text-align: right;
 
+    &:last-child {
+      border-radius: 50px 50px 50px 50px;
+      position: relative;
+      margin: 6.25rem 0;
+
+      & > * {
+        text-align: center;
+        border-radius: 50px;
+      }
+    }
+
     & > * {
       text-align: right;
     }
 
-    &:nth-child(even) {
-      background: $primary-color;
+    &:nth-child(2) {
+      // background: $primary-color;
       position: relative;
       padding: 4.625rem 5.875rem;
       margin: 6.25rem 0;
