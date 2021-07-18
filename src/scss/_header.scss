@@ -29,6 +29,16 @@ header,
     font-weight: 700;
     transition: 0.25s ease;
 
+    @supports not (gap: 1.25rem) {
+      margin-right: 1.25rem;
+    }
+
+    &:last-child {
+      @supports not (gap: 1.25rem) {
+        margin-right: 0;
+      }
+    }
+
     &:hover {
       color: $primary-color;
     }
