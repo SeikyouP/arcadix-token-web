@@ -1,6 +1,5 @@
 .project-roadmap {
   position: relative;
-  background: $secondary-color;
 
   &_inner {
     padding-top: 12rem;
@@ -88,7 +87,7 @@
   .project-roadmap {
     &_rectangle {
       border-radius: 0;
-          padding: 5rem;
+      padding: 5rem;
 
       p {
         font-size: 1rem;
@@ -100,7 +99,7 @@
 
       &:nth-child(even) {
         border-radius: 0;
-            padding: 5rem;
+        padding: 5rem;
 
         & > * {
           text-align: center;

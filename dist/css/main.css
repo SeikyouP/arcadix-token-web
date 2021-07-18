@@ -583,6 +583,10 @@ header_menu-button:hover,
   position: relative;
 }
 
+.home .hero_button:hover {
+  background: #7717af;
+}
+
 .home .hero_button:last-child {
   background: #f1f0f3;
   color: #ab45e7;
@@ -595,6 +599,10 @@ header_menu-button:hover,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.home .hero_button:last-child:hover {
+  background: #bcb7c6;
 }
 
 .home .hero_button:last-child i {
@@ -742,6 +750,10 @@ header_menu-button:hover,
   position: relative;
 }
 
+.home .misc_button:hover {
+  background: #7717af;
+}
+
 .home .misc_button::before {
   content: '(Coming Soon)';
   position: absolute;
@@ -776,6 +788,10 @@ header_menu-button:hover,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.home .misc_button:last-child:hover {
+  background: #bcb7c6;
 }
 
 .home .misc_button:last-child::before {
@@ -993,7 +1009,6 @@ header_menu-button:hover,
 
 .project-roadmap {
   position: relative;
-  background: #f1f0f3;
 }
 
 .project-roadmap_inner {
@@ -1202,6 +1217,10 @@ header_menu-button:hover,
   position: relative;
 }
 
+.tokenomics_button:hover {
+  background: #7717af;
+}
+
 .tokenomics_button::before {
   content: '(Coming Soon)';
   position: absolute;
@@ -1236,6 +1255,10 @@ header_menu-button:hover,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.tokenomics_button:last-child:hover {
+  background: #bcb7c6;
 }
 
 .tokenomics_button:last-child::before {
