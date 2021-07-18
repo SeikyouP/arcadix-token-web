@@ -108,14 +108,14 @@
       align-items: center;
       text-align: center;
       width: 100%;
-      gap: 3.625rem;
+      gap: 3rem;
       flex-wrap: wrap;
     }
 
     &_card {
       border: 0.25rem solid $tertiary-color;
       border-radius: 1.875rem;
-      width: 16.25rem;
+      width: 16rem;
       height: 21rem;
       display: flex;
       flex-direction: column;
@@ -210,6 +210,7 @@
   }
 }
 
+// Media Queries
 @media (max-width: 959px) {
   .home {
     .hero {
@@ -246,10 +247,16 @@
         justify-content: center;
         gap: 6rem;
       }
-    }
 
-    &_cards {
-      gap: 2rem;
+      &_data-info {
+        h3 {
+          font-size: 1.5rem;
+        }
+
+        span {
+          font-size: 1.25rem;
+        }
+      }
     }
   }
 }
@@ -276,17 +283,6 @@
       }
     }
 
-    .stats {
-      &_data-info {
-        h3 {
-          font-size: 1.5rem;
-        }
-
-        span {
-          font-size: 1.25rem;
-        }
-      }
-    }
     .misc {
       .inner-gutter {
         padding-left: 1rem;

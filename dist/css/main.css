@@ -656,7 +656,7 @@ header_menu-button:hover,
           align-items: center;
   text-align: center;
   width: 100%;
-  gap: 3.625rem;
+  gap: 3rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -664,7 +664,7 @@ header_menu-button:hover,
 .home .promotion_card {
   border: 0.25rem solid #7205f6;
   border-radius: 1.875rem;
-  width: 16.25rem;
+  width: 16rem;
   height: 21rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -824,8 +824,11 @@ header_menu-button:hover,
             justify-content: center;
     gap: 6rem;
   }
-  .home_cards {
-    gap: 2rem;
+  .home .stats_data-info h3 {
+    font-size: 1.5rem;
+  }
+  .home .stats_data-info span {
+    font-size: 1.25rem;
   }
 }
 
@@ -843,12 +846,6 @@ header_menu-button:hover,
   }
   .home .hero_image img {
     width: 200px;
-  }
-  .home .stats_data-info h3 {
-    font-size: 1.5rem;
-  }
-  .home .stats_data-info span {
-    font-size: 1.25rem;
   }
   .home .misc .inner-gutter {
     padding-left: 1rem;
@@ -906,7 +903,7 @@ header_menu-button:hover,
   font-family: "Montserrat", "Open Sans", Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   letter-spacing: -0.04em;
-  margin-bottom: 8.25rem;
+  margin-bottom: 7rem;
 }
 
 .team_title--period {
@@ -923,32 +920,40 @@ header_menu-button:hover,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 4rem;
-}
-
-.team_cards:first-child {
-  margin-bottom: 4.125rem;
-}
-
-.team_cards:last-child {
-  margin: 4rem auto;
-  margin-bottom: 4.125rem;
+  gap: 1.25rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 8.25rem;
 }
 
 .team_card {
-  height: 16.5rem;
-  width: 11rem;
+  height: 18.75rem;
+  width: 12.5rem;
+  border: 0.25rem solid #7205f6;
+  border-radius: 1.875rem;
+}
+
+.team_profile {
+  padding: 1.25rem 0 2rem;
+}
+
+.team_image {
+  width: 7.75rem;
+  height: 7.75rem;
 }
 
 .team_name {
   font-family: "Montserrat", "Open Sans", Arial, Helvetica, sans-serif;
   font-weight: 700;
-  text-transform: uppercase;
+  color: #7205f6;
   font-size: 1.25rem;
   text-align: center;
-  margin: 1rem auto 0.5rem;
-  width: 10ch;
+  margin: auto;
   line-height: 1.5rem;
+}
+
+.team_last-name {
+  display: block;
 }
 
 .team_role {
@@ -956,6 +961,27 @@ header_menu-button:hover,
   font-size: 1rem;
   line-height: 1.25rem;
   color: #ab45e7;
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+}
+
+.team_social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.team_social-icon i {
+  font-size: 1.375rem;
 }
 
 @media (max-width: 959px) {
@@ -963,6 +989,97 @@ header_menu-button:hover,
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+}
+
+.project-roadmap {
+  position: relative;
+  background: #f1f0f3;
+}
+
+.project-roadmap_inner {
+  padding: 12rem 0;
+}
+
+.project-roadmap_title {
+  font-weight: 800;
+  font-size: 2.125rem;
+  line-height: 2.5rem;
+  font-family: "Montserrat", "Open Sans", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  text-align: center;
+  color: #7205f6;
+}
+
+.project-roadmap_title--white {
+  color: #f1f0f3;
+}
+
+.project-roadmap_details, .project-roadmap_description {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  color: #ab45e7;
+  text-align: center;
+  display: block;
+}
+
+.project-roadmap_rectangle-list {
+  padding: 5.5rem 0 7.25rem;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.project-roadmap_rectangle {
+  width: 100%;
+  height: 264px;
+  background: #7205f6;
+  position: relative;
+  border-radius: 0px 50px 50px 0px;
+  padding: 4.625rem 5.875rem;
+  text-align: right;
+}
+
+.project-roadmap_rectangle > * {
+  text-align: right;
+}
+
+.project-roadmap_rectangle:nth-child(even) {
+  background: #ab45e7;
+  border-radius: 3.25rem;
+  position: relative;
+  padding: 4.625rem 5.875rem;
+  margin: 6.25rem 0;
+  border-radius: 50px 0px 0px 50px;
+}
+
+.project-roadmap_rectangle:nth-child(even) > * {
+  text-align: left;
+}
+
+.project-roadmap_description {
+  margin: 0.75rem auto 0;
+}
+
+.project-roadmap_description--last {
+  max-width: 634px;
+}
+
+.project-roadmap_description--white {
+  color: #f1f0f3;
+}
+
+.project-roadmap_next-line {
+  display: block;
 }
 
 footer_social-icons a,

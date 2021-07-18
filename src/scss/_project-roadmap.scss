@@ -1,0 +1,84 @@
+.project-roadmap {
+  position: relative;
+  background: $secondary-color;
+
+  &_inner {
+    padding: 12rem 0;
+  }
+
+  &_title {
+    font-weight: 800;
+    font-size: 2.125rem;
+    line-height: 2.5rem;
+    font-family: $primary-font-stack;
+    text-transform: uppercase;
+    letter-spacing: -0.04em;
+    text-align: center;
+    color: $tertiary-color;
+
+    &--white {
+      color: $secondary-color;
+    }
+  }
+
+  &_details,
+  &_description {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: $primary-color;
+    text-align: center;
+    display: block;
+  }
+
+  &_rectangle-list {
+    padding: 5.5rem 0 7.25rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &_rectangle {
+    width: 100%; // 86px space
+    height: 264px;
+    background: $tertiary-color;
+    position: relative;
+    border-radius: 0px 50px 50px 0px;
+    padding: 4.625rem 5.875rem;
+    text-align: right;
+
+    & > * {
+      text-align: right;
+    }
+
+    &:nth-child(even) {
+      background: $primary-color;
+      border-radius: 3.25rem;
+      position: relative;
+      padding: 4.625rem 5.875rem;
+      margin: 6.25rem 0;
+      border-radius: 50px 0px 0px 50px;
+
+      & > * {
+        text-align: left;
+      }
+    }
+  }
+
+  &_description {
+    margin: 0.75rem auto 0;
+
+    &--last {
+      max-width: 634px;
+    }
+
+    &--white {
+      color: $secondary-color;
+    }
+  }
+
+  &_next-line {
+    display: block;
+  }
+}
