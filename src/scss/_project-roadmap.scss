@@ -2,8 +2,6 @@
   position: relative;
 
   &_inner {
-    padding-top: 12rem;
-    padding-bottom: 12rem;
     overflow-x: hidden;
   }
 
@@ -33,7 +31,7 @@
   }
 
   &_rectangle-list {
-    padding: 5.5rem 0 7.25rem;
+    padding: 5.5rem 0;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -48,27 +46,14 @@
     border-radius: 0px 50px 50px 0px;
     padding: 4.625rem 5.875rem;
     text-align: right;
-    outline: 0.5rem solid $secondary-color;
+    border: 0.5rem solid $secondary-color;
     background: $tertiary-color;
-
-    &:last-child {
-      border-radius: 50px 50px 50px 50px;
-      position: relative;
-      margin: 6.25rem 0;
-      outline: none;
-      background: transparent;
-
-      & > * {
-        text-align: center;
-        border-radius: 50px;
-      }
-    }
 
     & > * {
       text-align: right;
     }
 
-    &:nth-child(2) {
+    &:nth-child(even) {
       // background: $primary-color;
       position: relative;
       padding: 4.625rem 5.875rem;
