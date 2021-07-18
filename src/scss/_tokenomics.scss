@@ -23,11 +23,25 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    margin: -1rem;
+
+    @supports (gap: 2rem) {
+      gap: 2rem;
+      margin: 0;
+    }
   }
 
   &_card {
-    max-width: 21.75rem;
+    max-width: 20rem;
+    margin-right: 2rem;
+
+    @supports (gap: 2rem) {
+      margin: 0;
+    }
+
+    &:last-child {
+      margin-left: 0;
+    }
   }
 
   &_card-title {
@@ -55,9 +69,13 @@
   &_buttons {
     display: flex;
     align-items: center;
-    gap: 1.25rem;
     flex-wrap: wrap;
     padding-top: 4.75rem;
+
+    @supports (gap: 1.25rem) {
+      gap: 1.25rem;
+      margin: 0;
+    }
 
     &--alt {
       margin-top: 0;
@@ -77,6 +95,12 @@
     background: $primary-color;
     border-radius: 0.5rem;
     position: relative;
+    margin-right: 1.25rem;
+
+    @supports (gap: 1.25rem) {
+      gap: 1.25rem;
+      margin: 0;
+    }
 
     &:hover {
       background: darken($primary-color, 20%);
@@ -104,6 +128,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-right: 0;
 
       &:hover {
         background: darken($secondary-color, 20%);
@@ -127,8 +152,11 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 4rem;
     margin: 5rem 0;
+
+    @supports (gap: 4rem) {
+      gap: 4rem;
+    }
   }
 
   &_alt-card {
@@ -137,6 +165,16 @@
     border-radius: 3.25rem;
     width: 28rem;
     height: 24.75rem;
+    margin-right: 4rem;
+
+    @supports (gap: 4rem) {
+      gap: 4rem;
+      margin: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   &_list-content {

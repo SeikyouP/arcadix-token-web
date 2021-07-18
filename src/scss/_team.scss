@@ -19,9 +19,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1.25rem;
     flex-wrap: wrap;
     margin-bottom: 8.25rem;
+    margin: -1.25rem;
+
+    @supports (gap: 1.25rem) {
+      gap: 1.25rem;
+      margin: 0;
+      margin-bottom: 8.25rem;
+    }
   }
 
   &_card {
@@ -29,6 +35,12 @@
     width: 12.5rem;
     border: 0.25rem solid $tertiary-color;
     border-radius: 1.875rem;
+    margin: 0.625rem;
+
+    @supports (gap: 1.25rem) {
+      gap: 1.25rem;
+      margin: 0;
+    }
   }
 
   &_profile {

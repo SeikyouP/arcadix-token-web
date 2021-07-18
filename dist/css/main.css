@@ -379,6 +379,13 @@ header_menu,
           align-items: center;
 }
 
+@supports (gap: 1.25rem) {
+  header_menu,
+  .header_menu {
+    gap: 1.25rem;
+  }
+}
+
 header_menu-link,
 .header_menu-link {
   font-size: 0.875rem;
@@ -386,6 +393,13 @@ header_menu-link,
   -webkit-transition: 0.25s ease;
   transition: 0.25s ease;
   margin-right: 1.25rem;
+}
+
+@supports (gap: 1.25rem) {
+  header_menu-link,
+  .header_menu-link {
+    margin-right: 0;
+  }
 }
 
 header_menu-link:last-child,
@@ -562,9 +576,14 @@ header_menu-button:hover,
       -ms-flex-align: center;
           align-items: center;
   margin: 2.25rem 0 0;
-  gap: 1.25rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+@supports (gap: 1.25rem) {
+  .home .hero_buttons {
+    gap: 1.25rem;
+  }
 }
 
 .home .hero_button {
@@ -586,6 +605,13 @@ header_menu-button:hover,
   background: #ab45e7;
   border-radius: 0.5rem;
   position: relative;
+  margin-right: 1.25rem;
+}
+
+@supports (gap: 1.25rem) {
+  .home .hero_button {
+    margin-right: 0;
+  }
 }
 
 .home .hero_button:hover {
@@ -604,6 +630,7 @@ header_menu-button:hover,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-right: 0;
 }
 
 .home .hero_button:last-child:hover {
@@ -669,9 +696,16 @@ header_menu-button:hover,
           align-items: center;
   text-align: center;
   width: 100%;
-  gap: 3rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: -1.5rem;
+}
+
+@supports (gap: 3rem) {
+  .home .promotion_cards {
+    gap: 3rem;
+    margin: 0;
+  }
 }
 
 .home .promotion_card {
@@ -693,6 +727,17 @@ header_menu-button:hover,
       -ms-flex-align: center;
           align-items: center;
   padding: 0 3rem;
+  margin: 1.5rem;
+}
+
+@supports (gap: 3rem) {
+  .home .promotion_card {
+    margin: 0;
+  }
+}
+
+.home .promotion_card:last-child {
+  margin-right: 0;
 }
 
 .home .promotion_card-icon {
@@ -722,9 +767,14 @@ header_menu-button:hover,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1.25rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+@supports (gap: 1.25rem) {
+  .home .misc_buttons {
+    gap: 1.25rem;
+  }
 }
 
 .home .misc_buttons--alt {
@@ -753,6 +803,13 @@ header_menu-button:hover,
   background: #ab45e7;
   border-radius: 0.5rem;
   position: relative;
+  margin-right: 1.25rem;
+}
+
+@supports (gap: 1.25rem) {
+  .home .misc_button {
+    margin-right: 0;
+  }
 }
 
 .home .misc_button:hover {
@@ -793,6 +850,7 @@ header_menu-button:hover,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-right: 0;
 }
 
 .home .misc_button:last-child:hover {
@@ -941,10 +999,18 @@ header_menu-button:hover,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1.25rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-bottom: 8.25rem;
+  margin: -1.25rem;
+}
+
+@supports (gap: 1.25rem) {
+  .team_cards {
+    gap: 1.25rem;
+    margin: 0;
+    margin-bottom: 8.25rem;
+  }
 }
 
 .team_card {
@@ -952,6 +1018,14 @@ header_menu-button:hover,
   width: 12.5rem;
   border: 0.25rem solid #7205f6;
   border-radius: 1.875rem;
+  margin: 0.625rem;
+}
+
+@supports (gap: 1.25rem) {
+  .team_card {
+    gap: 1.25rem;
+    margin: 0;
+  }
 }
 
 .team_profile {
@@ -1063,11 +1137,11 @@ header_menu-button:hover,
 .project-roadmap_rectangle {
   width: 100%;
   min-height: 264px;
-  background: #f1f0f3;
   position: relative;
   border-radius: 0px 50px 50px 0px;
   padding: 4.625rem 5.875rem;
   text-align: right;
+  outline: 0.25rem solid #f1f0f3;
 }
 
 .project-roadmap_rectangle:last-child {
@@ -1161,11 +1235,29 @@ header_menu-button:hover,
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 1rem;
+  margin: -1rem;
+}
+
+@supports (gap: 2rem) {
+  .tokenomics_cards {
+    gap: 2rem;
+    margin: 0;
+  }
 }
 
 .tokenomics_card {
-  max-width: 21.75rem;
+  max-width: 20rem;
+  margin-right: 2rem;
+}
+
+@supports (gap: 2rem) {
+  .tokenomics_card {
+    margin: 0;
+  }
+}
+
+.tokenomics_card:last-child {
+  margin-left: 0;
 }
 
 .tokenomics_card-title {
@@ -1197,10 +1289,16 @@ header_menu-button:hover,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1.25rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding-top: 4.75rem;
+}
+
+@supports (gap: 1.25rem) {
+  .tokenomics_buttons {
+    gap: 1.25rem;
+    margin: 0;
+  }
 }
 
 .tokenomics_buttons--alt {
@@ -1229,6 +1327,14 @@ header_menu-button:hover,
   background: #ab45e7;
   border-radius: 0.5rem;
   position: relative;
+  margin-right: 1.25rem;
+}
+
+@supports (gap: 1.25rem) {
+  .tokenomics_button {
+    gap: 1.25rem;
+    margin: 0;
+  }
 }
 
 .tokenomics_button:hover {
@@ -1269,6 +1375,7 @@ header_menu-button:hover,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-right: 0;
 }
 
 .tokenomics_button:last-child:hover {
@@ -1298,8 +1405,13 @@ header_menu-button:hover,
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 4rem;
   margin: 5rem 0;
+}
+
+@supports (gap: 4rem) {
+  .tokenomics_alt-cards {
+    gap: 4rem;
+  }
 }
 
 .tokenomics_alt-card {
@@ -1308,6 +1420,18 @@ header_menu-button:hover,
   border-radius: 3.25rem;
   width: 28rem;
   height: 24.75rem;
+  margin-right: 4rem;
+}
+
+@supports (gap: 4rem) {
+  .tokenomics_alt-card {
+    gap: 4rem;
+    margin: 0;
+  }
+}
+
+.tokenomics_alt-card:last-child {
+  margin-right: 0;
 }
 
 .tokenomics_list-content {

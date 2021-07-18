@@ -35,8 +35,11 @@
       display: flex;
       align-items: center;
       margin: 2.25rem 0 0;
-      gap: 1.25rem;
       flex-wrap: wrap;
+
+      @supports (gap: 1.25rem) {
+        gap: 1.25rem;
+      }
     }
 
     &_button {
@@ -51,6 +54,11 @@
       background: $primary-color;
       border-radius: 0.5rem;
       position: relative;
+      margin-right: 1.25rem;
+
+      @supports (gap: 1.25rem) {
+        margin-right: 0;
+      }
 
       &:hover {
         background: darken($primary-color, 20%);
@@ -62,6 +70,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-right: 0;
 
         &:hover {
           background: darken($secondary-color, 20%);
@@ -116,8 +125,13 @@
       align-items: center;
       text-align: center;
       width: 100%;
-      gap: 3rem;
       flex-wrap: wrap;
+      margin: -1.5rem;
+
+      @supports (gap: 3rem) {
+        gap: 3rem;
+        margin: 0;
+      }
     }
 
     &_card {
@@ -130,6 +144,15 @@
       justify-content: center;
       align-items: center;
       padding: 0 3rem;
+      margin: 1.5rem;
+
+      @supports (gap: 3rem) {
+        margin: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
 
     &_card-icon {
@@ -158,8 +181,11 @@
     &_buttons {
       display: flex;
       align-items: center;
-      gap: 1.25rem;
       flex-wrap: wrap;
+
+      @supports (gap: 1.25rem) {
+        gap: 1.25rem;
+      }
 
       &--alt {
         margin-top: 0;
@@ -179,6 +205,11 @@
       background: $primary-color;
       border-radius: 0.5rem;
       position: relative;
+      margin-right: 1.25rem;
+
+      @supports (gap: 1.25rem) {
+        margin-right: 0;
+      }
 
       &:hover {
         background: darken($primary-color, 20%);
@@ -206,7 +237,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        
+        margin-right: 0;
+
         &:hover {
           background: darken($secondary-color, 20%);
         }

@@ -42,11 +42,12 @@
   &_rectangle {
     width: 100%; // 86px space
     min-height: 264px;
-    background: $secondary-color;
+    // background: $secondary-color;
     position: relative;
     border-radius: 0px 50px 50px 0px;
     padding: 4.625rem 5.875rem;
     text-align: right;
+    outline: 0.25rem solid $secondary-color;
 
     &:last-child {
       border-radius: 50px 50px 50px 50px;

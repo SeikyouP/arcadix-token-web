@@ -21,6 +21,10 @@ header,
     display: flex;
     flex-grow: 1;
     align-items: center;
+
+    @supports (gap: 1.25rem) {
+      gap: 1.25rem;
+    }
   }
 
   &_menu-link {
@@ -28,6 +32,10 @@ header,
     font-weight: 700;
     transition: 0.25s ease;
     margin-right: 1.25rem;
+
+    @supports (gap: 1.25rem) {
+      margin-right: 0;
+    }
 
     &:last-child {
       margin-right: 0;
