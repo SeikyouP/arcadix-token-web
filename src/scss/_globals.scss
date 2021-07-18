@@ -16,21 +16,41 @@ body {
   overflow-x: hidden;
 }
 
-.container-1080 {
-  max-width: $container-width-1080;
+.container {
+  max-width: $container;
   margin: auto;
-  padding: 0 1rem;
 }
 
-.container-960 {
-  max-width: $container-width-960;
+.inner-container {
+  max-width: $inner-container;
   margin: auto;
-  padding: 0 1rem;
+}
+
+.gutter {
+  padding: 0 $gutter-width;
+}
+
+.inner-gutter {
+  padding: 3rem 5.75rem;
+}
+
+.inner-gutter-x {
+  padding: 0 5.75rem;
+}
+
+.inner-gutter-y {
+  padding: 3rem 0;
+}
+
+.line-gutter {
+  padding: 6rem 0;
 }
 
 h1,
 h2,
 h3,
+h4,
+h5,
 p {
   line-height: 2rem;
   letter-spacing: -0.02em;

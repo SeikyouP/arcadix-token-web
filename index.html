@@ -33,31 +33,31 @@
   </head>
 
   <body>
-    <!-- Start of Header Section -->
+    <!-- Start Header Section -->
     <header class="header">
-      <div class="header_navbar container-1080">
-        <a href="https://www.arcadixtoken.io">
-          <img class="header_logo" src="src/assets/img/logo.svg" alt="header_logo" />
+      <div class="header_navbar container gutter">
+        <a class="header_logo" href="https://www.arcadixtoken.io">
+          <img src="src/assets/img/header_logo.svg" alt="header_logo" />
         </a>
 
-        <div class="header_menu">
+        <nav class="header_menu">
           <a class="header_menu-link" href="#">Home</a>
           <a class="header_menu-link" href="#team">Team</a>
           <a class="header_menu-link" href="#projects">Projects</a>
           <a class="header_menu-link" href="#roadmap">Roadmap</a>
           <a class="header_menu-link" href="#tokenomics">Tokenomics</a>
-          <a class="header_menu-link" href="#">Buy Arcadix</a>
-        </div>
+          <a class="header_menu-button" href="#">Buy Arcadix</a>
+        </nav>
       </div>
     </header>
-    <!-- End of Header Section -->
+    <!-- End Header Section -->
 
-    <!-- Start of Mobile Header Section -->
+    <!-- Start Mobile Header Section -->
     <header class="mobile-header">
       <div class="mobile-header_navbar">
-        <div class="mobile-header_topbar">
-          <a href="https://www.arcadixtoken.io">
-            <img class="mobile-header_logo" src="src/assets/img/logo.svg" alt="mobile-header_logo" />
+        <div class="mobile-header_topbar gutter">
+          <a class="mobile-header_logo" href="https://www.arcadixtoken.io">
+            <img src="src/assets/img/header_logo.svg" alt="mobile-header_logo" />
           </a>
 
           <button class="mobile-header_button hamburger hamburger--squeeze" type="button">
@@ -77,91 +77,113 @@
         </div>
       </div>
     </header>
-    <!-- End of Mobile Header Section -->
+    <!-- End Mobile Header Section -->
 
     <main class="content-area">
-      <!-- Start of Home Section -->
+      <!-- START HOME SECTION -->
       <section class="home">
-        <div class="home_hero container-960">
-          <div class="home_title">
-            One Coin<span class="home_color">.</span>
-            <span class="next-line"> One Future<span class="home_color">.</span></span>
-          </div>
-          <p class="home_description">
-            We are an audiovisual platform with the main goal being to help creators monetize their content seamlessly
-            and connect with their fans with an ecosystem of decentralized apps powered by Acradix.
-          </p>
+        <!-- Start Hero Section -->
+        <section class="hero">
+          <div class="hero_inner container inner-gutter">
+            <div class="hero_info">
+              <div class="hero_title">
+                One Coin<span class="hero_color">.</span>
+                <span class="next-line"> One Future<span class="hero_color">.</span></span>
+              </div>
+              <p class="hero_description">
+                We are an audiovisual platform with the main goal being to help creators monetize their content
+                seamlessly and connect with their fans with an ecosystem of decentralized apps powered by Acradix.
+              </p>
 
-          <div class="home_contract-address">
-            Contract Address:
-            <span class="home_color">0xd8c202fc83792D98FB94c1FA2FdaC5702A75dF1C</span>
-          </div>
+              <div class="hero_contract-address">
+                Contract Address:
+                <span class="hero_color">0xd8c202fc83792D98FB94c1FA2FdaC5702A75dF1C</span>
+              </div>
 
-          <div class="home_buttons">
-            <a href="#tokenomics" class="home_button">Tokenomics</a>
-            <a href="#team" class="home_button">
-              <span> Meet the Team </span>
-              <!-- <i class="far fa-clock"></i> -->
-            </a>
-          </div>
+              <div class="hero_buttons">
+                <a href="#tokenomics" class="hero_button">Tokenomics</a>
+                <a href="#team" class="hero_button">
+                  <span> Meet the Team </span>
+                  <!-- <i class="far fa-clock"></i> -->
+                </a>
+              </div>
+            </div>
 
-          <div class="home_stats">
-            <div class="home_data">
-              <h3>0.0001</h3>
-              <span>current price</span>
-            </div>
-            <div class="home_data">
-              <h3>15,000</h3>
-              <span>holders</span>
-            </div>
-            <div class="home_data">
-              <h3>$1,000,000</h3>
-              <span>liquidity</span>
-            </div>
-            <div class="home_data">
-              <h3>$5,000,000</h3>
-              <span>market cap</span>
+            <div class="hero_image">
+              <img src="src/assets/img/hero_logo.svg" alt="hero_logo" />
             </div>
           </div>
-        </div>
+        </section>
+        <!-- End Hero Section -->
 
-        <div class="home_cards container-960">
-          <div class="home_card">
-            <img class="home_card-icon" src="src/assets/img/arrow_icon.svg" alt="home_card-icon" />
-            <h3 class="home_card-title">Original Supply</h3>
-            <span class="home_card-number">-----------------------</span>
+        <!-- Start Stats Section -->
+        <section class="stats">
+          <div class="stats_inner container inner-gutter">
+            <div class="stats_data">
+              <div class="stats_data-info">
+                <h3>0.0001</h3>
+                <span>current price</span>
+              </div>
+              <div class="stats_data-info">
+                <h3>15,000</h3>
+                <span>holders</span>
+              </div>
+              <div class="stats_data-info">
+                <h3>$1,000,000</h3>
+                <span>liquidity</span>
+              </div>
+              <div class="stats_data-info">
+                <h3>$5,000,000</h3>
+                <span>market cap</span>
+              </div>
+            </div>
           </div>
+        </section>
+        <!-- End Stats Section -->
 
-          <div class="home_card">
-            <img class="home_card-icon" src="src/assets/img/arrow_icon.svg" alt="home_card-icon" />
-            <h3 class="home_card-title">14% Tax On Transactions</h3>
-            <span class="home_card-number">-----------------------</span>
-          </div>
+        <section class="promotion">
+          <div class="promotion_inner container inner-gutter">
+            <div class="promotion_cards">
+              <div class="promotion_card">
+                <img class="promotion_card-icon" src="src/assets/img/arrow_icon.svg" alt="promotion_card-icon" />
+                <h3 class="promotion_card-title">Original Supply</h3>
+                <span class="promotion_card-number">-----------------------</span>
+              </div>
 
-          <div class="home_card">
-            <img class="home_card-icon" src="src/assets/img/diamond_icon.svg" alt="home_card-icon" />
-            <h3 class="home_card-title">Diamond Hand Holders Only</h3>
-            <span class="home_card-number">-----------------------</span>
-          </div>
-        </div>
+              <div class="promotion_card">
+                <img class="promotion_card-icon" src="src/assets/img/arrow_icon.svg" alt="promotion_card-icon" />
+                <h3 class="promotion_card-title">14% Tax On Transactions</h3>
+                <span class="promotion_card-number">-----------------------</span>
+              </div>
 
-        <div class="button-section container-960">
-          <div class="home_buttons home_buttons--alt container-960">
-            <a href="#" class="home_button">Read our Whitepaper</a>
-            <a href="#" class="home_button">
-              <span> Read our Roadmap </span>
-            </a>
+              <div class="promotion_card">
+                <img class="promotion_card-icon" src="src/assets/img/diamond_icon.svg" alt="promotion_card-icon" />
+                <h3 class="promotion_card-title">Diamond Hand Holders Only</h3>
+                <span class="promotion_card-number">-----------------------</span>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
+
+        <section class="misc">
+          <div class="misc_inner container inner-gutter">
+            <div class="misc_buttons misc_buttons--alt buttons">
+              <a href="#" class="misc_button">Read our Whitepaper</a>
+              <a href="#" class="misc_button">
+                <span> Read our Roadmap </span>
+              </a>
+            </div>
+          </div>
+        </section>
       </section>
-      <!-- End of Home Section -->
+      <!-- END HOME SECTION -->
 
-      <div class="container-960">
+      <div class="inner-container line-gutter">
         <div class="line"></div>
       </div>
 
-      <!-- Start of Team Section -->
-      <section class="team container-960" id="team">
+      <!-- Start Team Section -->
+      <section class="team" id="team">
         <h3 class="team_title">
           Meet Our <span class="next-line"> Core Team<span class="team_title--period">.</span></span>
         </h3>
@@ -233,10 +255,10 @@
           </div>
         </div>
       </section>
-      <!-- End of Team Section -->
+      <!-- End Team Section -->
     </main>
 
-    <!-- Start of Footer Section -->
+    <!-- Start Footer Section -->
     <footer class="footer">
       <!-- <div class="footer_social-icons">
         <a class="footer_social-icon" href="#"><i class="fab fa-telegram-plane"></i></a>
@@ -247,7 +269,7 @@
         <a class="footer_social-icon" href="#"><i class="fab fa-reddit-alien"></i></a>
       </div> -->
     </footer>
-    <!-- End of Footer Section -->
+    <!-- End Footer Section -->
 
     <!-- Start of Top Button -->
     <a href="#" class="top-button">
@@ -259,3 +281,11 @@
     <script src="src/js/main.js"></script>
   </body>
 </html>
+
+<!-- 
+
+3.  Nav, Hero, Stats, Promotion #1, and Document button, should all have top and bottom padding of 48px and left and right padding of 92px (besides the NAV). 
+
+4. If any spacing numbers are off, just make sure that every spacing is based on a 4 point grid. Also, please let me know whenever one of those numbers are off so I can change it later.(edited) 
+
+-->

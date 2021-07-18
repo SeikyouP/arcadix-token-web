@@ -7,8 +7,11 @@ $body-color-alt: #170131;
 $line-color: rgba(241, 240, 243, 0.25);
 
 // Container Width
-$container-width-1080: 67.5rem;
-$container-width-960: 60rem;
+$container: 1080px;
+$inner-container: 904px;
+
+// Gutter Width
+$gutter-width: 1rem;
 
 // Font Family Stacks
 $primary-font-stack: 'Montserrat', 'Open Sans', Arial, Helvetica, sans-serif;
