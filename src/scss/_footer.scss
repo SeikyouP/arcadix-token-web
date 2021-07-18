@@ -38,3 +38,21 @@ footer,
     margin-bottom: 6rem;
   }
 }
+
+@media (max-width: 768px) {
+  .footer {
+    &_logo {
+      height: 4rem;
+    }
+
+    &_menus {
+      flex-direction: column;
+      gap: 2rem;
+      text-align: center;
+    }
+
+    &_copyright-info{
+      font-size: 0.75rem;
+    }
+  }
+}

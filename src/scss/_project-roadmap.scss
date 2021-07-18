@@ -3,7 +3,8 @@
   background: $secondary-color;
 
   &_inner {
-    padding: 12rem 0;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
   }
 
   &_title {
@@ -41,7 +42,7 @@
 
   &_rectangle {
     width: 100%; // 86px space
-    height: 264px;
+    min-height: 264px;
     background: $tertiary-color;
     position: relative;
     border-radius: 0px 50px 50px 0px;
@@ -80,5 +81,31 @@
 
   &_next-line {
     display: block;
+  }
+}
+
+@media (max-width: 640px) {
+  .project-roadmap {
+    &_rectangle {
+      border-radius: 0;
+          padding: 5rem;
+
+      p {
+        font-size: 1rem;
+      }
+
+      & > * {
+        text-align: center;
+      }
+
+      &:nth-child(even) {
+        border-radius: 0;
+            padding: 5rem;
+
+        & > * {
+          text-align: center;
+        }
+      }
+    }
   }
 }
