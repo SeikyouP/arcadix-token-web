@@ -1071,7 +1071,6 @@ header_menu-button:hover,
 
 .project-roadmap_rectangle:nth-child(even) {
   background: #ab45e7;
-  border-radius: 3.25rem;
   position: relative;
   padding: 4.625rem 5.875rem;
   margin: 6.25rem 0;
