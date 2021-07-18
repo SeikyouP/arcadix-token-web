@@ -1,18 +1,40 @@
 footer,
 .footer {
-  &_social-icons {
-    a {
-      font-size: 2rem;
-      margin-right: 2rem;
-      transition: 0.25s ease;
+  &_inner {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+  }
 
-      &:last-child {
-        margin-right: 0;
-      }
+  &_logo {
+    height: 6rem;
+    width: auto;
+    margin-bottom: 5.25rem;
+  }
 
-      &:hover {
-        color: $primary-color;
-      }
-    }
+  &_menus {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &_menu-title {
+    font-weight: 800;
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+    display: block;
+  }
+
+  &_menu-link {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: darken($secondary-color, 40%);
+  }
+
+  &_copyright-info {
+    text-align: center;
+    margin-bottom: 6rem;
   }
 }
