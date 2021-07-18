@@ -145,6 +145,7 @@
     }
   }
 
+  // Misc Section
   .misc {
     &_buttons {
       display: flex;
@@ -157,6 +158,7 @@
         justify-content: center;
       }
     }
+
     &_button {
       width: 12.5rem;
       height: 3rem;
@@ -182,6 +184,8 @@
         justify-content: center;
         font-weight: 600;
         font-size: 0.875rem;
+        cursor: default;
+        pointer-events: none;
       }
 
       &:last-child {
@@ -208,19 +212,40 @@
 
 @media (max-width: 959px) {
   .home {
-    text-align: center;
-    &_description {
-      margin: auto;
-      width: 75%;
+    .hero {
+      text-align: center;
+      &_inner {
+        flex-direction: column-reverse;
+      }
+
+      &_description {
+        margin: auto;
+        width: 100%;
+        line-height: 1.5;
+      }
+
+      &_buttons {
+        justify-content: center;
+      }
+
+      &_image {
+        margin-bottom: 3rem;
+      }
+
+      &_contract-address {
+        font-size: 1.25rem;
+
+        span {
+          font-size: 1rem;
+        }
+      }
     }
 
-    &_buttons {
-      justify-content: center;
-    }
-
-    &_stats {
-      justify-content: center;
-      gap: 6rem;
+    .stats {
+      &_data {
+        justify-content: center;
+        gap: 6rem;
+      }
     }
 
     &_cards {
@@ -231,18 +256,45 @@
 
 @media (max-width: 768px) {
   .home {
-    padding: 15rem 0 0;
-    &_description {
-      width: 90%;
-    }
+    padding: 7.125rem 0 0;
+    text-align: center;
 
-    &_data {
-      h3 {
-        font-size: 1.5rem;
+    .hero {
+      &_description {
+        margin: auto;
+        width: 100%;
       }
 
-      span {
-        font-size: 1.25rem;
+      &_buttons {
+        gap: 2rem;
+      }
+
+      &_image {
+        img {
+          width: 200px;
+        }
+      }
+    }
+
+    .stats {
+      &_data-info {
+        h3 {
+          font-size: 1.5rem;
+        }
+
+        span {
+          font-size: 1.25rem;
+        }
+      }
+    }
+    .misc {
+      .inner-gutter {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      &_buttons {
+        gap: 2rem;
       }
     }
   }
@@ -250,18 +302,41 @@
 
 @media (max-width: 500px) {
   .home {
-    &_description {
-      font-size: 0.8rem;
-      width: 100%;
+    .inner-gutter {
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
 
-    &_contract-address {
-      font-size: 0.8rem;
-      font-weight: 700;
+    .hero {
+      &_description {
+        font-size: 0.8rem;
+      }
+
+      &_contract-address {
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.25;
+
+        span {
+          font-size: 0.75rem;
+        }
+      }
+
+      &_buttons {
+        flex-direction: column;
+      }
     }
 
-    &_stats {
-      flex-direction: column;
+    .stats {
+      &_data {
+        flex-direction: column;
+      }
+    }
+
+    .misc {
+      &_buttons {
+        flex-direction: column;
+      }
     }
   }
 }

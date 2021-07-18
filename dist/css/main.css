@@ -199,7 +199,7 @@ a {
   color: #f1f0f3;
 }
 
-@media (max-width: 31.25rem) {
+@media (max-width: 40rem) {
   .next-line {
     display: block;
   }
@@ -760,6 +760,8 @@ header_menu-button:hover,
           justify-content: center;
   font-weight: 600;
   font-size: 0.875rem;
+  cursor: default;
+  pointer-events: none;
 }
 
 .home .misc_button:last-child {
@@ -788,19 +790,35 @@ header_menu-button:hover,
 }
 
 @media (max-width: 959px) {
-  .home {
+  .home .hero {
     text-align: center;
   }
-  .home_description {
-    margin: auto;
-    width: 75%;
+  .home .hero_inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
-  .home_buttons {
+  .home .hero_description {
+    margin: auto;
+    width: 100%;
+    line-height: 1.5;
+  }
+  .home .hero_buttons {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .home_stats {
+  .home .hero_image {
+    margin-bottom: 3rem;
+  }
+  .home .hero_contract-address {
+    font-size: 1.25rem;
+  }
+  .home .hero_contract-address span {
+    font-size: 1rem;
+  }
+  .home .stats_data {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -813,29 +831,63 @@ header_menu-button:hover,
 
 @media (max-width: 768px) {
   .home {
-    padding: 15rem 0 0;
+    padding: 7.125rem 0 0;
+    text-align: center;
   }
-  .home_description {
-    width: 90%;
+  .home .hero_description {
+    margin: auto;
+    width: 100%;
   }
-  .home_data h3 {
+  .home .hero_buttons {
+    gap: 2rem;
+  }
+  .home .hero_image img {
+    width: 200px;
+  }
+  .home .stats_data-info h3 {
     font-size: 1.5rem;
   }
-  .home_data span {
+  .home .stats_data-info span {
     font-size: 1.25rem;
+  }
+  .home .misc .inner-gutter {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .home .misc_buttons {
+    gap: 2rem;
   }
 }
 
 @media (max-width: 500px) {
-  .home_description {
-    font-size: 0.8rem;
-    width: 100%;
+  .home .inner-gutter {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
-  .home_contract-address {
+  .home .hero_description {
     font-size: 0.8rem;
+  }
+  .home .hero_contract-address {
+    font-size: 1rem;
     font-weight: 700;
+    line-height: 1.25;
   }
-  .home_stats {
+  .home .hero_contract-address span {
+    font-size: 0.75rem;
+  }
+  .home .hero_buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .home .stats_data {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .home .misc_buttons {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -965,12 +1017,12 @@ footer_social-icons a:hover,
 }
 
 .top-button::before {
-  content: 'Scroll to Top (It Works, but has bugs)';
+  content: 'Scroll to Top';
   position: absolute;
-  width: 18rem;
+  width: 8rem;
   line-height: 3rem;
   background: #ab45e7;
-  left: -19rem;
+  left: -9rem;
   text-align: center;
   color: #f1f0f3;
   border-radius: 0.25rem;

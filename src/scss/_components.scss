@@ -21,12 +21,12 @@
   }
 
   &::before {
-    content: 'Scroll to Top (It Works, but has bugs)';
+    content: 'Scroll to Top';
     position: absolute;
-    width: 18rem;
+    width: 8rem;
     line-height: 3rem;
     background: $primary-color;
-    left: -19rem;
+    left: -9rem;
     text-align: center;
     color: $secondary-color;
     border-radius: 0.25rem;
