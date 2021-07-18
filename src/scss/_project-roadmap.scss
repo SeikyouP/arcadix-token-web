@@ -4,6 +4,7 @@
   &_inner {
     padding-top: 12rem;
     padding-bottom: 12rem;
+    overflow-x: hidden;
   }
 
   &_title {
@@ -26,7 +27,7 @@
     font-weight: bold;
     font-size: 24px;
     line-height: 32px;
-    color: $primary-color;
+    // color: $primary-color;
     text-align: center;
     display: block;
   }
@@ -42,17 +43,20 @@
   &_rectangle {
     width: 100%; // 86px space
     min-height: 264px;
-    // background: $secondary-color;
     position: relative;
+    right: 6rem;
     border-radius: 0px 50px 50px 0px;
     padding: 4.625rem 5.875rem;
     text-align: right;
-    outline: 0.25rem solid $secondary-color;
+    outline: 0.5rem solid $secondary-color;
+    background: $tertiary-color;
 
     &:last-child {
       border-radius: 50px 50px 50px 50px;
       position: relative;
       margin: 6.25rem 0;
+      outline: none;
+      background: transparent;
 
       & > * {
         text-align: center;
@@ -70,6 +74,8 @@
       padding: 4.625rem 5.875rem;
       margin: 6.25rem 0;
       border-radius: 50px 0px 0px 50px;
+      left: 6rem;
+      background: $primary-color;
 
       & > * {
         text-align: left;

@@ -1093,6 +1093,7 @@ header_menu-button:hover,
 .project-roadmap_inner {
   padding-top: 12rem;
   padding-bottom: 12rem;
+  overflow-x: hidden;
 }
 
 .project-roadmap_title {
@@ -1114,7 +1115,6 @@ header_menu-button:hover,
   font-weight: bold;
   font-size: 24px;
   line-height: 32px;
-  color: #ab45e7;
   text-align: center;
   display: block;
 }
@@ -1138,16 +1138,20 @@ header_menu-button:hover,
   width: 100%;
   min-height: 264px;
   position: relative;
+  right: 6rem;
   border-radius: 0px 50px 50px 0px;
   padding: 4.625rem 5.875rem;
   text-align: right;
-  outline: 0.25rem solid #f1f0f3;
+  outline: 0.5rem solid #f1f0f3;
+  background: #7205f6;
 }
 
 .project-roadmap_rectangle:last-child {
   border-radius: 50px 50px 50px 50px;
   position: relative;
   margin: 6.25rem 0;
+  outline: none;
+  background: transparent;
 }
 
 .project-roadmap_rectangle:last-child > * {
@@ -1164,6 +1168,8 @@ header_menu-button:hover,
   padding: 4.625rem 5.875rem;
   margin: 6.25rem 0;
   border-radius: 50px 0px 0px 50px;
+  left: 6rem;
+  background: #ab45e7;
 }
 
 .project-roadmap_rectangle:nth-child(2) > * {
