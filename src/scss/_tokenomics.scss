@@ -106,9 +106,10 @@
     }
 
     &::before {
-      content: '(Coming Soon)';
+      content: '( Coming Soon )';
       position: absolute;
       top: 2.5rem;
+      right: 0;
       right: calc(100% + 1.25rem) / 2;
       width: 12.5rem;
       height: 3rem;

@@ -750,7 +750,8 @@ header_menu-button:hover,
   font-size: 1.25rem;
   line-height: 1.5rem;
   color: #ab45e7;
-  margin: 40px 0 2rem;
+  padding: 2.5rem 0 2rem;
+  max-width: 200px;
 }
 
 .home .promotion_card-number {
@@ -817,9 +818,10 @@ header_menu-button:hover,
 }
 
 .home .misc_button::before {
-  content: '(Coming Soon)';
+  content: '( Coming Soon )';
   position: absolute;
   top: 2.5rem;
+  right: 0;
   right: calc(100% + 1.25rem)/2;
   width: 12.5rem;
   height: 3rem;
@@ -1071,8 +1073,29 @@ header_menu-button:hover,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 0.5rem;
   margin-top: 1rem;
+}
+
+@supports (gap: 0.5rem) {
+  .team_social-icons {
+    gap: 0.5rem;
+    margin: 0;
+    margin-top: 1rem;
+  }
+}
+
+.team_social-icon {
+  margin-right: 0.5rem;
+}
+
+@supports (gap: 0.5rem) {
+  .team_social-icon {
+    margin: 0;
+  }
+}
+
+.team_social-icon:last-child {
+  margin-right: 0;
 }
 
 .team_social-icon i {
@@ -1332,9 +1355,10 @@ header_menu-button:hover,
 }
 
 .tokenomics_button::before {
-  content: '(Coming Soon)';
+  content: '( Coming Soon )';
   position: absolute;
   top: 2.5rem;
+  right: 0;
   right: calc(100% + 1.25rem)/2;
   width: 12.5rem;
   height: 3rem;
