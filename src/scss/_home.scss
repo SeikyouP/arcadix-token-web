@@ -1,5 +1,23 @@
 .home {
   // Hero Section
+
+  .landscape {
+    @media only screen and (device-width: 768px) {
+      /* For general iPad layouts */
+      height: initial;
+    }
+
+    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
+      /* For portrait layouts only */
+      height: initial;
+    }
+
+    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
+      /* For landscape layouts only */
+      height: 100vh;
+    }
+  }
+
   .hero {
     &_inner {
       display: flex;
@@ -123,10 +141,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      text-align: center;
-      width: 100%;
       flex-wrap: wrap;
-      margin: -1.5rem;
 
       @supports (gap: 3rem) {
         gap: 3rem;

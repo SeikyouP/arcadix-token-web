@@ -20,13 +20,10 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 8.25rem;
-    margin: -1.25rem;
 
     @supports (gap: 1.25rem) {
       gap: 1.25rem;
       margin: 0;
-      margin-bottom: 8.25rem;
     }
   }
 

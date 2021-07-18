@@ -83,29 +83,27 @@
   &_next-line {
     display: block;
   }
+
+  &_color {
+    color: $primary-color;
+  }
 }
 
 @media (max-width: 640px) {
   .project-roadmap {
     &_rectangle {
-      border-radius: 0;
-      padding: 5rem;
+      padding: 3rem;
 
-      p {
-        font-size: 1rem;
+      h3 {
+        font-size: 1.75rem;
       }
 
-      & > * {
-        text-align: center;
+      p {
+        font-size: 0.8rem;
       }
 
       &:nth-child(even) {
-        border-radius: 0;
-        padding: 5rem;
-
-        & > * {
-          text-align: center;
-        }
+        padding: 3rem;
       }
     }
   }

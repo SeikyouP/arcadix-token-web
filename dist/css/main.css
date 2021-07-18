@@ -146,8 +146,8 @@ html {
 }
 
 body {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(171, 69, 231, 0.2)), color-stop(50%, rgba(0, 0, 0, 0.2))), #170131;
-  background: linear-gradient(180deg, rgba(171, 69, 231, 0.2) 0%, rgba(0, 0, 0, 0.2) 50%), #170131;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(171, 69, 231, 0.2)), color-stop(9.17%, rgba(0, 0, 0, 0.2))), #170131;
+  background: linear-gradient(180deg, rgba(171, 69, 231, 0.2) 0%, rgba(0, 0, 0, 0.2) 9.17%), #170131;
   color: #f1f0f3;
   min-height: 100vh;
   overflow-x: hidden;
@@ -485,8 +485,8 @@ header_menu-button:hover,
   text-align: center;
   width: 100%;
   height: calc(100vh - 7.125rem);
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(171, 69, 231, 0.2)), color-stop(50%, rgba(0, 0, 0, 0.2))), #170131;
-  background: linear-gradient(180deg, rgba(171, 69, 231, 0.2) 0%, rgba(0, 0, 0, 0.2) 50%), #170131;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(171, 69, 231, 0.2)), color-stop(9.17%, rgba(0, 0, 0, 0.2))), #170131;
+  background: linear-gradient(180deg, rgba(171, 69, 231, 0.2) 0%, rgba(0, 0, 0, 0.2) 9.17%), #170131;
 }
 
 .mobile-header_menu-link {
@@ -529,6 +529,27 @@ header_menu-button:hover,
   }
   .mobile-header {
     display: block;
+  }
+}
+
+@media only screen and (device-width: 768px) {
+  .home .landscape {
+    /* For general iPad layouts */
+    height: initial;
+  }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .home .landscape {
+    /* For portrait layouts only */
+    height: initial;
+  }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .home .landscape {
+    /* For landscape layouts only */
+    height: 100vh;
   }
 }
 
@@ -1003,15 +1024,12 @@ header_menu-button:hover,
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 8.25rem;
-  margin: -1.25rem;
 }
 
 @supports (gap: 1.25rem) {
   .team_cards {
     gap: 1.25rem;
     margin: 0;
-    margin-bottom: 8.25rem;
   }
 }
 
@@ -1200,23 +1218,22 @@ header_menu-button:hover,
   display: block;
 }
 
+.project-roadmap_color {
+  color: #ab45e7;
+}
+
 @media (max-width: 640px) {
   .project-roadmap_rectangle {
-    border-radius: 0;
-    padding: 5rem;
+    padding: 3rem;
+  }
+  .project-roadmap_rectangle h3 {
+    font-size: 1.75rem;
   }
   .project-roadmap_rectangle p {
-    font-size: 1rem;
-  }
-  .project-roadmap_rectangle > * {
-    text-align: center;
+    font-size: 0.8rem;
   }
   .project-roadmap_rectangle:nth-child(even) {
-    border-radius: 0;
-    padding: 5rem;
-  }
-  .project-roadmap_rectangle:nth-child(even) > * {
-    text-align: center;
+    padding: 3rem;
   }
 }
 
@@ -1583,8 +1600,8 @@ footer_copyright-info,
   width: 3rem;
   border: 0.25rem solid #ab45e7;
   border-radius: 1.5rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(171, 69, 231, 0.2)), color-stop(50%, rgba(0, 0, 0, 0.2))), #170131;
-  background: linear-gradient(180deg, rgba(171, 69, 231, 0.2) 0%, rgba(0, 0, 0, 0.2) 50%), #170131;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(171, 69, 231, 0.2)), color-stop(9.17%, rgba(0, 0, 0, 0.2))), #170131;
+  background: linear-gradient(180deg, rgba(171, 69, 231, 0.2) 0%, rgba(0, 0, 0, 0.2) 9.17%), #170131;
   z-index: 99;
   -webkit-transform: translateY(6.25rem);
           transform: translateY(6.25rem);
