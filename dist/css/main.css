@@ -532,27 +532,6 @@ header_menu-button:hover,
   }
 }
 
-@media only screen and (device-width: 768px) {
-  .home .landscape {
-    /* For general iPad layouts */
-    height: initial;
-  }
-}
-
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
-  .home .landscape {
-    /* For portrait layouts only */
-    height: initial;
-  }
-}
-
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
-  .home .landscape {
-    /* For landscape layouts only */
-    height: 100vh;
-  }
-}
-
 .home .hero_inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -626,12 +605,12 @@ header_menu-button:hover,
   background: #ab45e7;
   border-radius: 0.5rem;
   position: relative;
-  margin-right: 1.25rem;
+  margin: 1.25rem;
 }
 
 @supports (gap: 1.25rem) {
   .home .hero_button {
-    margin-right: 0;
+    margin: 0;
   }
 }
 
@@ -651,7 +630,7 @@ header_menu-button:hover,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-right: 0;
+  margin: 0;
 }
 
 .home .hero_button:last-child:hover {
@@ -705,6 +684,10 @@ header_menu-button:hover,
   line-height: 1.5rem;
 }
 
+.home .promotion {
+  text-align: center;
+}
+
 .home .promotion_cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -715,11 +698,8 @@ header_menu-button:hover,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
-  width: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: -1.5rem;
 }
 
 @supports (gap: 3rem) {
@@ -730,49 +710,34 @@ header_menu-button:hover,
 }
 
 .home .promotion_card {
-  border: 0.25rem solid #7205f6;
-  border-radius: 1.875rem;
   width: 16rem;
   height: 21rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 3rem;
-  margin: 1.5rem;
+  border: 0.25rem solid #7205f6;
+  border-radius: 1.875rem;
+  margin: 1.25rem;
+  padding: 2rem 0 3.5rem;
 }
 
 @supports (gap: 3rem) {
   .home .promotion_card {
+    gap: 3rem;
     margin: 0;
   }
 }
 
-.home .promotion_card:last-child {
-  margin-right: 0;
-}
-
 .home .promotion_card-icon {
-  height: 6.8125rem;
-  width: 6.8125rem;
+  height: 6.75rem;
+  width: 6.75rem;
 }
 
 .home .promotion_card-title {
   font-weight: 800;
   font-size: 1.25rem;
-  line-height: 1.5rem;
   color: #ab45e7;
   padding: 2.5rem 0 2rem;
   max-width: 200px;
+  line-height: 1.5rem;
+  margin: auto;
 }
 
 .home .promotion_card-number {
@@ -780,6 +745,10 @@ header_menu-button:hover,
   font-weight: 600;
   font-size: 0.75rem;
   line-height: 1.125rem;
+}
+
+.home .promotion_next-line {
+  display: block;
 }
 
 .home .misc_buttons {
@@ -825,12 +794,13 @@ header_menu-button:hover,
   background: #ab45e7;
   border-radius: 0.5rem;
   position: relative;
-  margin-right: 1.25rem;
+  margin: 1.25rem;
 }
 
 @supports (gap: 1.25rem) {
   .home .misc_button {
-    margin-right: 0;
+    gap: 1.25rem;
+    margin: 0;
   }
 }
 
@@ -873,7 +843,7 @@ header_menu-button:hover,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-right: 0;
+  margin: 0;
 }
 
 .home .misc_button:last-child:hover {
@@ -903,7 +873,7 @@ header_menu-button:hover,
   }
   .home .hero_description {
     margin: auto;
-    width: 100%;
+    max-width: 33.25rem;
     line-height: 1.5;
   }
   .home .hero_buttons {
@@ -924,7 +894,21 @@ header_menu-button:hover,
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    gap: 6rem;
+    margin: -1.5rem 0;
+  }
+  @supports (gap: 3rem) {
+    .home .stats_data {
+      gap: 3rem;
+      margin: 0;
+    }
+  }
+  .home .stats_data-info {
+    margin: 3rem;
+  }
+  @supports (gap: 3rem) {
+    .home .stats_data-info {
+      margin: 0;
+    }
   }
   .home .stats_data-info h3 {
     font-size: 1.5rem;
@@ -942,9 +926,6 @@ header_menu-button:hover,
   .home .hero_description {
     margin: auto;
     width: 100%;
-  }
-  .home .hero_buttons {
-    gap: 2rem;
   }
   .home .hero_image img {
     width: 200px;
@@ -991,6 +972,14 @@ header_menu-button:hover,
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .home .misc_button {
+    margin: 2rem;
+  }
+  @supports (gap: 2rem) {
+    .home .misc_button {
+      margin: 0;
+    }
   }
 }
 
@@ -1406,7 +1395,7 @@ header_menu-button:hover,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-right: 0;
+  margin: 0;
 }
 
 .tokenomics_button:last-child:hover {
