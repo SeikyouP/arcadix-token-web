@@ -83,16 +83,17 @@
       }
 
       &:last-child {
-        background: $secondary-color;
-        color: $primary-color;
+        // background: $secondary-color;
+        // color: $primary-color;
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 0;
 
-        &:hover {
-          background: darken($secondary-color, 20%);
-        }
+        // &:hover {
+        //   background: $primary-color;
+        //   color: $secondary-color;
+        // }
 
         i {
           margin-left: 0.5rem;
@@ -174,16 +175,16 @@
       font-weight: 800;
       font-size: 1.25rem;
       color: $primary-color;
-      padding: 2.5rem 0 2rem;
+      padding: 2.5rem 0 0;
       max-width: 200px;
       line-height: 1.5rem;
       margin: auto;
     }
 
     &_card-number {
-      font-family: $secondary-font-stack;
+      font-family: $primary-font-stack;
       font-weight: 600;
-      font-size: 0.75rem;
+      font-size: 1rem;
       line-height: 1.125rem;
     }
 
@@ -219,6 +220,7 @@
       font-size: 0.875rem;
       transition: color 0.25s ease, background 0.25s ease;
       background: $primary-color;
+      color: $secondary-color;
       border-radius: 0.5rem;
       position: relative;
       margin: 1.25rem;
@@ -250,15 +252,15 @@
       }
 
       &:last-child {
-        background: $secondary-color;
-        color: $primary-color;
+        // background: $secondary-color;
+        // color: $primary-color;
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 0;
 
         &:hover {
-          background: darken($secondary-color, 20%);
+          background: darken($primary-color, 20%);
         }
 
         &::before {
@@ -375,8 +377,8 @@
 @media (max-width: 500px) {
   .home {
     .inner-gutter {
-      padding-left: 4rem;
-      padding-right: 4rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
 
     .hero {

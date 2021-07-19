@@ -39,30 +39,38 @@
   }
 
   &_rectangle {
-    width: 100%; // 86px space
-    min-height: 264px;
+    width: 100%;
+    height: 200px;
     position: relative;
     right: 6rem;
     border-radius: 0px 50px 50px 0px;
-    padding: 4.625rem 5.875rem;
+    padding: 0 5.875rem;
     text-align: right;
     border: 0.5rem solid $secondary-color;
     background: $tertiary-color;
+    display: flex;
+    justify-content: end;
+    align-items: center;
 
-    & > * {
+    h3,
+    p {
       text-align: right;
     }
 
-    &:nth-child(even) {
-      // background: $primary-color;
+    .date {
+      font-size: 1.25rem;
+    }
+
+    &--pink {
       position: relative;
-      padding: 4.625rem 5.875rem;
       margin: 6.25rem 0;
       border-radius: 50px 0px 0px 50px;
       left: 6rem;
       background: $primary-color;
+      justify-content: start;
 
-      & > * {
+      h3,
+      p {
         text-align: left;
       }
     }
@@ -93,6 +101,7 @@
   .project-roadmap {
     &_rectangle {
       padding: 3rem;
+      left: 0;
 
       h3 {
         font-size: 1.75rem;
@@ -104,6 +113,7 @@
 
       &:nth-child(even) {
         padding: 3rem;
+        right: 0;
       }
     }
   }

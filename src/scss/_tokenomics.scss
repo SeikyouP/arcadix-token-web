@@ -15,14 +15,14 @@
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 2rem;
-    padding: 2rem 0 9.125rem;
+    padding: 2rem 0 0;
   }
 
   &_cards {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: -1rem;
+    padding: 4.75rem 0;
 
     @supports (gap: 2rem) {
       gap: 2rem;
@@ -32,14 +32,14 @@
 
   &_card {
     max-width: 20rem;
-    margin-right: 2rem;
+    margin: 2rem;
 
     @supports (gap: 2rem) {
       margin: 0;
     }
 
     &:last-child {
-      margin-left: 0;
+      margin: 0;
     }
   }
 
@@ -69,7 +69,6 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    padding-top: 4.75rem;
 
     @supports (gap: 1.25rem) {
       gap: 1.25rem;
@@ -94,7 +93,7 @@
     background: $primary-color;
     border-radius: 0.5rem;
     position: relative;
-    margin-right: 1.25rem;
+    margin: 2rem;
 
     @supports (gap: 1.25rem) {
       gap: 1.25rem;
@@ -123,16 +122,16 @@
     }
 
     &:last-child {
-      background: $secondary-color;
-      color: $primary-color;
+      // background: $secondary-color;
+      // color: $primary-color;
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 0;
 
-      &:hover {
-        background: darken($secondary-color, 20%);
-      }
+      // &:hover {
+      //   background: darken($secondary-color, 20%);
+      // }
 
       &::before {
         color: $secondary-color;
@@ -153,19 +152,24 @@
     justify-content: center;
     flex-wrap: wrap;
     margin: 5rem 0;
+    flex-grow: 1;
 
     @supports (gap: 4rem) {
       gap: 4rem;
+      margin: 0;
+      margin: 5rem 0;
     }
   }
 
   &_alt-card {
     background: $tertiary-color;
-    border: 9.62255px solid $secondary-color;
-    border-radius: 3.25rem;
-    width: 28rem;
-    height: 24.75rem;
-    margin-right: 4rem;
+    border: 0.5rem solid $secondary-color;
+    border-radius: 3.125rem;
+    width: 24rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     @supports (gap: 4rem) {
       gap: 4rem;
@@ -173,22 +177,23 @@
     }
 
     &:last-child {
-      margin-right: 0;
+      margin: 0;
     }
   }
 
   &_list-content {
-    margin: 4.25rem 0 7rem;
-    border-top: 0.125rem solid $secondary-color;
-    border-bottom: 0.125rem solid $secondary-color;
-    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
   }
 
   &_list-title {
     text-decoration: underline;
     font-weight: 800;
     font-size: 2.25rem;
-    padding: 1rem 0;
+    padding: 0 0 1rem;
   }
 
   &_list {
