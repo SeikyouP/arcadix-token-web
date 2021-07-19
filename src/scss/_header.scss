@@ -91,6 +91,18 @@ header,
     height: 7.125rem;
   }
 
+  &_logo {
+    img {
+      height: 2.75rem;
+    }
+  }
+
+  &_button {
+    .hamburger-box {
+      height: 2.75rem;
+    }
+  }
+
   &_menu {
     display: flex;
     flex-direction: column;

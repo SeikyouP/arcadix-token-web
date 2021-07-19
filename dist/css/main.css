@@ -213,7 +213,6 @@ a {
  * @link https://github.com/jonsuh/hamburgers
  */
 .hamburger {
-  padding: 15px 15px;
   display: inline-block;
   cursor: pointer;
   -webkit-transition-property: opacity, -webkit-filter;
@@ -263,8 +262,8 @@ a {
 .hamburger-inner,
 .hamburger-inner::before,
 .hamburger-inner::after {
-  width: 40px;
-  height: 4px;
+  width: 32px;
+  height: 3px;
   background-color: #f1f0f3;
   border-radius: 4px;
   position: absolute;
@@ -285,11 +284,11 @@ a {
 }
 
 .hamburger-inner::before {
-  top: -10px;
+  top: -8px;
 }
 
 .hamburger-inner::after {
-  bottom: -10px;
+  bottom: -8px;
 }
 
 /*
@@ -472,6 +471,14 @@ header_menu-button:hover,
       -ms-flex-align: center;
           align-items: center;
   height: 7.125rem;
+}
+
+.mobile-header_logo img {
+  height: 2.75rem;
+}
+
+.mobile-header_button .hamburger-box {
+  height: 2.75rem;
 }
 
 .mobile-header_menu {
@@ -894,18 +901,17 @@ header_menu-button:hover,
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: -1.5rem 0;
   }
-  @supports (gap: 3rem) {
+  @supports (gap: 4rem) {
     .home .stats_data {
-      gap: 3rem;
+      gap: 4rem;
       margin: 0;
     }
   }
   .home .stats_data-info {
-    margin: 3rem;
+    margin: 4rem;
   }
-  @supports (gap: 3rem) {
+  @supports (gap: 4rem) {
     .home .stats_data-info {
       margin: 0;
     }
