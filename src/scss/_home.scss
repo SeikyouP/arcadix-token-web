@@ -350,11 +350,12 @@
       &_description {
         margin: auto;
         width: 100%;
+        padding-bottom: 3rem;
       }
 
       &_image {
         img {
-          width: 200px;
+          width: 150px;
         }
       }
     }
@@ -375,8 +376,8 @@
 @media (max-width: 500px) {
   .home {
     .inner-gutter {
-      padding-left: 1rem;
-      padding-right: 1rem;
+      padding-left: 4rem;
+      padding-right: 4rem;
     }
 
     .hero {

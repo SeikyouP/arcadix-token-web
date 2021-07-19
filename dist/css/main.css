@@ -929,9 +929,10 @@ header_menu-button:hover,
   .home .hero_description {
     margin: auto;
     width: 100%;
+    padding-bottom: 3rem;
   }
   .home .hero_image img {
-    width: 200px;
+    width: 150px;
   }
   .home .misc .inner-gutter {
     padding-left: 1rem;
@@ -944,8 +945,8 @@ header_menu-button:hover,
 
 @media (max-width: 500px) {
   .home .inner-gutter {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
   .home .hero_description {
     font-size: 0.8rem;
