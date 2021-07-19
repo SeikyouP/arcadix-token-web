@@ -712,19 +712,23 @@ header_menu-button:hover,
 }
 
 .home .promotion_card {
-  width: 16rem;
+  width: 14rem;
   height: 21rem;
   border: 0.25rem solid #7205f6;
   border-radius: 1.875rem;
-  margin: 1.25rem;
-  padding: 2rem 0 3.5rem;
-}
-
-@supports (gap: 3rem) {
-  .home .promotion_card {
-    gap: 3rem;
-    margin: 0;
-  }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .home .promotion_card-icon {
@@ -734,19 +738,18 @@ header_menu-button:hover,
 
 .home .promotion_card-title {
   font-weight: 800;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: #ab45e7;
-  padding: 2.5rem 0 0;
   max-width: 200px;
   line-height: 1.5rem;
-  margin: auto;
+  padding: 2rem 0 0;
 }
 
 .home .promotion_card-number {
   font-family: "Montserrat", "Open Sans", Arial, Helvetica, sans-serif;
   font-weight: 600;
-  font-size: 1rem;
-  line-height: 1.125rem;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
 }
 
 .home .promotion_next-line {
@@ -1456,8 +1459,7 @@ header_menu-button:hover,
 }
 
 .tokenomics_alt-card {
-  background: #7205f6;
-  border: 0.5rem solid #f1f0f3;
+  border: 0.5rem solid #7205f6;
   border-radius: 3.125rem;
   width: 24rem;
   height: 20rem;
@@ -1506,6 +1508,7 @@ header_menu-button:hover,
   font-weight: 800;
   font-size: 2.25rem;
   padding: 0 0 1rem;
+  color: #ab45e7;
 }
 
 .tokenomics_list {

@@ -162,8 +162,9 @@
   }
 
   &_alt-card {
-    background: $tertiary-color;
-    border: 0.5rem solid $secondary-color;
+    // background: $tertiary-color;
+    // border: 0.5rem solid $secondary-color;
+    border: 0.5rem solid $tertiary-color;
     border-radius: 3.125rem;
     width: 24rem;
     height: 20rem;
@@ -194,6 +195,7 @@
     font-weight: 800;
     font-size: 2.25rem;
     padding: 0 0 1rem;
+    color: $primary-color;
   }
 
   &_list {
