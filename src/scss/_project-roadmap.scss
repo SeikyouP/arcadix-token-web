@@ -11,7 +11,6 @@
     line-height: 2.5rem;
     font-family: $primary-font-stack;
     text-transform: uppercase;
-    letter-spacing: -0.04em;
     text-align: center;
     color: $tertiary-color;
 
@@ -44,7 +43,7 @@
     border: 0.5rem solid $secondary-color;
     background: $tertiary-color;
     display: flex;
-    justify-content: flex-end !important;
+    justify-content: flex-end;
     align-items: center;
 
     &_content {
@@ -57,17 +56,13 @@
       text-align: right;
     }
 
-    .date {
-      font-size: 1.25rem;
-    }
-
     &--pink {
       position: relative;
       margin: 6.25rem 0;
       border-radius: 50px 0px 0px 50px;
       left: 6rem;
       background: $primary-color;
-      justify-content: start;
+      justify-content: flex-start;
 
       h3,
       p {
@@ -86,10 +81,11 @@
     &--white {
       color: $secondary-color;
     }
-  }
 
-  &_next-line {
-    display: block;
+    .date {
+      display: block;
+      font-size: 1.25rem;
+    }
   }
 
   &_color {
@@ -97,23 +93,89 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 767px) {
   .project-roadmap {
+    &_title {
+      font-size: 1.625rem;
+    }
+
+    &_details {
+      font-size: 1.25rem;
+    }
+
     &_rectangle {
       padding: 3rem;
-      left: 0;
 
       h3 {
         font-size: 1.75rem;
       }
 
       p {
-        font-size: 0.8rem;
+        font-size: 1.25rem;
       }
 
       &:nth-child(even) {
         padding: 3rem;
-        right: 0;
+      }
+    }
+
+    .date {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .project-roadmap {
+    &_rectangle {
+      padding: 2rem;
+      right: 3rem;
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      &:nth-child(even) {
+        padding: 2rem;
+        left: 3rem;
+      }
+
+      .date {
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .project-roadmap {
+    &_rectangle {
+      padding: 1rem;
+      right: 0;
+      border-radius: 0;
+      justify-content: center;
+
+      h3 {
+        font-size: 1.25rem;
+        text-align: center;
+      }
+
+      p {
+        font-size: 0.75rem;
+        text-align: center;
+      }
+
+      &:nth-child(even) {
+        padding: 1rem;
+        left: 0;
+      }
+
+      .date {
+        font-size: 0.75rem;
       }
     }
   }

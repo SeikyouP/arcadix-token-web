@@ -221,6 +221,14 @@
 
 @media (max-width: 768px) {
   .tokenomics {
+    &_title {
+      font-size: 1.625rem;
+    }
+
+    &_description {
+      font-size: 1.25rem;
+    }
+
     &_buttons {
       gap: 2rem;
       flex-direction: column;
