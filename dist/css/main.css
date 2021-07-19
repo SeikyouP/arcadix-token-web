@@ -1156,21 +1156,9 @@ header_menu-button:hover,
 
 .project-roadmap_rectangle-list {
   padding: 5.5rem 0;
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .project-roadmap_rectangle {
-  width: 100%;
   height: 200px;
   position: relative;
   right: 6rem;
@@ -1182,12 +1170,17 @@ header_menu-button:hover,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  -webkit-box-pack: end !important;
+      -ms-flex-pack: end !important;
+          justify-content: flex-end !important;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.project-roadmap_rectangle_content {
+  position: absolute;
+  top: 0;
 }
 
 .project-roadmap_rectangle h3,
