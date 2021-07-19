@@ -1,9 +1,20 @@
 // Desktop Header
 header,
 .header {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: background 0.125s ease;
+
+  &.active {
+    background: $body-color-alt;
+  }
+
   &_navbar {
     display: flex;
-    flex-grow: 1;
+    justify-content: space-between;
     align-items: center;
     min-height: 3rem;
     padding-top: 2rem;
@@ -11,19 +22,16 @@ header,
   }
 
   &_logo {
-    position: relative;
     height: 3rem;
     flex-basis: 50%;
   }
 
   &_menu {
-    flex-basis: 50%;
     display: flex;
-    flex-grow: 1;
     align-items: center;
-
+    // flex-basis: 50%;
     @supports (gap: 1.25rem) {
-      gap: 1.25rem;
+      // gap: 1.25rem;
     }
   }
 
@@ -31,14 +39,15 @@ header,
     font-size: 0.875rem;
     font-weight: 700;
     transition: 0.25s ease;
-    margin-right: 1.25rem;
+    display: flex;
+    margin-right: 1.25rem !important;
 
     @supports (gap: 1.25rem) {
       margin-right: 0;
     }
 
     &:last-child {
-      margin-right: 0;
+      margin-right: 0 !important;
     }
 
     &:hover {
@@ -69,7 +78,6 @@ header,
 // Mobile Header
 .mobile-header {
   height: 7rem;
-  background: $body-color-alt;
   position: fixed;
   top: 0;
   left: 0;
@@ -78,9 +86,13 @@ header,
   width: 100%;
   z-index: 100;
   overflow: hidden;
-  transition: height 0.5s ease;
+  transition: height 0.5s ease, background 0.125s ease;
 
   &_active {
+    background: $body-color-alt;
+  }
+
+  &_open {
     height: 100%;
   }
 

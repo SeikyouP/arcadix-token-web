@@ -1,4 +1,5 @@
 //  Declare Variables
+let header = document.querySelector('.header')
 let mobileHeader = document.querySelector('.mobile-header')
 let menuToggle = document.querySelector('.mobile-header_button')
 let menuLinks = document.querySelectorAll('.mobile-header_menu-link')
@@ -12,30 +13,41 @@ var scroll = new SmoothScroll('a[href*="#"]', {
   topOnEmptyHash: true,
 })
 
-//Include Menuspy JS
-// var elm = document.querySelector('#menuspy') // Desktop Menu
-// var ms = new MenuSpy(elm, {
-//   activeClass: 'current',
-//   enableLocationHash: false,
-// })
+window.addEventListener('scroll', () => {
+  // Change header background color when scrolled away from top
+  if (window.pageYOffset > 0) {
+    header.classList.add('active')
+  }
 
-// var elm2 = document.querySelector('#mobile-menuspy') // Mobile Menu
-// var ms2 = new MenuSpy(elm2, {
-//   activeClass: 'current',
-//   enableLocationHash: false,
-// })
+  // Otherwise, revert header background color when scrolled back to top
+  else if (window.pageYOffset === 0) {
+    header.classList.remove('active')
+  }
+})
+
+window.addEventListener('scroll', () => {
+  // Change mobile header background color when scrolled away from top
+  if (window.pageYOffset > 0) {
+    mobileHeader.classList.add('active')
+  }
+
+  // Otherwise, revert mobile header background color when scrolled back to top
+  else if (window.pageYOffset === 0) {
+    mobileHeader.classList.remove('active')
+  }
+})
 
 // Open / Close (Toggle) the mobile menu when you click the menu toggle button
 menuToggle.addEventListener('click', function () {
   menuToggle.classList.toggle('is-active')
-  mobileHeader.classList.toggle('mobile-header_active')
+  mobileHeader.classList.toggle('mobile-header_open')
 })
 
 // Close the moblie menu when you click on any mobile link
 for (i = 0; i < menuLinks.length; i++) {
   menuLinks[i].addEventListener('click', function () {
     menuToggle.classList.remove('is-active')
-    mobileHeader.classList.remove('mobile-header_active')
+    mobileHeader.classList.remove('mobile-header_open')
   })
 }
 

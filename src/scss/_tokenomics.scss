@@ -33,7 +33,7 @@
     }
 
     @supports (gap: 2rem) {
-      gap: var(--gap);
+      // gap: var(--gap);
       margin: 0;
 
       & > * {
@@ -88,7 +88,7 @@
     }
 
     @supports (gap: 2rem) {
-      gap: var(--gap);
+      // gap: var(--gap);
       margin: 0;
 
       & > * {
@@ -172,7 +172,7 @@
     }
 
     @supports (gap: 4rem) {
-      gap: var(--gap);
+      // gap: var(--gap);
       margin: 0;
       margin: 5rem 0;
 
@@ -242,7 +242,7 @@
     }
 
     &_buttons {
-      gap: 2rem;
+      // gap: 2rem;
       flex-direction: column;
     }
 
