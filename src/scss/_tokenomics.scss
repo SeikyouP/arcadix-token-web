@@ -19,28 +19,35 @@
   }
 
   &_cards {
+    --gap: 2rem;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     padding: 4.75rem 0;
+    margin: calc(2rem / -2);
+    margin: calc(var(--gap) / -2);
+
+    & > * {
+      margin: calc(2rem / 2);
+      margin: calc(var(--gap) / 2);
+    }
 
     @supports (gap: 2rem) {
-      gap: 2rem;
+      gap: var(--gap);
       margin: 0;
+
+      & > * {
+        margin: 0;
+      }
     }
   }
 
   &_card {
-    max-width: 20rem;
-    margin: 2rem;
-
-    @supports (gap: 2rem) {
-      margin: 0;
-    }
-
-    &:last-child {
-      margin: 0;
-    }
+    width: 20rem;
+    min-height: 28rem;
+    border: 0.25rem solid $tertiary-color;
+    padding: 2rem;
+    border-radius: 1.875rem;
   }
 
   &_card-title {
@@ -66,17 +73,31 @@
   }
 
   &_buttons {
+    --gap: 2rem;
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: calc(2rem / -2);
+    margin-left: calc(var(--gap) / -2);
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    justify-content: center;
 
-    @supports (gap: 1.25rem) {
-      gap: 1.25rem;
+    & > * {
+      margin: calc(2rem / 2);
+      margin: calc(var(--gap) / 2);
+    }
+
+    @supports (gap: 2rem) {
+      gap: var(--gap);
       margin: 0;
+
+      & > * {
+        margin: 0;
+      }
     }
 
     &--alt {
-      margin-top: 0;
+      margin: 0;
       justify-content: center;
     }
   }
@@ -91,14 +112,9 @@
     font-size: 0.875rem;
     transition: color 0.25s ease, background 0.25s ease;
     background: $primary-color;
+    color: $secondary-color;
     border-radius: 0.5rem;
     position: relative;
-    margin: 2rem;
-
-    @supports (gap: 1.25rem) {
-      gap: 1.25rem;
-      margin: 0;
-    }
 
     &:hover {
       background: darken($primary-color, 20%);
@@ -124,10 +140,6 @@
     &:last-child {
       // background: $secondary-color;
       // color: $primary-color;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0;
 
       // &:hover {
       //   background: darken($secondary-color, 20%);
@@ -147,17 +159,26 @@
   }
 
   &_alt-cards {
+    --gap: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     margin: 5rem 0;
-    flex-grow: 1;
+
+    & > * {
+      margin: calc(4rem / 2);
+      margin: calc(var(--gap) / 2);
+    }
 
     @supports (gap: 4rem) {
-      gap: 4rem;
+      gap: var(--gap);
       margin: 0;
       margin: 5rem 0;
+
+      & > * {
+        margin: 0;
+      }
     }
   }
 
@@ -171,15 +192,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    @supports (gap: 4rem) {
-      gap: 4rem;
-      margin: 0;
-    }
-
-    &:last-child {
-      margin: 0;
-    }
   }
 
   &_list-content {

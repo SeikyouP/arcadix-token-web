@@ -1336,37 +1336,43 @@ header_menu-button:hover,
 }
 
 .tokenomics_cards {
+  --gap: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   padding: 4.75rem 0;
+  margin: calc(2rem / -2);
+  margin: calc(var(--gap) / -2);
+}
+
+.tokenomics_cards > * {
+  margin: calc(2rem / 2);
+  margin: calc(var(--gap) / 2);
 }
 
 @supports (gap: 2rem) {
   .tokenomics_cards {
-    gap: 2rem;
+    gap: var(--gap);
+    margin: 0;
+  }
+  .tokenomics_cards > * {
     margin: 0;
   }
 }
 
 .tokenomics_card {
-  max-width: 20rem;
-  margin: 2rem;
-}
-
-@supports (gap: 2rem) {
-  .tokenomics_card {
-    margin: 0;
-  }
-}
-
-.tokenomics_card:last-child {
-  margin: 0;
+  width: 20rem;
+  min-height: 28rem;
+  border: 0.25rem solid #7205f6;
+  padding: 2rem;
+  border-radius: 1.875rem;
 }
 
 .tokenomics_card-title {
@@ -1392,25 +1398,42 @@ header_menu-button:hover,
 }
 
 .tokenomics_buttons {
+  --gap: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin-left: calc(2rem / -2);
+  margin-left: calc(var(--gap) / -2);
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-@supports (gap: 1.25rem) {
+.tokenomics_buttons > * {
+  margin: calc(2rem / 2);
+  margin: calc(var(--gap) / 2);
+}
+
+@supports (gap: 2rem) {
   .tokenomics_buttons {
-    gap: 1.25rem;
+    gap: var(--gap);
+    margin: 0;
+  }
+  .tokenomics_buttons > * {
     margin: 0;
   }
 }
 
 .tokenomics_buttons--alt {
-  margin-top: 0;
+  margin: 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1433,16 +1456,9 @@ header_menu-button:hover,
   -webkit-transition: color 0.25s ease, background 0.25s ease;
   transition: color 0.25s ease, background 0.25s ease;
   background: #ab45e7;
+  color: #f1f0f3;
   border-radius: 0.5rem;
   position: relative;
-  margin: 2rem;
-}
-
-@supports (gap: 1.25rem) {
-  .tokenomics_button {
-    gap: 1.25rem;
-    margin: 0;
-  }
 }
 
 .tokenomics_button:hover {
@@ -1472,19 +1488,6 @@ header_menu-button:hover,
   pointer-events: none;
 }
 
-.tokenomics_button:last-child {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0;
-}
-
 .tokenomics_button:last-child::before {
   color: #f1f0f3;
 }
@@ -1497,6 +1500,7 @@ header_menu-button:hover,
 }
 
 .tokenomics_alt-cards {
+  --gap: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1506,19 +1510,26 @@ header_menu-button:hover,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   margin: 5rem 0;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+}
+
+.tokenomics_alt-cards > * {
+  margin: calc(4rem / 2);
+  margin: calc(var(--gap) / 2);
 }
 
 @supports (gap: 4rem) {
   .tokenomics_alt-cards {
-    gap: 4rem;
+    gap: var(--gap);
     margin: 0;
     margin: 5rem 0;
+  }
+  .tokenomics_alt-cards > * {
+    margin: 0;
   }
 }
 
@@ -1537,17 +1548,6 @@ header_menu-button:hover,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-@supports (gap: 4rem) {
-  .tokenomics_alt-card {
-    gap: 4rem;
-    margin: 0;
-  }
-}
-
-.tokenomics_alt-card:last-child {
-  margin: 0;
 }
 
 .tokenomics_list-content {
