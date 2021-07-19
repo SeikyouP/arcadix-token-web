@@ -923,6 +923,9 @@ header_menu-button:hover,
     padding: 7.125rem 0 0;
     text-align: center;
   }
+  .home .hero_title {
+    font-size: 1.625rem;
+  }
   .home .hero_description {
     margin: auto;
     width: 100%;

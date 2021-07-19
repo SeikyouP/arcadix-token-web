@@ -343,6 +343,10 @@
     text-align: center;
 
     .hero {
+      &_title {
+        font-size: 1.625rem;
+      }
+
       &_description {
         margin: auto;
         width: 100%;
