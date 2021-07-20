@@ -20,6 +20,10 @@
     align-items: center;
     flex-wrap: wrap;
     margin: -0.625rem 0 !important;
+
+    @media (max-width: 767px) {
+      margin: -0.25rem 0 !important;
+    }
   }
 
   &_card {
@@ -28,10 +32,19 @@
     border: 0.25rem solid $tertiary-color;
     border-radius: 1.875rem;
     margin: 0.625rem !important;
+
+    @media (max-width: 767px) {
+      height: 18.75rem;
+      width: 10rem;
+      margin: 0.25rem !important;
+    }
   }
 
   &_profile {
     padding: 1.25rem 0 2rem;
+    @media (max-width: 767px) {
+      padding: 1.25rem 0 1.25rem;
+    }
   }
 
   &_image {
@@ -47,6 +60,12 @@
     text-align: center;
     margin: auto;
     line-height: 1.5rem;
+  }
+
+  &_no-name {
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
 
   &_last-name {

@@ -22,8 +22,11 @@ header,
   }
 
   &_logo {
-    height: 3rem;
     flex-basis: 50%;
+    height: 2.75rem;
+    img {
+      height: 2.75rem;
+    }
   }
 
   &_menu {

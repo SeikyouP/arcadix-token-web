@@ -59,7 +59,7 @@
     &_buttons {
       display: flex;
       align-items: center;
-      margin-top: 2.25rem;
+      margin: 2.25rem -1rem 0;
       flex-flow: row wrap;
     }
 
@@ -73,30 +73,25 @@
       background: $primary-color;
       border-radius: 0.5rem;
       position: relative;
-      margin-right: 2rem;
+      margin: 1rem;
 
-      @media (max-width: 500px) {
-        margin-right: 0rem;
-
-        &:last-child {
-          margin-top: 2rem;
-        }
+      @media (max-width: 767px) {
+        margin: 0.25rem;
       }
 
       &:hover {
         background: darken($primary-color, 20%);
       }
 
-      &:last-child {
-        margin-right: 0rem;
-        // background: $secondary-color;
-        // color: $primary-color;
+      // &:last-child {
+      //   background: $secondary-color;
+      //   color: $primary-color;
 
-        // &:hover {
-        //   background: $primary-color;
-        //   color: $secondary-color;
-        // }
-      }
+      //   &:hover {
+      //     background: $primary-color;
+      //     color: $secondary-color;
+      //   }
+      // }
     }
   }
 
@@ -229,12 +224,9 @@
       position: relative;
       margin: 1rem;
 
-      @media (max-width: 500px) {
-        margin-right: 0rem;
-
-        &:last-child {
-          margin-top: 2rem;
-        }
+      @media (max-width: 767px) {
+        width: 10rem;
+        margin: 0.25rem;
       }
 
       &:hover {
@@ -256,6 +248,10 @@
         font-size: 0.875rem;
         cursor: default;
         pointer-events: none;
+
+        @media (max-width: 767px) {
+          width: 10rem;
+        }
       }
 
       &:last-child {
@@ -310,12 +306,16 @@
 
 @media (max-width: 768px) {
   .home {
-    padding: 7.125rem 0 0;
+    padding: 0;
     text-align: center;
 
     .hero {
       &_title {
         font-size: 1.625rem;
+      }
+
+      .inner-gutter {
+        padding-top: 0;
       }
 
       &_description {
@@ -328,17 +328,6 @@
         img {
           width: 150px;
         }
-      }
-    }
-
-    .misc {
-      .inner-gutter {
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
-
-      &_buttons {
-        // gap: 2rem;
       }
     }
   }
@@ -363,24 +352,6 @@
 
         span {
           font-size: 0.75rem;
-        }
-      }
-
-      &_buttons {
-        flex-direction: column;
-      }
-    }
-
-    .misc {
-      &_buttons {
-        flex-direction: column;
-      }
-
-      &_button {
-        margin: 2rem;
-
-        @supports (gap: 2rem) {
-          margin: 0;
         }
       }
     }

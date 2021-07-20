@@ -88,6 +88,11 @@
     position: relative;
     margin: 1rem;
 
+    @media (max-width: 767px) {
+      width: 10rem;
+      margin: 0.25rem;
+    }
+
     &:hover {
       background: darken($primary-color, 20%);
     }
@@ -107,6 +112,10 @@
       font-size: 0.875rem;
       cursor: default;
       pointer-events: none;
+
+      @media (max-width: 767px) {
+        width: 10rem;
+      }
     }
 
     &:last-child {
@@ -191,11 +200,6 @@
 
     &_description {
       font-size: 1.25rem;
-    }
-
-    &_buttons {
-      // gap: 2rem;
-      flex-direction: column;
     }
 
     &_next-line {

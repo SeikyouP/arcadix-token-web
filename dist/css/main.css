@@ -360,9 +360,14 @@ header_navbar,
 
 header_logo,
 .header_logo {
-  height: 3rem;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
+  height: 2.75rem;
+}
+
+header_logo img,
+.header_logo img {
+  height: 2.75rem;
 }
 
 header_menu,
@@ -590,7 +595,7 @@ header_menu-button:hover,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 2.25rem;
+  margin: 2.25rem -1rem 0;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
@@ -608,24 +613,17 @@ header_menu-button:hover,
   background: #ab45e7;
   border-radius: 0.5rem;
   position: relative;
-  margin-right: 2rem;
+  margin: 1rem;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 767px) {
   .home .hero_button {
-    margin-right: 0rem;
-  }
-  .home .hero_button:last-child {
-    margin-top: 2rem;
+    margin: 0.25rem;
   }
 }
 
 .home .hero_button:hover {
   background: #7717af;
-}
-
-.home .hero_button:last-child {
-  margin-right: 0rem;
 }
 
 .home .stats_data {
@@ -801,12 +799,10 @@ header_menu-button:hover,
   margin: 1rem;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 767px) {
   .home .misc_button {
-    margin-right: 0rem;
-  }
-  .home .misc_button:last-child {
-    margin-top: 2rem;
+    width: 10rem;
+    margin: 0.25rem;
   }
 }
 
@@ -835,6 +831,12 @@ header_menu-button:hover,
   font-size: 0.875rem;
   cursor: default;
   pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .home .misc_button::before {
+    width: 10rem;
+  }
 }
 
 .home .misc_button:last-child:hover {
@@ -878,11 +880,14 @@ header_menu-button:hover,
 
 @media (max-width: 768px) {
   .home {
-    padding: 7.125rem 0 0;
+    padding: 0;
     text-align: center;
   }
   .home .hero_title {
     font-size: 1.625rem;
+  }
+  .home .hero .inner-gutter {
+    padding-top: 0;
   }
   .home .hero_description {
     margin: auto;
@@ -891,10 +896,6 @@ header_menu-button:hover,
   }
   .home .hero_image img {
     width: 150px;
-  }
-  .home .misc .inner-gutter {
-    padding-left: 1rem;
-    padding-right: 1rem;
   }
 }
 
@@ -913,26 +914,6 @@ header_menu-button:hover,
   }
   .home .hero_contract-address span {
     font-size: 0.75rem;
-  }
-  .home .hero_buttons {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .home .misc_buttons {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .home .misc_button {
-    margin: 2rem;
-  }
-  @supports (gap: 2rem) {
-    .home .misc_button {
-      margin: 0;
-    }
   }
 }
 
@@ -968,6 +949,12 @@ header_menu-button:hover,
   margin: -0.625rem 0 !important;
 }
 
+@media (max-width: 767px) {
+  .team_cards {
+    margin: -0.25rem 0 !important;
+  }
+}
+
 .team_card {
   height: 18.75rem;
   width: 12.5rem;
@@ -976,8 +963,22 @@ header_menu-button:hover,
   margin: 0.625rem !important;
 }
 
+@media (max-width: 767px) {
+  .team_card {
+    height: 18.75rem;
+    width: 10rem;
+    margin: 0.25rem !important;
+  }
+}
+
 .team_profile {
   padding: 1.25rem 0 2rem;
+}
+
+@media (max-width: 767px) {
+  .team_profile {
+    padding: 1.25rem 0 1.25rem;
+  }
 }
 
 .team_image {
@@ -993,6 +994,12 @@ header_menu-button:hover,
   text-align: center;
   margin: auto;
   line-height: 1.5rem;
+}
+
+@media (max-width: 767px) {
+  .team_no-name {
+    display: none;
+  }
 }
 
 .team_last-name {
@@ -1346,6 +1353,13 @@ header_menu-button:hover,
   margin: 1rem;
 }
 
+@media (max-width: 767px) {
+  .tokenomics_button {
+    width: 10rem;
+    margin: 0.25rem;
+  }
+}
+
 .tokenomics_button:hover {
   background: #7717af;
 }
@@ -1371,6 +1385,12 @@ header_menu-button:hover,
   font-size: 0.875rem;
   cursor: default;
   pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .tokenomics_button::before {
+    width: 10rem;
+  }
 }
 
 .tokenomics_button:last-child::before {
@@ -1465,12 +1485,6 @@ header_menu-button:hover,
   }
   .tokenomics_description {
     font-size: 1.25rem;
-  }
-  .tokenomics_buttons {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
   .tokenomics_next-line {
     display: inline;
