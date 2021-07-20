@@ -541,6 +541,10 @@ header_menu-button:hover,
   }
 }
 
+.home {
+  overflow-x: hidden;
+}
+
 .home .hero {
   padding-top: 9rem;
 }
@@ -1236,6 +1240,10 @@ header_menu-button:hover,
   .project-roadmap_rectangle .date {
     font-size: 0.75rem;
   }
+}
+
+.tokenomics {
+  overflow-x: hidden;
 }
 
 .tokenomics_inner {
