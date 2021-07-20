@@ -584,7 +584,6 @@ header_menu-button:hover,
 }
 
 .home .hero_buttons {
-  --gap: 1.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -596,23 +595,6 @@ header_menu-button:hover,
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  margin: calc(1.25rem / -2);
-  margin: calc(var(--gap) / -2);
-}
-
-.home .hero_buttons > * {
-  margin: calc(1.25rem / 2);
-  margin: calc(var(--gap) / 2);
-}
-
-@supports (gap: 1.25rem) {
-  .home .hero_buttons {
-    margin: 0;
-    margin-top: 2.25rem;
-  }
-  .home .hero_buttons > * {
-    margin: 0;
-  }
 }
 
 .home .hero_button {
@@ -626,13 +608,15 @@ header_menu-button:hover,
   background: #ab45e7;
   border-radius: 0.5rem;
   position: relative;
-  border: 2rem transparent;
-  margin-right: 2rem !important;
+  margin-right: 2rem;
 }
 
-@supports (gap: 1.25rem) {
+@media (max-width: 500px) {
   .home .hero_button {
-    margin: 0;
+    margin-right: 0rem;
+  }
+  .home .hero_button:last-child {
+    margin-top: 2rem;
   }
 }
 
@@ -640,11 +624,8 @@ header_menu-button:hover,
   background: #7717af;
 }
 
-.home .hero_button:last-child i {
-  margin-left: 0.5rem;
-  font-size: 1.125rem;
-  height: 1.125rem;
-  width: 1.125rem;
+.home .hero_button:last-child {
+  margin-right: 0rem;
 }
 
 .home .stats_data {
@@ -664,15 +645,6 @@ header_menu-button:hover,
 .home .stats_data > * {
   margin: calc(4rem / 2);
   margin: calc(var(--gap) / 2);
-}
-
-@supports (gap: 4rem) {
-  .home .stats_data {
-    margin: 0;
-  }
-  .home .stats_data > * {
-    margin: 0;
-  }
 }
 
 .home .stats_data-info {
@@ -729,15 +701,6 @@ header_menu-button:hover,
 .home .promotion_cards > * {
   margin: calc(3rem / 2);
   margin: calc(var(--gap) / 2);
-}
-
-@supports (gap: 3rem) {
-  .home .promotion_cards {
-    margin: 0;
-  }
-  .home .promotion_cards > * {
-    margin: 0;
-  }
 }
 
 .home .promotion_card {
@@ -798,8 +761,6 @@ header_menu-button:hover,
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  margin: calc(2rem / -2);
-  margin: calc(var(--gap) / -2);
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -807,20 +768,7 @@ header_menu-button:hover,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.home .misc_buttons > * {
-  margin-right: calc(2rem / 2);
-  margin-right: calc(var(--gap) / 2);
-}
-
-@supports (gap: 2rem) {
-  .home .misc_buttons {
-    margin: 0;
-  }
-  .home .misc_buttons > * {
-    margin: 0;
-  }
+  margin: -1rem;
 }
 
 .home .misc_buttons--alt {
@@ -850,7 +798,16 @@ header_menu-button:hover,
   color: #f1f0f3;
   border-radius: 0.5rem;
   position: relative;
-  margin-right: 2rem;
+  margin: 1rem;
+}
+
+@media (max-width: 500px) {
+  .home .misc_button {
+    margin-right: 0rem;
+  }
+  .home .misc_button:last-child {
+    margin-top: 2rem;
+  }
 }
 
 .home .misc_button:hover {
@@ -878,19 +835,6 @@ header_menu-button:hover,
   font-size: 0.875rem;
   cursor: default;
   pointer-events: none;
-}
-
-.home .misc_button:last-child {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0;
 }
 
 .home .misc_button:last-child:hover {
@@ -1021,12 +965,7 @@ header_menu-button:hover,
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-@supports (gap: 1.25rem) {
-  .team_cards {
-    margin: 0;
-  }
+  margin: -0.625rem 0 !important;
 }
 
 .team_card {
@@ -1034,13 +973,7 @@ header_menu-button:hover,
   width: 12.5rem;
   border: 0.25rem solid #7205f6;
   border-radius: 1.875rem;
-  margin: 0.625rem;
-}
-
-@supports (gap: 1.25rem) {
-  .team_card {
-    margin: 0;
-  }
+  margin: 0.625rem !important;
 }
 
 .team_profile {
@@ -1330,22 +1263,7 @@ header_menu-button:hover,
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   padding: 4.75rem 0;
-  margin: calc(2rem / -2);
-  margin: calc(var(--gap) / -2);
-}
-
-.tokenomics_cards > * {
-  margin: calc(2rem / 2);
-  margin: calc(var(--gap) / 2);
-}
-
-@supports (gap: 2rem) {
-  .tokenomics_cards {
-    margin: 0;
-  }
-  .tokenomics_cards > * {
-    margin: 0;
-  }
+  margin: -1rem;
 }
 
 .tokenomics_card {
@@ -1354,6 +1272,7 @@ header_menu-button:hover,
   border: 0.25rem solid #7205f6;
   padding: 2rem;
   border-radius: 1.875rem;
+  margin: 1rem;
 }
 
 .tokenomics_card-title {
@@ -1387,8 +1306,6 @@ header_menu-button:hover,
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  margin-left: calc(2rem / -2);
-  margin-left: calc(var(--gap) / -2);
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1396,20 +1313,7 @@ header_menu-button:hover,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.tokenomics_buttons > * {
-  margin: calc(2rem / 2);
-  margin: calc(var(--gap) / 2);
-}
-
-@supports (gap: 2rem) {
-  .tokenomics_buttons {
-    margin: 0;
-  }
-  .tokenomics_buttons > * {
-    margin: 0;
-  }
+  margin: -1rem;
 }
 
 .tokenomics_buttons--alt {
@@ -1439,6 +1343,7 @@ header_menu-button:hover,
   color: #f1f0f3;
   border-radius: 0.5rem;
   position: relative;
+  margin: 1rem;
 }
 
 .tokenomics_button:hover {
@@ -1470,13 +1375,6 @@ header_menu-button:hover,
 
 .tokenomics_button:last-child::before {
   color: #f1f0f3;
-}
-
-.tokenomics_button:last-child i {
-  margin-left: 0.5rem;
-  font-size: 1.125rem;
-  height: 1.125rem;
-  width: 1.125rem;
 }
 
 .tokenomics_alt-cards {
@@ -1607,8 +1505,8 @@ footer_inner,
 footer_logo,
 .footer_logo {
   height: 6rem;
-  width: auto;
   margin-bottom: 5.25rem;
+  display: block;
 }
 
 footer_menus,
@@ -1621,6 +1519,11 @@ footer_menus,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+footer_menu,
+.footer_menu {
+  margin: 2rem;
 }
 
 footer_menu-title,

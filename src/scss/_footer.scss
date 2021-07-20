@@ -8,14 +8,18 @@ footer,
 
   &_logo {
     height: 6rem;
-    width: auto;
     margin-bottom: 5.25rem;
+    display: block;
   }
 
   &_menus {
     display: flex;
     justify-content: space-around;
     align-items: center;
+  }
+
+  &_menu {
+    margin: 2rem;
   }
 
   &_menu-title {
@@ -51,7 +55,7 @@ footer,
       text-align: center;
     }
 
-    &_copyright-info{
+    &_copyright-info {
       font-size: 0.75rem;
     }
   }

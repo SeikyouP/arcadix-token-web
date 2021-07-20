@@ -57,31 +57,10 @@
     }
 
     &_buttons {
-      --gap: 1.25rem;
       display: flex;
       align-items: center;
       margin-top: 2.25rem;
       flex-flow: row wrap;
-      margin: calc(1.25rem / -2);
-      margin: calc(var(--gap) / -2);
-
-      & > * {
-        margin: calc(1.25rem / 2);
-        margin: calc(var(--gap) / 2);
-      }
-      @supports (gap: 1.25rem) {
-        // gap: var(--gap);
-        margin: 0;
-        margin-top: 2.25rem;
-
-        & > * {
-          margin: 0;
-        }
-      }
-
-      @supports (gap: 1.25rem) {
-        // gap: 1.25rem;
-      }
     }
 
     &_button {
@@ -94,11 +73,14 @@
       background: $primary-color;
       border-radius: 0.5rem;
       position: relative;
-      border: 2rem transparent;
-      margin-right: 2rem !important;
+      margin-right: 2rem;
 
-      @supports (gap: 1.25rem) {
-        margin: 0;
+      @media (max-width: 500px) {
+        margin-right: 0rem;
+
+        &:last-child {
+          margin-top: 2rem;
+        }
       }
 
       &:hover {
@@ -106,6 +88,7 @@
       }
 
       &:last-child {
+        margin-right: 0rem;
         // background: $secondary-color;
         // color: $primary-color;
 
@@ -113,13 +96,6 @@
         //   background: $primary-color;
         //   color: $secondary-color;
         // }
-
-        i {
-          margin-left: 0.5rem;
-          font-size: 1.125rem;
-          height: 1.125rem;
-          width: 1.125rem;
-        }
       }
     }
   }
@@ -137,15 +113,6 @@
       & > * {
         margin: calc(4rem / 2);
         margin: calc(var(--gap) / 2);
-      }
-
-      @supports (gap: 4rem) {
-        // gap: var(--gap);
-        margin: 0;
-
-        & > * {
-          margin: 0;
-        }
       }
     }
 
@@ -188,15 +155,6 @@
       & > * {
         margin: calc(3rem / 2);
         margin: calc(var(--gap) / 2);
-      }
-
-      @supports (gap: 3rem) {
-        // gap: var(--gap);
-        margin: 0;
-
-        & > * {
-          margin: 0;
-        }
       }
     }
 
@@ -245,25 +203,10 @@
       --gap: 2rem;
       display: flex;
       flex-flow: row wrap;
-      margin: calc(2rem / -2);
-      margin: calc(var(--gap) / -2);
       display: flex;
       align-items: center;
       justify-content: center;
-
-      & > * {
-        margin-right: calc(2rem / 2);
-        margin-right: calc(var(--gap) / 2);
-      }
-
-      @supports (gap: 2rem) {
-        // gap: var(--gap);
-        margin: 0;
-
-        & > * {
-          margin: 0;
-        }
-      }
+      margin: -1rem;
 
       &--alt {
         margin: 0;
@@ -284,7 +227,15 @@
       color: $secondary-color;
       border-radius: 0.5rem;
       position: relative;
-      margin-right: 2rem;
+      margin: 1rem;
+
+      @media (max-width: 500px) {
+        margin-right: 0rem;
+
+        &:last-child {
+          margin-top: 2rem;
+        }
+      }
 
       &:hover {
         background: darken($primary-color, 20%);
@@ -310,10 +261,6 @@
       &:last-child {
         // background: $secondary-color;
         // color: $primary-color;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0;
 
         &:hover {
           background: darken($primary-color, 20%);
