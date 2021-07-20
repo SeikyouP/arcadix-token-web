@@ -129,22 +129,8 @@
     align-items: center;
     justify-content: center;
     flex-flow: row wrap;
-    margin: 5rem 0;
-
-    & > * {
-      margin: calc(4rem / 2);
-      margin: calc(var(--gap) / 2);
-    }
-
-    @supports (gap: 4rem) {
-      // gap: var(--gap);
-      margin: 0;
-      margin: 5rem 0;
-
-      & > * {
-        margin: 0;
-      }
-    }
+    padding: 5rem 0;
+    margin: -2rem;
   }
 
   &_alt-card {
@@ -157,6 +143,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 2rem;
   }
 
   &_list-content {

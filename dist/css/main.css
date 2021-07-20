@@ -1392,22 +1392,8 @@ header_menu-button:hover,
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  margin: 5rem 0;
-}
-
-.tokenomics_alt-cards > * {
-  margin: calc(4rem / 2);
-  margin: calc(var(--gap) / 2);
-}
-
-@supports (gap: 4rem) {
-  .tokenomics_alt-cards {
-    margin: 0;
-    margin: 5rem 0;
-  }
-  .tokenomics_alt-cards > * {
-    margin: 0;
-  }
+  padding: 5rem 0;
+  margin: -2rem;
 }
 
 .tokenomics_alt-card {
@@ -1425,6 +1411,7 @@ header_menu-button:hover,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 2rem;
 }
 
 .tokenomics_list-content {
