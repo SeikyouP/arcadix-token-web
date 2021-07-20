@@ -1489,6 +1489,14 @@ header_menu-button:hover,
   .tokenomics_next-line {
     display: inline;
   }
+  .tokenomics_alt-cards {
+    padding: 5rem 0;
+  }
+  .tokenomics_alt-card {
+    width: 23.5rem;
+    height: 20rem;
+    margin: 2rem;
+  }
 }
 
 footer_inner,

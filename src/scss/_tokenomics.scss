@@ -205,5 +205,15 @@
     &_next-line {
       display: inline;
     }
+
+    &_alt-cards {
+      padding: 5rem 0;
+    }
+
+    &_alt-card {
+      width: 23.5rem;
+      height: 20rem;
+      margin: 2rem;
+    }
   }
 }
