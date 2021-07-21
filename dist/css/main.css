@@ -1423,7 +1423,7 @@ header_menu-button:hover,
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 440px) {
   .project-roadmap_rectangle {
     padding: 0.75rem;
     right: 0;
