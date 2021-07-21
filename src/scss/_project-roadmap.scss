@@ -162,7 +162,7 @@
 @media (max-width: 500px) {
   .project-roadmap {
     &_rectangle {
-      padding: 1rem;
+      padding: 0.75rem;
       right: 0;
       border-radius: 0;
       justify-content: center;
@@ -173,12 +173,12 @@
       }
 
       h3 {
-        font-size: 1.25rem;
+        font-size: 1.4rem;
         text-align: center;
       }
 
       p {
-        font-size: 0.75rem;
+        font-size: 0.8rem;
         text-align: center;
       }
 

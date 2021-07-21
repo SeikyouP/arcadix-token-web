@@ -365,8 +365,6 @@ header_navbar,
 
 header_logo,
 .header_logo {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
   height: 2.75rem;
 }
 
@@ -743,6 +741,31 @@ header_menu-button:hover,
   margin: 1.5rem;
 }
 
+.home .promotion_card:first-child > div {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 6.75rem;
+  width: 6.75rem;
+  border-radius: 50%;
+  border: 0.25rem solid #ab45e7;
+}
+
+.home .promotion_card:first-child > div i {
+  color: #7205f6;
+  font-size: 3rem;
+}
+
 .home .promotion_card-icon {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -757,18 +780,6 @@ header_menu-button:hover,
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-}
-
-.home .promotion_card-icon i {
-  border-radius: 50%;
-  border: 0.25rem solid #ab45e7;
-  color: #7205f6;
-  font-size: 3rem;
-  padding: 1.5rem;
-}
-
-.home .promotion_card-icon,
-.home .promotion i {
   height: 6.75rem;
   width: 6.75rem;
 }
@@ -957,6 +968,13 @@ header_menu-button:hover,
   }
   .home .hero_contract-address span {
     font-size: 0.75rem;
+  }
+  .home .promotion_card-title {
+    font-size: 2rem;
+    padding-bottom: 0.5rem;
+  }
+  .home .promotion_card-number {
+    font-size: 1.5rem;
   }
 }
 
@@ -1264,7 +1282,7 @@ header_menu-button:hover,
 
 @media (max-width: 500px) {
   .project-roadmap_rectangle {
-    padding: 1rem;
+    padding: 0.75rem;
     right: 0;
     border-radius: 0;
     -webkit-box-pack: center;
@@ -1276,11 +1294,11 @@ header_menu-button:hover,
     margin: 0;
   }
   .project-roadmap_rectangle h3 {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     text-align: center;
   }
   .project-roadmap_rectangle p {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     text-align: center;
   }
   .project-roadmap_rectangle:nth-child(even) {
@@ -1305,15 +1323,11 @@ header_menu-button:hover,
   }
 }
 
-.tokenomics {
-  overflow: hidden;
-}
-
-.tokenomics_inner {
+.arcadix_inner {
   text-align: center;
 }
 
-.tokenomics_title {
+.arcadix_title {
   font-size: 2.125rem;
   font-weight: 800;
   font-family: "Montserrat", "Open Sans", Arial, Helvetica, sans-serif;
@@ -1321,14 +1335,30 @@ header_menu-button:hover,
   margin-bottom: 0.75rem;
 }
 
-.tokenomics_description {
+@media (max-width: 767px) {
+  .arcadix_title_title {
+    font-size: 1.625rem;
+  }
+}
+
+.arcadix_color {
+  color: #ab45e7;
+}
+
+.arcadix_description {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 2rem;
   padding: 2rem 0 0;
 }
 
-.tokenomics_cards {
+@media (max-width: 767px) {
+  .arcadix_description_description {
+    font-size: 1.25rem;
+  }
+}
+
+.arcadix_cards {
   --gap: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1344,7 +1374,7 @@ header_menu-button:hover,
   margin: -1rem;
 }
 
-.tokenomics_card {
+.arcadix_card {
   width: 20rem;
   min-height: 28rem;
   border: 0.25rem solid #7205f6;
@@ -1353,21 +1383,21 @@ header_menu-button:hover,
   margin: 1rem;
 }
 
-.tokenomics_card-title {
+.arcadix_card-title {
   color: #7205f6;
   font-weight: 800;
   font-size: 2.125rem;
   margin: 2rem 0 0.75rem;
 }
 
-.tokenomics_card-subtitle {
+.arcadix_card-subtitle {
   color: #ab45e7;
   font-weight: bold;
   font-size: 24px;
   line-height: 32px;
 }
 
-.tokenomics_card-description {
+.arcadix_card-description {
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1375,7 +1405,7 @@ header_menu-button:hover,
   margin-top: 0.75rem;
 }
 
-.tokenomics_buttons {
+.arcadix_buttons {
   --gap: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1394,14 +1424,14 @@ header_menu-button:hover,
   margin: -1rem;
 }
 
-.tokenomics_buttons--alt {
+.arcadix_buttons--alt {
   margin: 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.tokenomics_button {
+.arcadix_button {
   width: 10rem;
   height: 3rem;
   display: -webkit-box;
@@ -1425,17 +1455,17 @@ header_menu-button:hover,
 }
 
 @media (max-width: 767px) {
-  .tokenomics_button {
+  .arcadix_button {
     width: 9rem;
     margin: 0.25rem;
   }
 }
 
-.tokenomics_button:hover {
+.arcadix_button:hover {
   background: #7717af;
 }
 
-.tokenomics_button::before {
+.arcadix_button::before {
   content: '( Coming Soon )';
   position: absolute;
   top: 2.5rem;
@@ -1459,16 +1489,38 @@ header_menu-button:hover,
 }
 
 @media (max-width: 767px) {
-  .tokenomics_button::before {
+  .arcadix_button::before {
     width: 9rem;
   }
 }
 
-.tokenomics_button:last-child::before {
+.arcadix_button:last-child::before {
   color: #f1f0f3;
 }
 
-.tokenomics_alt-cards {
+.tokenomics_inner {
+  text-align: center;
+}
+
+.tokenomics_title {
+  font-size: 2.125rem;
+  font-weight: 800;
+  font-family: "Montserrat", "Open Sans", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .tokenomics_title {
+    font-size: 1.625rem;
+  }
+}
+
+.tokenomics_color {
+  color: #ab45e7;
+}
+
+.tokenomics_cards {
   --gap: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1486,7 +1538,13 @@ header_menu-button:hover,
   padding: 5rem 0;
 }
 
-.tokenomics_alt-card {
+@media (max-width: 768px) {
+  .tokenomics_cards {
+    padding: 4rem 0 0;
+  }
+}
+
+.tokenomics_card {
   border: 0.5rem solid #7205f6;
   border-radius: 3.125rem;
   width: 24rem;
@@ -1502,6 +1560,16 @@ header_menu-button:hover,
       -ms-flex-align: center;
           align-items: center;
   margin: 2rem;
+}
+
+@media (max-width: 768px) {
+  .tokenomics_card {
+    width: 20rem;
+    height: 20rem;
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 0.25rem solid #7205f6;
+  }
 }
 
 .tokenomics_list-content {
@@ -1535,44 +1603,9 @@ header_menu-button:hover,
   line-height: 2rem;
 }
 
-.tokenomics_color {
-  color: #ab45e7;
-}
-
-.tokenomics_next-line {
-  display: block;
-}
-
-.tokenomics_menu-links {
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 24px;
-}
-
 @media (max-width: 768px) {
-  .tokenomics_title {
-    font-size: 1.625rem;
-  }
-  .tokenomics_description {
-    font-size: 1.25rem;
-  }
-  .tokenomics_next-line {
-    display: inline;
-  }
-  .tokenomics_alt-cards {
-    padding: 4rem 0 0;
-  }
-  .tokenomics_alt-card {
-    width: 20rem;
-    height: 20rem;
-    margin: 1rem 0;
-    padding: 1rem;
-    border: 0.25rem solid #7205f6;
-  }
   .tokenomics_list {
-    font-weight: bold;
     font-size: 1.25rem;
-    line-height: 2rem;
   }
 }
 

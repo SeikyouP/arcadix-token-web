@@ -1,5 +1,4 @@
 .tokenomics {
-  overflow: hidden;
   &_inner {
     text-align: center;
   }
@@ -10,139 +9,30 @@
     font-family: $primary-font-stack;
     text-transform: uppercase;
     margin-bottom: 0.75rem;
+
+    @media (max-width: 768px) {
+      font-size: 1.625rem;
+    }
   }
 
-  &_description {
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 2rem;
-    padding: 2rem 0 0;
+  &_color {
+    color: $primary-color;
   }
 
   &_cards {
-    --gap: 2rem;
-    display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
-    padding: 4.75rem 0;
-    margin: -1rem;
-  }
-
-  &_card {
-    width: 20rem;
-    min-height: 28rem;
-    border: 0.25rem solid $tertiary-color;
-    padding: 2rem;
-    border-radius: 1.875rem;
-    margin: 1rem;
-  }
-
-  &_card-title {
-    color: $tertiary-color;
-    font-weight: 800;
-    font-size: 2.125rem;
-    margin: 2rem 0 0.75rem;
-  }
-
-  &_card-subtitle {
-    color: $primary-color;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 32px;
-  }
-
-  &_card-description {
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    font-family: $secondary-font-stack;
-    margin-top: 0.75rem;
-  }
-
-  &_buttons {
-    --gap: 2rem;
-    display: flex;
-    flex-flow: row wrap;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: -1rem;
-
-    &--alt {
-      margin: 0;
-      justify-content: center;
-    }
-  }
-
-  &_button {
-    width: 10rem;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 0.875rem;
-    transition: color 0.25s ease, background 0.25s ease;
-    background: $primary-color;
-    color: $secondary-color;
-    border-radius: 0.5rem;
-    position: relative;
-    margin: 1rem;
-
-    @media (max-width: 767px) {
-      width: 9rem;
-      margin: 0.25rem;
-    }
-
-    &:hover {
-      background: darken($primary-color, 20%);
-    }
-
-    &::before {
-      content: '( Coming Soon )';
-      position: absolute;
-      top: 2.5rem;
-      right: 0;
-      right: calc(100% + 1.25rem) / 2;
-      width: 10rem;
-      height: 3rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 600;
-      font-size: 0.875rem;
-      cursor: default;
-      pointer-events: none;
-
-      @media (max-width: 767px) {
-        width: 9rem;
-      }
-    }
-
-    &:last-child {
-      // background: $secondary-color;
-      // color: $primary-color;
-
-      // &:hover {
-      //   background: darken($secondary-color, 20%);
-      // }
-
-      &::before {
-        color: $secondary-color;
-      }
-    }
-  }
-
-  &_alt-cards {
     --gap: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: row wrap;
     padding: 5rem 0;
+
+    @media (max-width: 768px) {
+      padding: 4rem 0 0;
+    }
   }
 
-  &_alt-card {
+  &_card {
     // background: $tertiary-color;
     // border: 0.5rem solid $secondary-color;
     border: 0.5rem solid $tertiary-color;
@@ -153,6 +43,14 @@
     flex-direction: column;
     align-items: center;
     margin: 2rem;
+
+    @media (max-width: 768px) {
+      width: 20rem;
+      height: 20rem;
+      margin: 1rem 0;
+      padding: 1rem;
+      border: 0.25rem solid $tertiary-color;
+    }
   }
 
   &_list-content {
@@ -175,53 +73,9 @@
     font-weight: bold;
     font-size: 1.5rem;
     line-height: 2rem;
-  }
 
-  &_color {
-    color: $primary-color;
-  }
-
-  &_next-line {
-    display: block;
-  }
-
-  &_menu-links {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 24px;
-  }
-}
-
-@media (max-width: 768px) {
-  .tokenomics {
-    &_title {
-      font-size: 1.625rem;
-    }
-
-    &_description {
+    @media (max-width: 768px) {
       font-size: 1.25rem;
-    }
-
-    &_next-line {
-      display: inline;
-    }
-
-    &_alt-cards {
-      padding: 4rem 0 0;
-    }
-
-    &_alt-card {
-      width: 20rem;
-      height: 20rem;
-      margin: 1rem 0;
-      padding: 1rem;
-      border: 0.25rem solid $tertiary-color;
-    }
-
-    &_list {
-      font-weight: bold;
-      font-size: 1.25rem;
-      line-height: 2rem;
     }
   }
 }
