@@ -6,7 +6,6 @@
 
 html {
   font-family: $primary-font-stack;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -16,7 +15,7 @@ body {
   overflow-x: hidden;
   position: relative;
 
-  &.disable-scroll{
+  &.disable-scroll {
     overflow: hidden !important;
   }
 }

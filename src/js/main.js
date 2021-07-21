@@ -9,7 +9,7 @@ let topButton = document.querySelector('.top-button')
 
 // Include Smooth Scroll JS
 var scroll = new SmoothScroll('a[href*="#"]', {
-  speed: 500,
+  speed: 750,
   speedAsDuration: true,
   updateURL: false,
   topOnEmptyHash: true,
