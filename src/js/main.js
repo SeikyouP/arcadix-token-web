@@ -4,14 +4,16 @@ let header = document.querySelector('.header')
 let mobileHeader = document.querySelector('.mobile-header')
 let menuToggle = document.querySelector('.mobile-header_button')
 let menuLinks = document.querySelectorAll('.mobile-header_menu-link')
+let headerLinks = document.querySelectorAll('.header_menu-link')
 let topButton = document.querySelector('.top-button')
 
 // Include Smooth Scroll JS
 var scroll = new SmoothScroll('a[href*="#"]', {
-  speed: 750,
+  speed: 500,
   speedAsDuration: true,
   updateURL: false,
   topOnEmptyHash: true,
+  header: '[data-scroll-header]'
 })
 
 window.addEventListener('scroll', () => {
@@ -68,6 +70,20 @@ for (i = 0; i < menuLinks.length; i++) {
     // Otherwise, do nothing
     else if (window.pageYOffset === 0) {
       return
+    }
+  })
+}
+
+// Close the moblie menu when you click on any mobile link
+for (i = 0; i < headerLinks.length; i++) {
+  headerLinks[i].addEventListener('click', function (event) {
+    // Change mobile header background color when you click the menu toggle button
+    if (window.pageYOffset === 0 && event.target.id === 'home') {
+      return
+    }
+    // Otherwise, do nothing
+    else if (window.pageYOffset === 0) {
+      header.classList.add('active')
     }
   })
 }

@@ -11,9 +11,7 @@
     margin-bottom: 0.75rem;
 
     @media (max-width: 767px) {
-      &_title {
-        font-size: 1.625rem;
-      }
+      font-size: 1.625rem;
     }
   }
 
@@ -28,9 +26,7 @@
     padding: 2rem 0 0;
 
     @media (max-width: 767px) {
-      &_description {
-        font-size: 1.25rem;
-      }
+      font-size: 1.25rem;
     }
   }
 
@@ -135,13 +131,6 @@
     }
 
     &:last-child {
-      // background: $secondary-color;
-      // color: $primary-color;
-
-      // &:hover {
-      //   background: darken($secondary-color, 20%);
-      // }
-
       &::before {
         color: $secondary-color;
       }
