@@ -140,7 +140,6 @@
     justify-content: center;
     flex-flow: row wrap;
     padding: 5rem 0;
-    margin: -2rem;
   }
 
   &_alt-card {
@@ -208,13 +207,21 @@
     }
 
     &_alt-cards {
-      padding: 5rem 0 0;
+      padding: 4rem 0 0;
     }
 
     &_alt-card {
-      width: 23.5rem;
+      width: 20rem;
       height: 20rem;
-      margin: 2rem;
+      margin: 1rem 0;
+      padding: 1rem;
+      border: 0.25rem solid $tertiary-color;
+    }
+
+    &_list {
+      font-weight: bold;
+      font-size: 1.25rem;
+      line-height: 2rem;
     }
   }
 }

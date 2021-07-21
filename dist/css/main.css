@@ -699,6 +699,9 @@ header_menu-button:hover,
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: calc(3rem / -2);
   margin: calc(var(--gap) / -2);
 }
@@ -706,6 +709,12 @@ header_menu-button:hover,
 .home .promotion_cards > * {
   margin: calc(3rem / 2);
   margin: calc(var(--gap) / 2);
+}
+
+@media (max-width: 767px) {
+  .home .promotion_cards {
+    margin: 0;
+  }
 }
 
 .home .promotion_card {
@@ -726,9 +735,6 @@ header_menu-button:hover,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   margin: 1.5rem;
 }
 
@@ -1473,7 +1479,6 @@ header_menu-button:hover,
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   padding: 5rem 0;
-  margin: -2rem;
 }
 
 .tokenomics_alt-card {
@@ -1550,12 +1555,19 @@ header_menu-button:hover,
     display: inline;
   }
   .tokenomics_alt-cards {
-    padding: 5rem 0 0;
+    padding: 4rem 0 0;
   }
   .tokenomics_alt-card {
-    width: 23.5rem;
+    width: 20rem;
     height: 20rem;
-    margin: 2rem;
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 0.25rem solid #7205f6;
+  }
+  .tokenomics_list {
+    font-weight: bold;
+    font-size: 1.25rem;
+    line-height: 2rem;
   }
 }
 
