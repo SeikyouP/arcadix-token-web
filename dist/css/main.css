@@ -1423,7 +1423,50 @@ header_menu-button:hover,
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 420px) {
+  .project-roadmap_rectangle {
+    padding: 0.75rem;
+    right: 0;
+    border-radius: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .project-roadmap_rectangle--pink {
+    left: 0;
+    margin: 0;
+  }
+  .project-roadmap_rectangle h3 {
+    font-size: 24px;
+    text-align: center;
+  }
+  .project-roadmap_rectangle p {
+    font-size: 18px;
+    text-align: center;
+  }
+  .project-roadmap_rectangle:nth-child(2) {
+    padding: 1rem;
+    left: 0;
+  }
+  .project-roadmap_rectangle .date {
+    font-size: 1rem;
+  }
+  .project-roadmap_arrow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 400px) {
   .project-roadmap_rectangle {
     padding: 0.75rem;
     right: 0;
