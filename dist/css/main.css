@@ -930,6 +930,17 @@ header_menu-button:hover,
   .home .hero_contract-address span {
     font-size: 1rem;
   }
+  .home .promotion_card {
+    width: 12rem;
+    margin: 0.5rem !important;
+  }
+  .home .promotion_card-title {
+    font-size: 1.75rem;
+    padding-bottom: 0.5rem;
+  }
+  .home .promotion_card-number {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -969,8 +980,13 @@ header_menu-button:hover,
   .home .hero_contract-address span {
     font-size: 0.75rem;
   }
+  .home .promotion_card {
+    height: 18.75rem;
+    width: 9.5rem;
+    margin: 0.25rem !important;
+  }
   .home .promotion_card-title {
-    font-size: 2rem;
+    font-size: 1.75rem;
     padding-bottom: 0.5rem;
   }
   .home .promotion_card-number {
@@ -1566,7 +1582,7 @@ header_menu-button:hover,
   .tokenomics_card {
     width: 20rem;
     height: 20rem;
-    margin: 1rem 0;
+    margin: 1rem;
     padding: 1rem;
     border: 0.25rem solid #7205f6;
   }
