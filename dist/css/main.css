@@ -1295,7 +1295,7 @@ header_menu-button:hover,
 }
 
 .tokenomics {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .tokenomics_inner {
