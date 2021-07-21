@@ -31,10 +31,6 @@ header,
   &_menu {
     display: flex;
     align-items: center;
-    // flex-basis: 50%;
-    @supports (gap: 1.25rem) {
-      // gap: 1.25rem;
-    }
   }
 
   &_menu-link {
@@ -78,7 +74,7 @@ header,
 
 // Mobile Header
 .mobile-header {
-  height: 7rem;
+  height: 7.125rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -86,15 +82,9 @@ header,
   bottom: 0;
   width: 100%;
   z-index: 100;
-  overflow: hidden;
-  transition: height 0.5s ease, background 0.125s ease;
-
-  &_active {
-    background: $body-color-alt;
-  }
 
   &_open {
-    height: 100%;
+    // height: 100%;
   }
 
   &_topbar {
@@ -103,6 +93,14 @@ header,
     justify-content: space-between;
     align-items: center;
     height: 7.125rem;
+    z-index: 99;
+    // background: $body-color-alt;
+    position: relative;
+    transition: height 0.5s ease, background 0.125s ease;
+
+    &--active {
+      background: $body-color-alt;
+    }
   }
 
   &_logo {
@@ -122,8 +120,17 @@ header,
     flex-direction: column;
     text-align: center;
     width: 100%;
+    height: 0;
+    background: $body-color-alt;
     height: calc(100vh - 7.125rem);
-    background: $body-color;
+    transform: translateY(calc(-100vh - 7.125rem));
+    transition: 0.5s ease;
+    position: relative;
+    z-index: 1;
+
+    &--open {
+      transform: translateY(0vh);
+    }
   }
 
   &_menu-link {
@@ -137,21 +144,30 @@ header,
       border-top: 4px solid $secondary-color;
     }
 
-    &:last-child {
-      border: 4px solid #f1f0f3;
-      padding: 0.75rem 1.125rem;
-      border-radius: 0.5rem;
-      margin: 2rem auto 0;
-      width: 10rem;
-
-      &:hover {
-        color: $primary-color;
-        border: 4px solid $primary-color;
-      }
-    }
-
     &:hover {
       color: $primary-color;
+    }
+  }
+
+  &:hover {
+    color: $primary-color;
+  }
+
+  &_menu-button {
+    font-size: 0.875rem;
+    font-weight: 800;
+    transition: 0.25s ease;
+    width: 10rem;
+    line-height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.25s ease, background 0.25s ease;
+    background: $primary-color;
+    border-radius: 0.75rem;
+
+    &:hover {
+      background: darken($primary-color, 20%);
     }
   }
 }

@@ -1,7 +1,8 @@
 //  Declare Variables
 let body = document.querySelector('body')
 let header = document.querySelector('.header')
-let mobileHeader = document.querySelector('.mobile-header')
+let mobileHeader = document.querySelector('.mobile-header_topbar')
+let mobileMenu = document.querySelector('.mobile-header_menu')
 let menuToggle = document.querySelector('.mobile-header_button')
 let menuLinks = document.querySelectorAll('.mobile-header_menu-link')
 let headerLinks = document.querySelectorAll('.header_menu-link')
@@ -13,9 +14,10 @@ var scroll = new SmoothScroll('a[href*="#"]', {
   speedAsDuration: true,
   updateURL: false,
   topOnEmptyHash: true,
-  header: '[data-scroll-header]'
+  header: '[data-scroll-header]',
 })
 
+// Event to change header background only
 window.addEventListener('scroll', () => {
   // Change header background color when scrolled away from top
   if (window.pageYOffset > 0) {
@@ -28,63 +30,33 @@ window.addEventListener('scroll', () => {
   }
 })
 
+// Event to change mobile header background only
 window.addEventListener('scroll', () => {
   // Change mobile header background color when scrolled away from top
   if (window.pageYOffset > 0) {
-    mobileHeader.classList.add('active')
+    mobileHeader.classList.add('mobile-header_topbar--active')
   }
 
   // Otherwise, revert mobile header background color when scrolled back to top
   else if (window.pageYOffset === 0) {
-    mobileHeader.classList.remove('active')
+    mobileHeader.classList.remove('mobile-header_topbar--active')
   }
 })
 
-// Open / Close (Toggle) the mobile menu when you click the menu toggle button
+// Toggle the mobile menu when you click the menu toggle button
 menuToggle.addEventListener('click', function () {
   menuToggle.classList.toggle('is-active')
-  mobileHeader.classList.toggle('mobile-header_open')
+  mobileHeader.classList.add('mobile-header_topbar--active')
+  mobileMenu.classList.toggle('mobile-header_menu--open')
   body.classList.toggle('disable-scroll')
-
-  // Change mobile header background color when you click the menu toggle button
-  if (window.pageYOffset === 0) {
-    mobileHeader.classList.toggle('active')
-  }
-  // Otherwise, do nothing
-  else {
-    return
-  }
 })
 
 // Close the moblie menu when you click on any mobile link
 for (i = 0; i < menuLinks.length; i++) {
   menuLinks[i].addEventListener('click', function (event) {
     menuToggle.classList.remove('is-active')
-    mobileHeader.classList.remove('mobile-header_open')
     body.classList.remove('disable-scroll')
-
-    // Change mobile header background color when you click the menu toggle button
-    if (window.pageYOffset === 0 && event.target.id === 'home') {
-      mobileHeader.classList.remove('active')
-    }
-    // Otherwise, do nothing
-    else if (window.pageYOffset === 0) {
-      return
-    }
-  })
-}
-
-// Close the moblie menu when you click on any mobile link
-for (i = 0; i < headerLinks.length; i++) {
-  headerLinks[i].addEventListener('click', function (event) {
-    // Change mobile header background color when you click the menu toggle button
-    if (window.pageYOffset === 0 && event.target.id === 'home') {
-      return
-    }
-    // Otherwise, do nothing
-    else if (window.pageYOffset === 0) {
-      header.classList.add('active')
-    }
+    mobileMenu.classList.remove('mobile-header_menu--open')
   })
 }
 
