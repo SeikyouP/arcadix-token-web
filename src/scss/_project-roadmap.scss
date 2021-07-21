@@ -71,6 +71,10 @@
     }
   }
 
+  &_arrow {
+    display: none;
+  }
+
   &_description {
     margin: 0.75rem auto 0;
 
@@ -101,6 +105,10 @@
 
     &_details {
       font-size: 1.25rem;
+    }
+
+    &_rectangle-list {
+      padding-bottom: 0;
     }
 
     &_rectangle {
@@ -159,6 +167,11 @@
       border-radius: 0;
       justify-content: center;
 
+      &--pink {
+        left: 0;
+        margin: 0;
+      }
+
       h3 {
         font-size: 1.25rem;
         text-align: center;
@@ -177,6 +190,14 @@
       .date {
         font-size: 0.75rem;
       }
+    }
+
+    &_arrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 3rem 0;
     }
   }
 }

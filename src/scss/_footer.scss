@@ -37,6 +37,10 @@ footer,
     color: darken($secondary-color, 40%);
   }
 
+  &_social-icons {
+    display: none;
+  }
+
   &_copyright-info {
     text-align: center;
     margin-bottom: 6rem;
@@ -49,14 +53,31 @@ footer,
       height: 4rem;
     }
 
+    &_menu {
+      &:last-child {
+        display: none;
+      }
+    }
+
     &_menus {
-      flex-direction: column;
+      // flex-direction: column;
       // gap: 2rem;
-      text-align: center;
+      text-align: left;
+    }
+
+    &_social-icons {
+      padding: 2rem 0 0;
+      display: flex;
+      justify-content: center;
+
+      i {
+        font-size: 1.75rem;
+        margin: 0.75rem;
+      }
     }
 
     &_copyright-info {
-      font-size: 0.75rem;
+      font-size: 0.8rem;
     }
   }
 }

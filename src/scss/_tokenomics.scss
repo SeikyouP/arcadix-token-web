@@ -75,7 +75,7 @@
   }
 
   &_button {
-    width: 12.5rem;
+    width: 10rem;
     height: 3rem;
     display: flex;
     align-items: center;
@@ -90,7 +90,7 @@
     margin: 1rem;
 
     @media (max-width: 767px) {
-      width: 10rem;
+      width: 9rem;
       margin: 0.25rem;
     }
 
@@ -104,7 +104,7 @@
       top: 2.5rem;
       right: 0;
       right: calc(100% + 1.25rem) / 2;
-      width: 12.5rem;
+      width: 10rem;
       height: 3rem;
       display: flex;
       align-items: center;
@@ -115,7 +115,7 @@
       pointer-events: none;
 
       @media (max-width: 767px) {
-        width: 10rem;
+        width: 9rem;
       }
     }
 
@@ -208,7 +208,7 @@
     }
 
     &_alt-cards {
-      padding: 5rem 0;
+      padding: 5rem 0 0;
     }
 
     &_alt-card {
