@@ -14,6 +14,11 @@ body {
   color: $secondary-color;
   min-height: 100vh;
   overflow-x: hidden;
+  position: relative;
+
+  &.disable-scroll{
+    overflow: hidden !important;
+  }
 }
 
 .container {

@@ -147,6 +147,11 @@ body {
   color: #f1f0f3;
   min-height: 100vh;
   overflow-x: hidden;
+  position: relative;
+}
+
+body.disable-scroll {
+  overflow: hidden !important;
 }
 
 .container {
