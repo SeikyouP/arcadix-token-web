@@ -1,11 +1,9 @@
 //  Declare Variables
 let body = document.querySelector('body')
 let header = document.querySelector('.header')
-let mobileHeader = document.querySelector('.mobile-header_topbar')
-let mobileMenu = document.querySelector('.mobile-header_menu')
+let mobileHeader = document.querySelector('.mobile-header')
 let menuToggle = document.querySelector('.mobile-header_button')
 let menuLinks = document.querySelectorAll('.mobile-header_menu-link')
-let headerLinks = document.querySelectorAll('.header_menu-link')
 let topButton = document.querySelector('.top-button')
 
 // Include Smooth Scroll JS
@@ -34,20 +32,20 @@ window.addEventListener('scroll', () => {
 window.addEventListener('scroll', () => {
   // Change mobile header background color when scrolled away from top
   if (window.pageYOffset > 0) {
-    mobileHeader.classList.add('mobile-header_topbar--active')
+    mobileHeader.classList.add('mobile-header--active')
   }
 
   // Otherwise, revert mobile header background color when scrolled back to top
   else if (window.pageYOffset === 0) {
-    mobileHeader.classList.remove('mobile-header_topbar--active')
+    mobileHeader.classList.remove('mobile-header--active')
   }
 })
 
 // Toggle the mobile menu when you click the menu toggle button
 menuToggle.addEventListener('click', function () {
   menuToggle.classList.toggle('is-active')
-  mobileHeader.classList.add('mobile-header_topbar--active')
-  mobileMenu.classList.toggle('mobile-header_menu--open')
+  mobileHeader.classList.add('mobile-header--active')
+  mobileHeader.classList.toggle('mobile-header--open')
   body.classList.toggle('disable-scroll')
 })
 
@@ -55,8 +53,8 @@ menuToggle.addEventListener('click', function () {
 for (i = 0; i < menuLinks.length; i++) {
   menuLinks[i].addEventListener('click', function (event) {
     menuToggle.classList.remove('is-active')
+    mobileHeader.classList.toggle('mobile-header--open')
     body.classList.remove('disable-scroll')
-    mobileMenu.classList.remove('mobile-header_menu--open')
   })
 }
 

@@ -71,6 +71,7 @@ header,
 // Mobile Header
 .mobile-header {
   height: 7.125rem;
+  // background: $body-color-alt;
   position: fixed;
   top: 0;
   left: 0;
@@ -78,6 +79,16 @@ header,
   bottom: 0;
   width: 100%;
   z-index: 100;
+  overflow: hidden;
+  transition: height 0.5s ease, background 0.125s ease;
+
+  &--active {
+    background: $body-color-alt;
+  }
+
+  &--open {
+    height: 100%;
+  }
 
   &_navbar {
     height: inherit;
@@ -89,13 +100,6 @@ header,
     justify-content: space-between;
     align-items: center;
     height: 7.125rem;
-    z-index: 99;
-    position: relative;
-    transition: height 0.5s ease, background 0.125s ease;
-
-    &--active {
-      background: $body-color-alt;
-    }
   }
 
   &_logo {
@@ -115,17 +119,8 @@ header,
     flex-direction: column;
     text-align: center;
     width: 100%;
-    height: 0;
-    background: $body-color;
     height: calc(100vh - 7.125rem);
-    transform: translateY(calc(-100vh - 7.125rem));
-    transition: 0.5s ease;
-    position: relative;
-    z-index: 1;
-
-    &--open {
-      transform: translateY(0vh);
-    }
+    background: $body-color;
   }
 
   &_menu-link {
