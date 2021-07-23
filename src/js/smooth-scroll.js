@@ -1,92 +1,83 @@
-/*!
- * smooth-scroll v16.1.2
- * Animate scrolling to anchor links
- * (c) 2020 Chris Ferdinandi
- * MIT License
- * http://github.com/cferdinandi/smooth-scroll
- */
-
-/**
- * closest() polyfill
- * @link https://developer.mozilla.org/en-US/docs/Web/API/Element/closest#Polyfill
- */
-if (window.Element && !Element.prototype.closest) {
-  Element.prototype.closest = function (s) {
-    var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-      i,
-      el = this
-    do {
-      i = matches.length
-      while (--i >= 0 && matches.item(i) !== el) {}
-    } while (i < 0 && (el = el.parentElement))
-    return el
-  }
-}
-
-/**
- * CustomEvent() polyfill
- * https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent#Polyfill
- */
-;(function () {
-  if (typeof window.CustomEvent === 'function') return false
-
-  function CustomEvent(event, params) {
-    params = params || { bubbles: false, cancelable: false, detail: undefined }
-    var evt = document.createEvent('CustomEvent')
-    evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail)
-    return evt
-  }
-
-  CustomEvent.prototype = window.Event.prototype
-
-  window.CustomEvent = CustomEvent
-})()
-/**
- * requestAnimationFrame() polyfill
- * By Erik Möller. Fixes from Paul Irish and Tino Zijdel.
- * @link http://paulirish.com/2011/requestanimationframe-for-smart-animating/
- * @link http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
- * @license MIT
- */
-;(function () {
-  var lastTime = 0
-  var vendors = ['ms', 'moz', 'webkit', 'o']
-  for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
-    window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame']
-    window.cancelAnimationFrame =
-      window[vendors[x] + 'CancelAnimationFrame'] || window[vendors[x] + 'CancelRequestAnimationFrame']
-  }
-
-  if (!window.requestAnimationFrame) {
-    window.requestAnimationFrame = function (callback, element) {
-      var currTime = new Date().getTime()
-      var timeToCall = Math.max(0, 16 - (currTime - lastTime))
-      var id = window.setTimeout(function () {
-        callback(currTime + timeToCall)
-      }, timeToCall)
-      lastTime = currTime + timeToCall
-      return id
-    }
-  }
-
-  if (!window.cancelAnimationFrame) {
-    window.cancelAnimationFrame = function (id) {
-      clearTimeout(id)
-    }
-  }
-})()
-;(function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    define([], function () {
-      return factory(root)
-    })
-  } else if (typeof exports === 'object') {
-    module.exports = factory(root)
-  } else {
-    root.SmoothScroll = factory(root)
-  }
-})(typeof global !== 'undefined' ? global : typeof window !== 'undefined' ? window : this, function (window) {
+/*! SmoothScroll v16.1.4 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/smooth-scroll */
+;(function (global, factory) {
+  typeof exports === 'object' && typeof module !== 'undefined'
+    ? (module.exports = factory())
+    : typeof define === 'function' && define.amd
+    ? define(factory)
+    : ((global = global || self), (global.SmoothScroll = factory()))
+})(this, function () {
   'use strict'
+
+  /**
+   * closest() polyfill
+   * @link https://developer.mozilla.org/en-US/docs/Web/API/Element/closest#Polyfill
+   */
+  if (window.Element && !Element.prototype.closest) {
+    Element.prototype.closest = function (s) {
+      var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+        i,
+        el = this
+      do {
+        i = matches.length
+        while (--i >= 0 && matches.item(i) !== el) {}
+      } while (i < 0 && (el = el.parentElement))
+      return el
+    }
+  }
+
+  /**
+   * CustomEvent() polyfill
+   * https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent#Polyfill
+   */
+  ;(function () {
+    if (typeof window.CustomEvent === 'function') return false
+
+    function CustomEvent(event, params) {
+      params = params || { bubbles: false, cancelable: false, detail: undefined }
+      var evt = document.createEvent('CustomEvent')
+      evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail)
+      return evt
+    }
+
+    CustomEvent.prototype = window.Event.prototype
+
+    window.CustomEvent = CustomEvent
+  })()
+
+  /**
+   * requestAnimationFrame() polyfill
+   * By Erik Möller. Fixes from Paul Irish and Tino Zijdel.
+   * @link http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+   * @link http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
+   * @license MIT
+   */
+  ;(function () {
+    var lastTime = 0
+    var vendors = ['ms', 'moz', 'webkit', 'o']
+    for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+      window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame']
+      window.cancelAnimationFrame =
+        window[vendors[x] + 'CancelAnimationFrame'] || window[vendors[x] + 'CancelRequestAnimationFrame']
+    }
+
+    if (!window.requestAnimationFrame) {
+      window.requestAnimationFrame = function (callback, element) {
+        var currTime = new Date().getTime()
+        var timeToCall = Math.max(0, 16 - (currTime - lastTime))
+        var id = window.setTimeout(function () {
+          callback(currTime + timeToCall)
+        }, timeToCall)
+        lastTime = currTime + timeToCall
+        return id
+      }
+    }
+
+    if (!window.cancelAnimationFrame) {
+      window.cancelAnimationFrame = function (id) {
+        clearTimeout(id)
+      }
+    }
+  })()
 
   //
   // Default settings
@@ -246,8 +237,8 @@ if (window.Element && !Element.prototype.closest) {
   /**
    * Calculate the easing pattern
    * @link https://gist.github.com/gre/1650294
-   * @param {String} type Easing pattern
-   * @param {Number} time Time animation should take to complete
+   * @param   {Object} settings Easing pattern
+   * @param   {Number} time     Time animation should take to complete
    * @returns {Number}
    */
   var easingPattern = function (settings, time) {
@@ -434,7 +425,7 @@ if (window.Element && !Element.prototype.closest) {
     //
 
     var smoothScroll = {} // Object for public APIs
-    var settings, anchor, toggle, fixedHeader, eventTimeout, animationInterval
+    var settings, toggle, fixedHeader, animationInterval
 
     //
     // Methods
@@ -551,7 +542,7 @@ if (window.Element && !Element.prototype.closest) {
 
       // If the user prefers reduced motion, jump to location
       if (reduceMotion()) {
-        window.scrollTo(0, Math.floor(endLocation))
+        adjustFocus(anchor, Math.floor(endLocation), false)
         return
       }
 
@@ -618,17 +609,13 @@ if (window.Element && !Element.prototype.closest) {
     /**
      * Animate scroll on popstate events
      */
-    var popstateHandler = function (event) {
+    var popstateHandler = function () {
       // Stop if history.state doesn't exist (ex. if clicking on a broken anchor link).
       // fixes `Cannot read property 'smoothScroll' of null` error getting thrown.
       if (history.state === null) return
 
       // Only run if state is a popstate record for this instantiation
       if (!history.state.smoothScroll || history.state.smoothScroll !== JSON.stringify(settings)) return
-
-      // Only run if state includes an anchor
-
-      // if (!history.state.anchor && history.state.anchor !== 0) return;
 
       // Get the anchor
       var anchor = history.state.anchor
@@ -657,10 +644,8 @@ if (window.Element && !Element.prototype.closest) {
 
       // Reset variables
       settings = null
-      anchor = null
       toggle = null
       fixedHeader = null
-      eventTimeout = null
       animationInterval = null
     }
 

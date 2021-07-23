@@ -441,17 +441,12 @@ header_menu-button:hover,
   bottom: 0;
   width: 100%;
   z-index: 100;
-  overflow: hidden;
   -webkit-transition: height 0.5s ease, background 0.125s ease;
   transition: height 0.5s ease, background 0.125s ease;
 }
 
 .mobile-header--active {
   background: #170131;
-}
-
-.mobile-header--open {
-  height: 100%;
 }
 
 .mobile-header_navbar {
@@ -492,9 +487,16 @@ header_menu-button:hover,
           flex-direction: column;
   text-align: center;
   width: 100%;
-  height: calc(100vh - 7.125rem);
+  height: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(171, 69, 231, 0.2)), color-stop(9.17%, rgba(0, 0, 0, 0.2))), #170131;
   background: linear-gradient(180deg, rgba(171, 69, 231, 0.2) 0%, rgba(0, 0, 0, 0.2) 9.17%), #170131;
+  overflow: hidden;
+  -webkit-transition: height 0.5s ease;
+  transition: height 0.5s ease;
+}
+
+.mobile-header_menu--open {
+  height: calc(100vh - 7.125rem);
 }
 
 .mobile-header_menu-link {
@@ -1114,6 +1116,7 @@ header_menu-button:hover,
 
 .team {
   text-align: center;
+  scroll-padding-top: 7rem;
 }
 
 .team_title {
@@ -1264,6 +1267,7 @@ header_menu-button:hover,
 
 .project-roadmap {
   position: relative;
+  scroll-padding-top: 7rem;
 }
 
 .project-roadmap_inner {
@@ -1500,6 +1504,10 @@ header_menu-button:hover,
   }
 }
 
+.arcadix {
+  scroll-padding-top: 7rem;
+}
+
 .arcadix_inner {
   text-align: center;
 }
@@ -1673,6 +1681,10 @@ header_menu-button:hover,
 
 .arcadix_button:last-child::before {
   color: #f1f0f3;
+}
+
+.tokenomics {
+  scroll-padding-top: 7rem;
 }
 
 .tokenomics_inner {

@@ -2,6 +2,7 @@
 let body = document.querySelector('body')
 let header = document.querySelector('.header')
 let mobileHeader = document.querySelector('.mobile-header')
+let mobileMenu = document.querySelector('.mobile-header_menu')
 let menuToggle = document.querySelector('.mobile-header_button')
 let menuLinks = document.querySelectorAll('.mobile-header_menu-link')
 let topButton = document.querySelector('.top-button')
@@ -45,15 +46,15 @@ window.addEventListener('scroll', () => {
 menuToggle.addEventListener('click', function () {
   menuToggle.classList.toggle('is-active')
   mobileHeader.classList.add('mobile-header--active')
-  mobileHeader.classList.toggle('mobile-header--open')
+  mobileMenu.classList.toggle('mobile-header_menu--open')
   body.classList.toggle('disable-scroll')
 })
 
 // Close the moblie menu when you click on any mobile link
 for (i = 0; i < menuLinks.length; i++) {
-  menuLinks[i].addEventListener('click', function (event) {
+  menuLinks[i].addEventListener('click', function () {
     menuToggle.classList.remove('is-active')
-    mobileHeader.classList.toggle('mobile-header--open')
+    mobileMenu.classList.remove('mobile-header_menu--open')
     body.classList.remove('disable-scroll')
   })
 }

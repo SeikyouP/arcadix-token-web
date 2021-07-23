@@ -79,15 +79,11 @@ header,
   bottom: 0;
   width: 100%;
   z-index: 100;
-  overflow: hidden;
+
   transition: height 0.5s ease, background 0.125s ease;
 
   &--active {
     background: $body-color-alt;
-  }
-
-  &--open {
-    height: 100%;
   }
 
   &_navbar {
@@ -119,8 +115,14 @@ header,
     flex-direction: column;
     text-align: center;
     width: 100%;
-    height: calc(100vh - 7.125rem);
+    height: 0;
     background: $body-color;
+    overflow: hidden;
+    transition: height 0.5s ease;
+
+    &--open {
+      height: calc(100vh - 7.125rem);
+    }
   }
 
   &_menu-link {
