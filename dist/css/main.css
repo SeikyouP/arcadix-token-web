@@ -1875,6 +1875,37 @@ footer_copyright-info,
   }
 }
 
+.faq-section_inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 7rem;
+}
+
+.faq-section .sidebar {
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+}
+
+.faq-section .sidebar_inner {
+  background-color: red;
+}
+
+.faq-section .content {
+  -ms-flex-preferred-size: 65%;
+      flex-basis: 65%;
+}
+
+.faq-section .content_inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: red;
+}
+
 .top-button {
   position: fixed;
   display: -webkit-box;
