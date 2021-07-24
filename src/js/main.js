@@ -30,6 +30,22 @@ for (let i = 0; i < question.length; i++) {
   })
 }
 
+for (let i = 0; i < plusMinusButton.length; i++) {
+  plusMinusButton[i].addEventListener('touchstart', () => {
+    plusButton[i].classList.toggle('content_plus-icon--active')
+    minusButton[i].classList.toggle('content_minus-icon--active')
+    answer[i].classList.toggle('content_answer--open')
+  })
+}
+
+for (let i = 0; i < question.length; i++) {
+  question[i].addEventListener('touchstart', () => {
+    plusButton[i].classList.toggle('content_plus-icon--active')
+    minusButton[i].classList.toggle('content_minus-icon--active')
+    answer[i].classList.toggle('content_answer--open')
+  })
+}
+
 // Include Smooth Scroll JS
 var scroll = new SmoothScroll('a[href*="#"]', {
   speed: 750,
