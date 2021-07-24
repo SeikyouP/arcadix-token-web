@@ -590,7 +590,7 @@ header_menu-button:hover,
 
 .home .hero_description {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.25rem;
   padding: 0.75rem 0 4.5rem;
   max-width: 33.25rem;
@@ -631,7 +631,7 @@ header_menu-button:hover,
   line-height: 3rem;
   text-align: center;
   font-weight: 700;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   -webkit-transition: color 0.25s ease, background 0.25s ease;
   transition: color 0.25s ease, background 0.25s ease;
   background: #ab45e7;
@@ -653,6 +653,7 @@ header_menu-button:hover,
 
 .home .stats {
   text-align: center;
+  text-transform: capitalize;
 }
 
 .home .stats_data {
@@ -864,7 +865,7 @@ header_menu-button:hover,
       -ms-flex-pack: center;
           justify-content: center;
   font-weight: 700;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   -webkit-transition: color 0.25s ease, background 0.25s ease;
   transition: color 0.25s ease, background 0.25s ease;
   background: #ab45e7;
@@ -902,8 +903,8 @@ header_menu-button:hover,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-weight: 600;
-  font-size: 0.875rem;
+  font-weight: 400;
+  font-size: 0.75rem;
 }
 
 @media (max-width: 767px) {
@@ -1290,7 +1291,7 @@ header_menu-button:hover,
 }
 
 .project-roadmap_details, .project-roadmap_description {
-  font-weight: bold;
+  font-weight: 400;
   font-size: 24px;
   line-height: 32px;
   text-align: center;
@@ -1533,7 +1534,7 @@ header_menu-button:hover,
 
 .arcadix_description {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 2rem;
   padding: 2rem 0 0;
 }
@@ -1584,7 +1585,7 @@ header_menu-button:hover,
 }
 
 .arcadix_card-description {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1rem;
   line-height: 1.5rem;
   font-family: "Inter", "Open Sans", Arial, Helvetica, sans-serif;
@@ -1630,7 +1631,7 @@ header_menu-button:hover,
       -ms-flex-pack: center;
           justify-content: center;
   font-weight: 700;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   -webkit-transition: color 0.25s ease, background 0.25s ease;
   transition: color 0.25s ease, background 0.25s ease;
   background: #ab45e7;
@@ -1788,7 +1789,7 @@ header_menu-button:hover,
 }
 
 .tokenomics_list {
-  font-weight: bold;
+  font-weight: 400;
   font-size: 1.5rem;
   line-height: 2rem;
 }
@@ -1797,6 +1798,11 @@ header_menu-button:hover,
   .tokenomics_list {
     font-size: 1.25rem;
   }
+}
+
+.tokenomics_list-item--alt {
+  font-style: italic;
+  font-size: 1.25rem;
 }
 
 footer_inner,
@@ -1947,7 +1953,6 @@ footer_copyright-info,
 @media (max-width: 767px) {
   .faq-section .content_subtitle {
     font-size: 1.5rem;
-    text-align: center;
     padding: 0 1rem;
   }
 }

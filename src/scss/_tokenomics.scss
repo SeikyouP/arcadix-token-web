@@ -1,6 +1,6 @@
 .tokenomics {
   scroll-padding-top: 7rem;
-  
+
   &_inner {
     text-align: center;
   }
@@ -70,11 +70,18 @@
   }
 
   &_list {
-    font-weight: bold;
+    font-weight: 400;
     font-size: 1.5rem;
     line-height: 2rem;
 
     @media (max-width: 768px) {
+      font-size: 1.25rem;
+    }
+  }
+
+  &_list-item {
+    &--alt {
+      font-style: italic;
       font-size: 1.25rem;
     }
   }

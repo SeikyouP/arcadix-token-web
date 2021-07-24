@@ -20,7 +20,7 @@
 
     &_description {
       font-size: 1rem;
-      font-weight: 600;
+      font-weight: 400;
       line-height: 1.25rem;
       padding: 0.75rem 0 4.5rem;
       max-width: 33.25rem;
@@ -52,7 +52,7 @@
       line-height: 3rem;
       text-align: center;
       font-weight: 700;
-      font-size: 0.875rem;
+      font-size: 0.9rem;
       transition: color 0.25s ease, background 0.25s ease;
       background: $primary-color;
       border-radius: 0.5rem;
@@ -73,6 +73,7 @@
   // Stats Section
   .stats {
     text-align: center;
+    text-transform: capitalize;
     &_data {
       font-weight: 700;
       --gap: 4rem;
@@ -214,7 +215,7 @@
       align-items: center;
       justify-content: center;
       font-weight: 700;
-      font-size: 0.875rem;
+      font-size: 0.9rem;
       transition: color 0.25s ease, background 0.25s ease;
       background: $primary-color;
       color: $secondary-color;
@@ -242,8 +243,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-weight: 600;
-        font-size: 0.875rem;
+        font-weight: 400;
+        font-size: 0.75rem;
         // cursor: default;
         // pointer-events: none;
 
