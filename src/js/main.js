@@ -7,6 +7,29 @@ let menuToggle = document.querySelector('.mobile-header_button')
 let menuLinks = document.querySelectorAll('.mobile-header_menu-link')
 let topButton = document.querySelector('.top-button')
 
+let plusButton = document.querySelectorAll('.content_plus-icon')
+let minusButton = document.querySelectorAll('.content_minus-icon')
+let answer = document.querySelectorAll('.content_answer')
+let plusMinusButton = document.querySelectorAll('.content_plus-minus')
+let returnTop = document.querySelectorAll('.content_top-button-section')
+let question = document.querySelectorAll('.content_question')
+
+for (let i = 0; i < plusMinusButton.length; i++) {
+  plusMinusButton[i].addEventListener('click', () => {
+    plusButton[i].classList.toggle('content_plus-icon--active')
+    minusButton[i].classList.toggle('content_minus-icon--active')
+    answer[i].classList.toggle('content_answer--open')
+  })
+}
+
+for (let i = 0; i < question.length; i++) {
+  question[i].addEventListener('click', () => {
+    plusButton[i].classList.toggle('content_plus-icon--active')
+    minusButton[i].classList.toggle('content_minus-icon--active')
+    answer[i].classList.toggle('content_answer--open')
+  })
+}
+
 // Include Smooth Scroll JS
 var scroll = new SmoothScroll('a[href*="#"]', {
   speed: 750,

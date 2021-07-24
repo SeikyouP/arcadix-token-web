@@ -1,22 +1,292 @@
 .faq-section {
+  // & > * {
+  //   line-height: 1.5;
+  // }
+
   &_inner {
     display: flex;
     justify-content: center;
     padding-top: 7rem;
   }
 
-  .sidebar {
-    flex-basis: 35%;
-    &_inner {
-      background-color: red;
-    }
-  }
+  // Sidebar Section
+  // .sidebar {
+  //   flex-basis: 30%;
+  //   border-right: 4px solid $line-color;
+  //   display: block;
+  // }
 
+  // .accordion {
+  //   &_item {
+  //     padding: 1.25rem;
+  //   }
+
+  //   &_top {
+  //     display: flex;
+  //     align-items: center;
+
+  //     & > * + * {
+  //       margin-left: 1.25rem;
+  //     }
+  //   }
+
+  //   &_arrow {
+  //     height: 2.5rem;
+  //     width: 2.5rem;
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  //     border-radius: 50%;
+  //     background-color: $primary-color;
+  //     transition: transform 0.5s ease;
+
+  //     &--alt {
+  //       background-color: $tertiary-color;
+  //     }
+
+  //     &--active {
+  //       transform: rotate(90deg);
+  //     }
+
+  //     i {
+  //       color: $secondary-color;
+  //       font-size: 1.25rem;
+  //     }
+  //   }
+
+  //   &_title {
+  //     font-size: 1.25rem;
+  //     font-weight: 600;
+  //   }
+
+  //   &_list {
+  //     overflow: hidden;
+  //     height: 0;
+
+  //     &--open {
+  //       height: 100%;
+  //     }
+  //   }
+
+  //   &_list-item {
+  //     padding: 1.25rem 1.25rem 1.25rem 3.75rem;
+  //   }
+
+  //   &_link {
+  //     font-size: 0.75rem;
+  //   }
+  // }
+
+  // Content Section
   .content {
-    flex-basis: 65%;
+    // flex-basis: 70%;
     &_inner {
+      padding: 1.25rem;
+
+      @media (max-width: 767px) {
+        padding: 1rem;
+      }
+    }
+
+    &_title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 2rem;
+
+      @media (max-width: 767px) {
+        font-size: 1.75rem;
+      }
+    }
+
+    &_description {
+      font-family: $secondary-font-stack;
+      font-weight: 500;
+      font-size: 20px;
+      margin-bottom: 4rem;
+
+      @media (max-width: 767px) {
+        font-size: 1rem;
+      }
+    }
+
+    &_subtitle {
+      font-weight: 700;
+      font-size: 2.125rem;
+      margin-bottom: 2rem;
+
+      @media (max-width: 767px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    &_subtitle-info {
+      font-family: $secondary-font-stack;
+      font-weight: 600;
+      font-size: 1.25rem;
+      margin-bottom: 4rem;
+
+      @media (max-width: 767px) {
+        font-size: 1rem;
+      }
+    }
+
+    &_top-button-section {
       display: flex;
-      background-color: red;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+
+      div {
+        display: flex;
+        align-items: center;
+
+        & > * + * {
+          margin-left: 1rem;
+        }
+      }
+
+      & > * + * {
+        margin-left: 1rem;
+      }
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    &_top-button {
+      width: 2.5rem;
+      height: 2.5rem;
+      background: $primary-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+
+      i {
+        color: $secondary-color;
+      }
+    }
+
+    span {
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+
+    &_question-answer {
+      position: relative;
+      padding-left: 3.5rem;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 1rem;
+        background: $primary-color;
+        height: 5.25rem;
+        width: 0.5rem;
+
+        @media (max-width: 767px) {
+          font-family: 'FontAwesome';
+          content: '\f054';
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-radius: 50%;
+          background: $primary-color;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 2.5rem;
+          width: 2.5rem;
+        }
+      }
+
+      @media (max-width: 767px) {
+        font-size: 1.25rem;
+      }
+    }
+
+    &_question {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+
+      @media (max-width: 767px) {
+        font-size: 1.25rem;
+      }
+    }
+
+    &_plus-minus {
+      display: flex;
+      position: relative;
+      align-items: center;
+    }
+
+    &_plus-icon,
+    &_minus-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      background: $primary-color;
+      padding: 0.5rem;
+      border-radius: 50%;
+      width: 2.5rem;
+      height: 2.5rem;
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    &_plus-icon {
+      display: flex;
+      z-index: 1;
+      transition: opacity 0.5s ease;
+
+      &--active {
+        display: none;
+      }
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    &_minus-icon {
+      display: none;
+
+      &--active {
+        display: flex;
+      }
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    &_answer {
+      font-family: $secondary-font-stack;
+      font-size: 1.25rem;
+      margin-bottom: 6rem;
+      overflow: hidden;
+      height: 0;
+      transition: height 0.5s ease;
+
+      &--open {
+        height: 500px;
+        height: max-content;
+      }
+
+      &--last {
+        margin-bottom: 0;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 1rem;
+        margin: 3rem 0;
+      }
     }
   }
 }
