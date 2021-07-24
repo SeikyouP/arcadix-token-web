@@ -84,7 +84,7 @@
       padding: 1.25rem;
 
       @media (max-width: 767px) {
-        padding: 1rem;
+        padding: 0;
       }
     }
 
@@ -95,6 +95,8 @@
 
       @media (max-width: 767px) {
         font-size: 1.75rem;
+        text-align: center;
+        padding: 0 1rem;
       }
     }
 
@@ -106,6 +108,9 @@
 
       @media (max-width: 767px) {
         font-size: 1rem;
+        text-align: center;
+        margin-bottom: 1rem;
+        padding: 0 1rem;
       }
     }
 
@@ -116,6 +121,8 @@
 
       @media (max-width: 767px) {
         font-size: 1.5rem;
+        text-align: center;
+        padding: 0 1rem;
       }
     }
 
@@ -127,6 +134,7 @@
 
       @media (max-width: 767px) {
         font-size: 1rem;
+        padding: 0 1rem;
       }
     }
 
@@ -206,6 +214,12 @@
       & > * + * {
         margin-left: 0.25rem;
       }
+
+      @media (max-width: 767px) {
+        border-top: 1px solid $line-color;
+        padding: 1rem 0;
+        margin-bottom: 0;
+      }
     }
 
     &_question {
@@ -214,6 +228,7 @@
 
       @media (max-width: 767px) {
         font-size: 1rem;
+        padding: 0 1rem;
       }
     }
 
@@ -233,8 +248,7 @@
       width: 2rem;
       height: 2rem;
       opacity: 0.5;
-      border-radius: 50%;
-      border: 0.25rem solid $secondary-color;
+      margin-right: 1rem;
     }
 
     &_plus-icon {
@@ -264,8 +278,7 @@
       transition: height 0.5s ease;
 
       &--open {
-        height: 500px;
-        height: max-content;
+        height: min-content;
       }
 
       &--last {
@@ -274,7 +287,12 @@
 
       @media (max-width: 767px) {
         font-size: 1rem;
-        margin: 3rem 0;
+        margin: 0;
+        padding: 0 1rem;
+
+        &--open {
+          padding: 1rem;
+        }
       }
     }
   }
