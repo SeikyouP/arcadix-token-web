@@ -178,42 +178,42 @@
       padding-left: 3.5rem;
 
       &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 1rem;
-        background: $primary-color;
-        height: 5.25rem;
-        width: 0.5rem;
+        // content: '';
+        // position: absolute;
+        // top: 0;
+        // left: 1rem;
+        // background: $primary-color;
+        // height: 5.25rem;
+        // width: 0.5rem;
 
         @media (max-width: 767px) {
-          font-family: 'FontAwesome';
-          content: '\f054';
-          position: absolute;
-          top: 0;
-          left: 0;
-          border-radius: 50%;
-          background: $primary-color;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 2.5rem;
-          width: 2.5rem;
+          display: none;
         }
       }
 
       @media (max-width: 767px) {
         font-size: 1.25rem;
+        padding-left: 0;
+      }
+    }
+
+    &_question-section {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+
+      & > * + * {
+        margin-left: 0.25rem;
       }
     }
 
     &_question {
       font-size: 1.5rem;
       font-weight: 700;
-      margin-bottom: 2rem;
 
       @media (max-width: 767px) {
-        font-size: 1.25rem;
+        font-size: 1rem;
       }
     }
 
@@ -229,15 +229,12 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      background: $primary-color;
       padding: 0.5rem;
+      width: 2rem;
+      height: 2rem;
+      opacity: 0.5;
       border-radius: 50%;
-      width: 2.5rem;
-      height: 2.5rem;
-
-      @media (max-width: 767px) {
-        display: none;
-      }
+      border: 0.25rem solid $secondary-color;
     }
 
     &_plus-icon {
@@ -248,10 +245,6 @@
       &--active {
         display: none;
       }
-
-      @media (max-width: 767px) {
-        display: none;
-      }
     }
 
     &_minus-icon {
@@ -259,10 +252,6 @@
 
       &--active {
         display: flex;
-      }
-
-      @media (max-width: 767px) {
-        display: none;
       }
     }
 
