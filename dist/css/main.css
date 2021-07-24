@@ -187,6 +187,10 @@ body.disable-scroll {
   padding: 4rem 0 6rem 0;
 }
 
+.line-gutter--half {
+  padding: 3rem 0;
+}
+
 h1,
 h2,
 h3,
@@ -2493,4 +2497,8 @@ footer_copyright-info,
 
 .line--thicc {
   height: 0.25rem;
+}
+
+.line--half {
+  margin: 4rem auto;
 }
