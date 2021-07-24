@@ -183,6 +183,10 @@ body.disable-scroll {
   padding: 6rem 0;
 }
 
+.line-gutter--offset {
+  padding: 4rem 0 6rem 0;
+}
+
 h1,
 h2,
 h3,
@@ -905,6 +909,8 @@ header_menu-button:hover,
           justify-content: center;
   font-weight: 400;
   font-size: 0.75rem;
+  cursor: default;
+  pointer-events: none;
 }
 
 @media (max-width: 767px) {
@@ -1609,6 +1615,7 @@ header_menu-button:hover,
       -ms-flex-pack: center;
           justify-content: center;
   margin: -1rem;
+  padding-bottom: 2.5rem;
 }
 
 .arcadix_buttons--alt {
@@ -1669,8 +1676,8 @@ header_menu-button:hover,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-weight: 600;
-  font-size: 0.875rem;
+  font-weight: 400;
+  font-size: 0.75rem;
   cursor: default;
   pointer-events: none;
 }
@@ -1802,7 +1809,7 @@ header_menu-button:hover,
 
 .tokenomics_list-item--alt {
   font-style: italic;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 footer_inner,
@@ -1820,8 +1827,14 @@ footer_inner,
 footer_logo,
 .footer_logo {
   height: 6rem;
-  margin-bottom: 5.25rem;
   display: block;
+}
+
+footer_sub-logo,
+.footer_sub-logo {
+  width: 350px;
+  margin: auto;
+  padding-bottom: 1rem;
 }
 
 footer_menus,
@@ -1930,7 +1943,7 @@ footer_copyright-info,
 
 .faq-section .content_description {
   font-family: "Inter", "Open Sans", Arial, Helvetica, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 20px;
   margin-bottom: 4rem;
 }
@@ -1953,7 +1966,10 @@ footer_copyright-info,
 @media (max-width: 767px) {
   .faq-section .content_subtitle {
     font-size: 1.5rem;
-    padding: 0 1rem;
+    padding: 1rem;
+    border-top: 4px solid rgba(241, 240, 243, 0.25);
+    border-bottom: 3px solid rgba(241, 240, 243, 0.25);
+    margin: 0;
   }
 }
 
@@ -1969,6 +1985,10 @@ footer_copyright-info,
     font-size: 1rem;
     padding: 0 1rem;
   }
+}
+
+.faq-section .content_faq:first-child {
+  border-bottom: 4px solid rgba(241, 240, 243, 0.25);
 }
 
 .faq-section .content_top-button-section {
@@ -2469,4 +2489,8 @@ footer_copyright-info,
 
 .line--last {
   margin: 0 0 2rem 0;
+}
+
+.line--thicc {
+  height: 0.25rem;
 }

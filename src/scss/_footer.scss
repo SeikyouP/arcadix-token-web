@@ -8,8 +8,14 @@ footer,
 
   &_logo {
     height: 6rem;
-    margin-bottom: 5.25rem;
+    // margin-bottom: 5.25rem;
     display: block;
+  }
+
+  &_sub-logo {
+    width: 350px;
+    margin: auto;
+    padding-bottom: 1rem;
   }
 
   &_menus {

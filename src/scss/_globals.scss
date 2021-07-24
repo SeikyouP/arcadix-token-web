@@ -8,7 +8,6 @@ html {
   font-family: $primary-font-stack;
 }
 
-
 body {
   background: $body-color;
   color: $secondary-color;
@@ -49,6 +48,10 @@ body {
 
 .line-gutter {
   padding: 6rem 0;
+
+  &--offset {
+    padding: 4rem 0 6rem 0;
+  }
 }
 
 h1,
